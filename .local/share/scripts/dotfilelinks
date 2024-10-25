@@ -1,37 +1,20 @@
 #!/bin/bash
+ln -sf ~/code/repos/dotfiles/.local/share/scripts/ ~/.local/share
+ln -sf ~/code/repos/dotfiles/.config/suckless ~/.config
+ln -sf ~/code/repos/dotfiles/.config/conky/ ~/.config
+ln -sf ~/code/repos/dotfiles/.config/dconf/ ~/.config
+ln -sf ~/code/repos/dotfiles/.config/dunst/ ~/.config
+ln -sf ~/code/repos/dotfiles/.config/mpv/ ~/.config
+ln -sf ~/code/repos/dotfiles/.config/newsboat/ ~/.config
+ln -sf ~/code/repos/dotfiles/.config/nvim/ ~/.config
+ln -sf ~/code/repos/dotfiles/.config/awesome/ ~/.config
+ln -sf ~/code/repos/dotfiles/.config/rofi/ ~/.config
+ln -sf ~/code/repos/dotfiles/.config/tmux/ ~/.config
+ln -sf ~/code/repos/dotfiles/.config/zathura/ ~/.config
+ln -sf ~/code/repos/dotfiles/.config/zsh/ ~/.config
 
-# * Creating symlinks for my configs
-# * Shared across computers using Dropbox
-# * Abandoning Syncthing
-#   - Syncthing doesn't work well when you frequently use restricted networks which cut off the syncthing ports
-#   - Eduroam blocks Syncthing from syncing my home computer and laptop
-#   - Dropbox doesn't have this issue since it syncs to a cloud server
-#   - I do not have the networking knowledge nor the patience to try and troubleshoot this
-
-# Scripts folder
-ln -sf ~/Dropbox/.dotfiles/.local/share/scripts/ ~/.local/share
-
-# Suckless software
-ln -sf ~/Dropbox/.dotfiles/.config/suckless ~/.config
-
-# Config folders
-ln -sf ~/Dropbox/.dotfiles/.config/conky/ ~/.config
-ln -sf ~/Dropbox/.dotfiles/.config/dconf/ ~/.config
-ln -sf ~/Dropbox/.dotfiles/.config/dunst/ ~/.config
-ln -sf ~/Dropbox/.dotfiles/.config/mpv/ ~/.config
-ln -sf ~/Dropbox/.dotfiles/.config/newsboat/ ~/.config
-ln -sf ~/Dropbox/.dotfiles/.config/nvim/ ~/.config
-ln -sf ~/Dropbox/.dotfiles/.config/awesome/ ~/.config
-ln -sf ~/Dropbox/.dotfiles/.config/rofi/ ~/.config
-ln -sf ~/Dropbox/.dotfiles/.config/tmux/ ~/.config
-ln -sf ~/Dropbox/.dotfiles/.config/zathura/ ~/.config
-ln -sf ~/Dropbox/.dotfiles/.config/zsh/ ~/.config
-
-
-
-# Config files
-ln -s ~/Dropbox/.dotfiles/.config/mimeapps.list ~/.config/
-ln -s ~/Dropbox/.dotfiles/.config/picom.conf ~/.config/
+ln -s ~/code/repos/dotfiles/.config/mimeapps.list ~/.config/
+ln -s ~/code/repos/dotfiles/.config/picom.conf ~/.config/
 
 # .desktop files
-ln -s ~/Dropbox/.dotfiles/.local/share/applications/dwm-twm.desktop ~/.local/share/applications/dwm-twm.desktop
+ln -s ~/code/repos/dotfiles/.local/share/applications/dwm-twm.desktop ~/.local/share/applications/dwm-twm.desktop
