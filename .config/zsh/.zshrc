@@ -10,7 +10,7 @@ ZVM_CURSOR_STYLE_ENABLED=true
 #     fi
 # fi
 # fpath=(path/to/zsh-completions/src $fpath)
-fpath+=($HOME/Dropbox/.dotfiles/.config/zsh/pure)
+fpath+=($HOME/code/repos/dotfiles/.config/zsh/pure)
 
 # ALIASES
 
@@ -120,5 +120,5 @@ cn () {
     cargo new "$@" --vcs none
 }
 
-beatit() { play -n -c1 synth 0.001 sine 1000 pad `awk "BEGIN { print 60/$1 -.001 }"` repeat 9999999 ; } 
+beatit() { play -n -c1 synth 0.001 sine 1000 pad `awk "BEGIN { print 60/$1 -.001 }"` repeat 9999999 ; }
 source /usr/share/nvm/init-nvm.sh

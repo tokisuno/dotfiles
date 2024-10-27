@@ -1,9 +1,10 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
-require("globals")
 
+require("globals")
 require("config.opts")
+
 require("config.lazy")
 require("config.remap")
 
