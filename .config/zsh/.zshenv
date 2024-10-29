@@ -39,7 +39,7 @@ export NVM_DIR=~/.nvm
 export TMUX_POWERLINE_THEME=my-theme
 export GOPATH="$HOME/go"
 export SYNCPATH="$HOME/Dropbox"
-export ZK_NOTEBOOK_DIR=$HOME/Dropbox/zk
+export ZK_NOTEBOOK_DIR=$HOME/code/repos/zettelkasten
 
 eval "$(fzf --zsh)"
 
