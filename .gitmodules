@@ -25,3 +25,9 @@
 [submodule ".config/zsh/zsh-autocomplete"]
 	path = .config/zsh/zsh-autocomplete
 	url = git@github.com:marlonrichert/zsh-autocomplete.git
+[submodule ".config/zsh/zsh-vi-mode"]
+	path = .config/zsh/zsh-vi-mode
+	url = git@github.com:jeffreytse/zsh-vi-mode.git
+[submodule ".config/zsh/zsh-edit"]
+	path = .config/zsh/zsh-edit
+	url = git@github.com:marlonrichert/zsh-edit.git
