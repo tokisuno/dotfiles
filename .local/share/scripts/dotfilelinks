@@ -1,9 +1,7 @@
 #!/bin/bash
 ln -sf ~/code/repos/dotfiles/.local/share/scripts/ ~/.local/share
-ln -sf ~/code/repos/dotfiles/.config/suckless ~/.config
 ln -sf ~/code/repos/dotfiles/.config/conky/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/dconf/ ~/.config
-ln -sf ~/code/repos/dotfiles/.config/dunst/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/mpv/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/newsboat/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/nvim/ ~/.config
@@ -19,3 +17,7 @@ ln -s ~/code/repos/dotfiles/.config/picom.conf ~/.config/
 
 # .desktop files
 ln -s ~/code/repos/dotfiles/.local/share/applications/dwm-twm.desktop ~/.local/share/applications/dwm-twm.desktop
+
+# TBA
+# ln -sf ~/code/repos/dotfiles/.config/suckless ~/.config
+# ln -sf ~/code/repos/dotfiles/.config/dunst/ ~/.config
