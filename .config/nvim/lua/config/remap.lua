@@ -14,6 +14,13 @@ vim.g.maplocalleader = ","
 -- map("n", "<leader>td", function () vling.deadkeys.toggle() end, { desc = "Toggle Deadkey Macros" })
 -- map("n", "<leader>ti", function () vling.ipa.toggle() end, { desc = "Toggle IPA Macros" })
 
+-- Zettelkasten
+map("n", "<leader>zn", "<Cmd>ZkNew { title = vim.fn.input('Title: ') }<CR>", opts)
+map("n", "<leader>zo", "<Cmd>ZkNotes { sort = { 'modified' } }<CR>", opts)
+map("n", "<leader>zt", "<Cmd>ZkTags<CR>", opts)
+map("n", "<leader>zf", "<Cmd>ZkNotes { sort = { 'modified' }, match = { vim.fn.input('Search: ') } }<CR>", opts)
+map("v", "<leader>zf", ":'<,'>ZkMatch<CR>", opts)
+
 -- Toggling things
 map("n", "<leader>ts", ":LiveServerToggle<cr>", { desc = "Toggle LiveServer" })
 map("n", "<leader>tw", ":setlocal wrap!<cr>", { desc = "Toggle wordwrapping" })

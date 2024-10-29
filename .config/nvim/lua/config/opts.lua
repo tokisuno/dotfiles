@@ -16,7 +16,7 @@ set.wildignore = {'*.docx','*.jpg','*.png','*.gif','*.pdf','*.pyc','*.exe','*.fl
 -- number column --
 set.nu = true
 set.relativenumber = true
-set.signcolumn = "no"
+set.signcolumn = "number"
 
 -- backups --
 set.swapfile = false
