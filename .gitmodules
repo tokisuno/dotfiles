@@ -10,3 +10,18 @@
 [submodule ".config/emacs"]
 	path = .config/emacs
 	url = https://github.com/tokisuno/emacs
+[submodule ".config/zsh/gitstatus"]
+	path = .config/zsh/gitstatus
+	url = git@github.com:romkatv/gitstatus.git
+[submodule ".config/zsh/pure"]
+	path = .config/zsh/pure
+	url = git@github.com:sindresorhus/pure.git
+[submodule ".config/zsh/zsh-autosuggestions"]
+	path = .config/zsh/zsh-autosuggestions
+	url = git@github.com:zsh-users/zsh-autosuggestions.git
+[submodule ".config/zsh/--force"]
+	path = .config/zsh/--force
+	url = git@github.com:jeffreytse/zsh-vi-mode.git
+[submodule ".config/zsh/zsh-autocomplete"]
+	path = .config/zsh/zsh-autocomplete
+	url = git@github.com:marlonrichert/zsh-autocomplete.git
