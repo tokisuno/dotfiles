@@ -4,13 +4,21 @@ return {
     version = "*",
     dependencies = 'nvim-tree/nvim-web-devicons',
     config = function ()
-      local bufferline = require("bufferline")
       require("bufferline").setup({
         options = {
+          color_icons = false,
           mode = "buffers",
-          style_preset = bufferline.style_preset.minimal,
+          themable = true,
           numbers = "none",
-          separator_style = "thin"
+          separator_style = "thin",
+          indicator = {
+            style = 'underline'
+          },
+          buffer_close_icon = '󰅖',
+          modified_icon = '● ',
+          close_icon = ' ',
+          left_trunc_marker = ' ',
+          right_trunc_marker = ' ',
         }
       })
     end
