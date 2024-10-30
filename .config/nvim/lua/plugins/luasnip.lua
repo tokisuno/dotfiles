@@ -2,12 +2,13 @@ return {
   {
     'hrsh7th/nvim-cmp',
     config = function ()
-      local luasnip = require('luasnip')
       local cmp = require('cmp')
-      cmp.setup {
+      local luasnip = require('luasnip')
+      cmp.setup({
+        experimental = { ghost_text = true },
         snippet = {
           expand = function(args)
-            require'luasnip'.lsp_expand(args.body)
+            luasnip.lsp_expand(args.body)
           end
         },
         mapping = cmp.mapping.preset.insert {
@@ -33,7 +34,7 @@ return {
           completion = cmp.config.window.bordered(),
           documentation = cmp.config.window.bordered(),
         },
-      }
+      })
     end
   },
   {'saadparwaiz1/cmp_luasnip'},

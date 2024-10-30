@@ -3,9 +3,9 @@ return {
   {"williamboman/mason.nvim"},
   {"williamboman/mason-lspconfig.nvim"},
   {'neovim/nvim-lspconfig'},
+  {'m4xshen/hardtime.nvim'},
   {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
   {'hrsh7th/cmp-nvim-lsp'},
-
   {'echasnovski/mini.nvim', version = false},
   {
     "OXY2DEV/helpview.nvim",
@@ -14,7 +14,6 @@ return {
       "nvim-treesitter/nvim-treesitter"
     }
   },
-
   {'dgagn/diagflow.nvim'},
   {'nvim-lua/plenary.nvim'},
   {'lewis6991/gitsigns.nvim'},
