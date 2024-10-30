@@ -1,6 +1,7 @@
 local map = vim.keymap.set
 local opts = { noremap=true, silent=false }
 
+local snip = require('luasnip')
 local builtin = require('telescope.builtin')
 local harpoon = require('harpoon')
 local trailspace = require('mini.trailspace')
@@ -9,6 +10,9 @@ local functions = require("config.funcs")
 
 vim.g.mapleader      = " "
 vim.g.maplocalleader = ","
+
+map({"i", "s"}, "<c-e>", function() snip.jump(-1) end, { silent = true })
+map({"i", "s"}, "<c-r>", function() snip.jump( 1) end, { silent = true })
 
 -- local vling = require('vling')
 -- map("n", "<leader>td", function () vling.deadkeys.toggle() end, { desc = "Toggle Deadkey Macros" })
