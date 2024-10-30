@@ -1,6 +1,0 @@
-#!/bin/bash
-
-notify-send "Launching Emacs daemon..."
-emacs -q -l ~/.config/emacs/init.el --daemon
-notify-send "Daemon started!"
-
