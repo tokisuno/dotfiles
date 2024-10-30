@@ -31,3 +31,6 @@
 [submodule ".config/zsh/zsh-edit"]
 	path = .config/zsh/zsh-edit
 	url = git@github.com:marlonrichert/zsh-edit.git
+[submodule ".config/tmux/plugins/tpm"]
+	path = .config/tmux/plugins/tpm
+	url = git@github.com:tmux-plugins/tpm.git
