@@ -1,10 +1,8 @@
 theme = GruvboxDarkHard
 window-decoration = false
 gtk-titlebar = false
-window-padding-x = 15
-window-padding-y = 10
 font-family = "JetBrainsMono Nerd Font"
-font-size = 13
+font-size = 14
 
 confirm-close-surface = false
 
