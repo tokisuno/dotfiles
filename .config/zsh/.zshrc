@@ -65,6 +65,7 @@ alias ga='git add .'
 alias gc='git commit -m'
 alias gp='git push'
 alias gt='git-token'
+alias lg='lazygit'
 
 alias ta='tmux attach'
 
