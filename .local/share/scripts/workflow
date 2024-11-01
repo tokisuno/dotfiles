@@ -14,11 +14,11 @@ then
     tmux rename-window -t "neorg":0 "life"
     tmux send-keys -t "life" 'nvim -c "Neorg workspace life"' C-m
 
-    tmux new-window -t "neorg":1 -n "notes"
-    tmux send-keys -t "notes" 'nvim -c "Neorg workspace notes"' C-m
-
-    tmux new-window -t "neorg":2 -n "yt"
-    tmux send-keys -t "yt" 'nvim -c "Neorg workspace yt"' C-m
+    # tmux new-window -t "neorg":1 -n "notes"
+    # tmux send-keys -t "notes" 'nvim -c "Neorg workspace notes"' C-m
+    #
+    # tmux new-window -t "neorg":2 -n "yt"
+    # tmux send-keys -t "yt" 'nvim -c "Neorg workspace yt"' C-m
 fi
 
 tmux attach -t "home":0
