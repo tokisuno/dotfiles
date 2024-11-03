@@ -5,12 +5,12 @@ local snip = require('luasnip')
 local builtin = require('telescope.builtin')
 local harpoon = require('harpoon')
 local trailspace = require('mini.trailspace')
-
 local functions = require("config.funcs")
 
 vim.g.mapleader      = " "
 vim.g.maplocalleader = ","
 
+-- Snippets
 map({"i", "s"}, "<c-e>", function() snip.jump(-1) end, { silent = true })
 map({"i", "s"}, "<c-r>", function() snip.jump( 1) end, { silent = true })
 
@@ -19,11 +19,11 @@ map({"i", "s"}, "<c-r>", function() snip.jump( 1) end, { silent = true })
 -- map("n", "<leader>ti", function () vling.ipa.toggle() end, { desc = "Toggle IPA Macros" })
 
 -- Zettelkasten
-map("n", "<leader>zn", "<Cmd>ZkNew { title = vim.fn.input('Title: ') }<CR>", opts)
-map("n", "<leader>zo", "<Cmd>ZkNotes { sort = { 'modified' } }<CR>", opts)
-map("n", "<leader>zt", "<Cmd>ZkTags<CR>", opts)
-map("n", "<leader>zf", "<Cmd>ZkNotes { sort = { 'modified' }, match = { vim.fn.input('Search: ') } }<CR>", opts)
-map("v", "<leader>zf", ":'<,'>ZkMatch<CR>", opts)
+map("n", "<leader>zn", "<Cmd>ZkNew { title = vim.fn.input('Title: ') }<CR>", { noremap = true, silent = false, desc = "New zettel" })
+map("n", "<leader>zo", "<Cmd>ZkNotes { sort = { 'modified' } }<CR>", { noremap = true, silent = false, desc = "List zettels" })
+map("n", "<leader>zt", "<Cmd>ZkTags<CR>", { noremap = true, silent = false, desc = "List tags" })
+map("n", "<leader>zf", "<Cmd>ZkNotes { sort = { 'modified' }, match = { vim.fn.input('Search: ') } }<CR>", { noremap = true, silent = false, desc = "Search through zettels" })
+map("v", "<leader>zf", ":'<,'>ZkMatch<CR>",{ noremap = true, silent = false, desc = "Match zettels" })
 
 -- Toggling things
 map("n", "<leader>ts", ":LiveServerToggle<cr>", { desc = "Toggle LiveServer" })
@@ -47,6 +47,9 @@ map('', '<right>', '<nop>')
 -- Buffer movement
 map('n', '<C-p>', ':bprev<cr>')
 map('n', '<C-n>', ':bnext<cr>')
+
+-- Yeet
+map("n", "<leader>y", function () require("yeet").list_cmd() end, { desc = "List Yeet cmds"})
 
 -- Quality of life
 map("n", "n", "nzzzv")
@@ -75,10 +78,10 @@ map("n", "<leader>xQ", "<cmd>Trouble qflist toggle<cr>")
 -- harpoon2: electric boogaloo
 map("n", "<leader>a", function() harpoon:list():add() end)
 map("n", "<leader>e", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
-map("n", "<leader>h", function() harpoon:list():select(1) end)
-map("n", "<leader>j", function() harpoon:list():select(2) end)
-map("n", "<leader>k", function() harpoon:list():select(3) end)
-map("n", "<leader>l", function() harpoon:list():select(4) end)
+map("n", "<A-q>", function() harpoon:list():select(1) end)
+map("n", "<A-w>", function() harpoon:list():select(2) end)
+map("n", "<A-e>", function() harpoon:list():select(3) end)
+map("n", "<A-r>", function() harpoon:list():select(4) end)
 
 harpoon:extend({
   UI_CREATE = function(cx)
