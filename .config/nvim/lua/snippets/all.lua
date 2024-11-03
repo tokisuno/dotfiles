@@ -9,5 +9,5 @@ local c = ls.choice_node
 local f = ls.function_node
 
 ls.add_snippets("all", {
-  s("noob", t("i know :/")),
+  s("asdf", t("nice")),
 })
