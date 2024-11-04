@@ -7,7 +7,7 @@ require("config.lazy")
 require("config.remap")
 
 vim.o.background = "dark"
-vim.cmd("colorscheme rose-pine")
+vim.cmd("colorscheme catppuccin")
 
 require('mini.ai').setup()
 require('mini.comment').setup()

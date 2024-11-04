@@ -5,7 +5,7 @@ return {
       require('lualine').setup({
         options = {
           icons_enabled = true,
-          theme = 'rose-pine',
+          theme = 'catppuccin',
           component_separators = { left = '', right = ''},
           section_separators = { left = '', right = ''},
           disabled_filetypes = {
@@ -23,8 +23,8 @@ return {
         },
         sections = {
           lualine_a = {'mode'},
-          lualine_b = {'branch', },
-          lualine_c = {'filename', 'diagnostics'},
+          lualine_b = {'branch', 'diagnostics'},
+          lualine_c = {'buffers'},
           lualine_x = {'harpoon2', 'fileformat', 'filetype'},
           lualine_y = {'progress', 'diff'},
           lualine_z = {'location'}
