@@ -1,8 +1,12 @@
-theme = rose-pine
+theme = catppuccin-macchiato
 window-decoration = false
 gtk-titlebar = false
 font-family = "JetBrainsMono Nerd Font"
 font-size = 14
+adjust-cell-height = 15%
+
+window-padding-x = 24
+window-padding-y = 8
 
 confirm-close-surface = false
 
