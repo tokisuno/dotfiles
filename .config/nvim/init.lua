@@ -10,11 +10,4 @@ vim.o.background = "dark"
 vim.cmd("colorscheme catppuccin")
 
 require('mini.ai').setup()
-require('mini.comment').setup()
-require('mini.cursorword').setup()
-require('mini.hipatterns').setup()
-require('mini.indentscope').setup()
-require('mini.move').setup()
-require('mini.pairs').setup()
-require('mini.surround').setup()
 require('mini.trailspace').setup()
