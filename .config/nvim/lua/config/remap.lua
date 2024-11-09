@@ -63,6 +63,7 @@ map("v", "<leader>y", "\"+y")
 
 -- Sets launch perms for file being written to
 map("n", "<leader>se", "<cmd>!chmod +x %<CR>", { silent = true })
+map("n", "<leader>ss", "<cmd>set spelllang=en_ca<cr>", {silent = true})
 
 -- ctrl-backspace when in insert mode
 map("i", "<C-h>", "<C-w>", { silent = true })

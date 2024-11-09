@@ -31,7 +31,12 @@ return {
       require("guess-indent").setup()
     end
   },
-  {'booperlv/nvim-gomove'},
+  {
+    'booperlv/nvim-gomove',
+    config = function ()
+      require("gomove").setup()
+    end
+  },
   {
     'windwp/nvim-autopairs',
     event = "InsertEnter",

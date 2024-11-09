@@ -4,12 +4,12 @@ local gears = require("gears")
 local awful = require("awful")
 require("awful.autofocus")
 
-local xresources = require("beautiful.xresources")
 local beautiful = require("beautiful")
+local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
 
 -- theme
-beautiful.init("~/.config/awesome/themes/tokisuno/theme.lua")
+beautiful.init(os.getenv("HOME") .. "/code/repos/dotfiles/.config/awesome/themes/tokisuno/theme.lua")
 
 local naughty = require("naughty")
 naughty.config.defaults['icon_size'] = 60
@@ -128,5 +128,4 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
-awful.spawn("/home/poto/Dropbox/.dotfiles/.config/awesome/autostart.sh")
-awful.spawn("/home/skinnyboot/Dropbox/.dotfiles/.config/awesome/autostart.sh")
+awful.spawn(os.getenv("HOME").. "/code/repos/dotfiles/.config/awesome/autostart.sh")
