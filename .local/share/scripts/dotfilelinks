@@ -11,12 +11,10 @@ ln -sf ~/code/repos/dotfiles/.config/tmux/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/zathura/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/zsh/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/ghostty/ ~/.config
+ln -sf ~/code/repos/dotfiles/.config/doom/ ~/.config
 
 ln -s ~/code/repos/dotfiles/.config/mimeapps.list ~/.config/
 ln -s ~/code/repos/dotfiles/.config/picom.conf ~/.config/
-
-# .desktop files
-ln -s ~/code/repos/dotfiles/.local/share/applications/dwm-twm.desktop ~/.local/share/applications/dwm-twm.desktop
 
 # TBA
 # ln -sf ~/code/repos/dotfiles/.config/suckless ~/.config
