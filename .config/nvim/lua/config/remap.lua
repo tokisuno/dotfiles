@@ -102,7 +102,8 @@ map("n", "<leader>cc", ":!gcc % -o asdf && ./asdf<cr>")
 map("n", "<leader>ck", ":!gcc -O -Wall -W -pedantic -ansi -std=c99 -o asdf %<cr>")
 
 -- Opening things
-map("n", "<leader>pv", ":e .<cr>", { desc = "File explorer" })
+map("n", "<leader>pv", ":e .<cr>", { desc = "Oil" })
+map("n", "<leader>pf", "<cmd>NvimTreeToggle<cr>", { desc = "Nvim-Tree" })
 map("n", "<leader>o", ":Lazy<cr>", { desc = "Open lazy.nvim" })
 map("n", "<leader>m", ":Mason<cr>", { desc = "Open Mason" })
 
