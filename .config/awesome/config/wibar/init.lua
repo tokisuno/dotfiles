@@ -8,7 +8,11 @@ local modkey = "Mod4"
 local client = client
 local dpi = xresources.apply_dpi
 
-awful.layout.layouts = { awful.layout.suit.tile.left }
+awful.layout.layouts = {
+    awful.layout.suit.tile.left,
+    awful.layout.suit.magnifier,
+    awful.layout.suit.tile.top,
+}
 
 local taglist_buttons = gears.table.join(
                     awful.button({}, 1,
@@ -64,7 +68,7 @@ local tasklist_buttons = gears.table.join(
                         end))
 
 awful.screen.connect_for_each_screen(function(s)
-    awful.tag({ " 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 " }, s, awful.layout.layouts[1])
+    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
     s.mypromptbox = awful.widget.prompt()
     s.mylayoutbox = awful.widget.layoutbox(s)
     s.mylayoutbox:buttons(
