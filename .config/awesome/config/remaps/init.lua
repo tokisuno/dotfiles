@@ -21,7 +21,7 @@ globalkeys = gears.table.join(
     awful.key({ modkey }, "z", function() awful.spawn("thunar") end),
     awful.key({ modkey }, "v", function() awful.spawn("pavucontrol") end),
     awful.key({}, "Print", function() awful.spawn("flameshot gui") end),
-    awful.key({ modkey, "Shift" }, "s", function() awful.spawn(os.getenv("HOME") .. "/.local/share/scripts/lock") end),
+    awful.key({ modkey }, "o", function() awful.spawn("zathura") end),
 
     -- layout movement/manipulation
     awful.key({ modkey, "Shift" }, "j", function() awful.client.swap.byidx( 1) end),
