@@ -5,7 +5,6 @@ local snip = require('luasnip')
 local builtin = require('telescope.builtin')
 local harpoon = require('harpoon')
 local trailspace = require('mini.trailspace')
-local functions = require("config.funcs")
 
 vim.g.mapleader      = " "
 vim.g.maplocalleader = ","
@@ -29,14 +28,9 @@ map("v", "<leader>zf", ":'<,'>ZkMatch<CR>",{ noremap = true, silent = false, des
 map("n", "<leader>ts", ":LiveServerToggle<cr>", { desc = "Toggle LiveServer" })
 map("n", "<leader>tw", ":setlocal wrap!<cr>", { desc = "Toggle wordwrapping" })
 map("n", "<leader>tz", ":ZenMode<cr>", { desc = "Toggle ZenMode (Coding)" })
-map("n", "<C-s>", functions.toggle_signs, { desc = "Toggle signcolumn" })
 
--- Neorg
-map("n", "<leader>nj", ":Neorg journal today<cr>", { desc = "Open journal buffer" })
-map("n", "<leader>nt", ":Neorg toc<cr>", { desc = "Generate TOC in buffer" })
-map("n", "<leader>nwl", ":Neorg workspace life<cr>", { desc = "Go to workspace:life" })
-map("n", "<leader>nwn", ":Neorg workspace notes<cr>", { desc = "Go to workspace:notes" })
-map("n", "<leader>nwy", ":Neorg workspace yt<cr>", { desc = "Go to workspace:yt" })
+map("n", "<leader><cr>", "<cmd>Telescope cmdline<cr>", { desc = "Telescope CMDLine"})
+map("n", "<leader>so", "<cmd>so<cr>", { desc = "Source file" })
 
 -- Removing arrow key navigation (to turn into something later)
 map('', '<up>',    '<nop>')
@@ -107,6 +101,7 @@ map("n", "<leader>pf", "<cmd>NvimTreeToggle<cr>", { desc = "Nvim-Tree" })
 map("n", "<leader>o", ":Lazy<cr>", { desc = "Open lazy.nvim" })
 map("n", "<leader>m", ":Mason<cr>", { desc = "Open Mason" })
 
+-- telescope funzies
 map("n", "<leader>fb", builtin.buffers, { desc = "Buffers" })
 map("n", "<leader>ff", builtin.find_files, { desc = "Files" })
 map("n", "<leader>fg", builtin.live_grep, { desc = "Live grep" })
@@ -114,5 +109,6 @@ map("n", "<leader>fh", builtin.help_tags, { desc = "Help tags" })
 map("n", "<leader>fm", builtin.man_pages, { desc = "Man pages" })
 map("n", "<leader>fo", builtin.oldfiles, {desc = "Old files" })
 map("n", "<leader>fs", require('telescope').extensions.luasnip.luasnip, { desc = "Opens Luasnip extension" })
+
 
 map("n", "<leader>qq", vim.cmd.bd)
