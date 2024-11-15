@@ -21,7 +21,7 @@ globalkeys = gears.table.join(
     awful.key({ modkey }, "z", function() awful.spawn("thunar") end),
     awful.key({ modkey }, "v", function() awful.spawn("pavucontrol") end),
     awful.key({}, "Print", function() awful.spawn("flameshot gui") end),
-    awful.key({ modkey }, "o", function() awful.spawn("zathura") end),
+    awful.key({ modkey }, "u", function() awful.spawn("zathura") end),
 
     -- layout movement/manipulation
     awful.key({ modkey, "Shift" }, "j", function() awful.client.swap.byidx( 1) end),
@@ -35,7 +35,7 @@ globalkeys = gears.table.join(
       ),
 
     -- client-based remaps
-    awful.key({modkey}, "u", awful.client.urgent.jumpto),
+    -- awful.key({modkey}, "u", awful.client.urgent.jumpto),
 
     awful.key({modkey, "Control"}, "r", awesome.restart),
     awful.key({modkey, "Shift"}, "q", awesome.quit),
