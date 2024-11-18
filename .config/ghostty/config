@@ -3,7 +3,7 @@ window-decoration = false
 gtk-titlebar = false
 font-family = "FiraMono Nerd Font"
 font-size = 14
-adjust-cell-height = 15%
+adjust-cell-height = 20%
 
 window-padding-x = 12
 window-padding-y = 8
