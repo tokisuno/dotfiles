@@ -45,7 +45,7 @@ alias notes='vim -c "Neorg workspace notes"'
 alias yt='vim -c "Neorg workspace yt"'
 
 ## Pacman & Yay
-alias syu="yes | sudo pacman -Syu && setxkbmap -option 'ctrl:nocaps' && $HOME/.local/share/scripts/hhkb"
+alias syu="sudo pacman -Syu && setxkbmap -option 'ctrl:nocaps'"
 
 # cobra-cli
 alias ccli='cobra-cli'
