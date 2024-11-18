@@ -3,7 +3,7 @@
 ## Base
 - Distro: Arch Linux
 - Shell: zsh
-- WM: awesomewm (dwm soon(tm))
+- WM: awesomewm
 
 ## Core Programs
 - ghostty
