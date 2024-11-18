@@ -27,13 +27,6 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift" }, "j", function() awful.client.swap.byidx( 1) end),
     awful.key({ modkey, "Shift" }, "k", function() awful.client.swap.byidx(-1) end),
 
-    -- moving to next monitor
-    awful.key({ modkey }, "space", function()
-        awful.screen.focus_relative(1)
-        -- awful.spawn("find-cursor -o 2 -c blue -O red -g --distance 50 -w 400")
-      end
-      ),
-
     -- client-based remaps
     -- awful.key({modkey}, "u", awful.client.urgent.jumpto),
 
