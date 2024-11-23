@@ -15,7 +15,16 @@ return {
         bibtex = {
           -- Depth for the *.bib file
           depth = 2,
-          custom_formats = {},
+          custom_formats = {
+            {
+              id="tex-author",
+              cite_marker="\\citeauthor{%s}"
+            },
+            {
+              id="tex",
+              cite_marker="\\cite{%s}"
+            }
+          },
           format = '',
           global_files = {
             os.getenv("HOME") .. "/Dropbox/latex/bibs/latam.bib",

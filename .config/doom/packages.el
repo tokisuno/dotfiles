@@ -7,6 +7,7 @@
 
 (package! catppuccin-theme)
 (package! org-roam)
+(package! pdf-tools)
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;; (package! some-package)

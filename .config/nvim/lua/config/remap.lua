@@ -12,6 +12,8 @@ vim.g.maplocalleader = ","
 -- Snippets
 map({"i", "s"}, "<c-e>", function() snip.jump(-1) end, { silent = true })
 map({"i", "s"}, "<c-r>", function() snip.jump( 1) end, { silent = true })
+map("n", '<Leader>L', '<Cmd>lua require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/lua/snippets/"})<CR>', { desc = "Hot-load snippets"})
+
 
 -- local vling = require('vling')
 -- map("n", "<leader>td", function () vling.deadkeys.toggle() end, { desc = "Toggle Deadkey Macros" })
@@ -44,6 +46,10 @@ map('n', '<C-n>', ':bnext<cr>')
 
 -- Yeet
 map("n", "<leader>y", function () require("yeet").list_cmd() end, { desc = "List Yeet cmds"})
+
+map("n", "<leader>lc", "<cmd>!xelatex %<cr>", { desc = "Compile LaTeX with XeLaTeX"})
+map("n", "<leader>lz", "<cmd>!zathura main.pdf &<cr>", { desc = "Open 'main.pdf' in Zathura"})
+map("n", "<leader>lw", "<cmd>!texcount %<cr>", { desc = "Get word count of document"})
 
 -- Quality of life
 map("n", "n", "nzzzv")
@@ -107,6 +113,7 @@ map("n", "<leader>fb", builtin.buffers, { desc = "Buffers" })
 map("n", "<leader>ff", builtin.find_files, { desc = "Files" })
 map("n", "<leader>fg", builtin.live_grep, { desc = "Live grep" })
 map("n", "<leader>fh", builtin.help_tags, { desc = "Help tags" })
+map("n", "<leader>fk", builtin.keymaps, { desc = "Keymaps" })
 map("n", "<leader>fm", builtin.man_pages, { desc = "Man pages" })
 map("n", "<leader>fo", builtin.oldfiles, {desc = "Old files" })
 map("n", "<leader>fs", require('telescope').extensions.luasnip.luasnip, { desc = "Opens Luasnip extension" })

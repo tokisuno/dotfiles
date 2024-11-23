@@ -37,13 +37,15 @@ return {
       })
     end
   },
-  {'saadparwaiz1/cmp_luasnip'},
-  {'rafamadriz/friendly-snippets'},
   {
     "L3MON4D3/LuaSnip",
     event = "InsertEnter",
     version = "v2.*",
     build = "make install_jsregexp",
+    dependencies = {
+      {'saadparwaiz1/cmp_luasnip'},
+      {'rafamadriz/friendly-snippets'},
+    },
     config = function ()
       require('luasnip.loaders.from_lua').load({paths = "./lua/snippets"})
     end

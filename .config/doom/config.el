@@ -60,7 +60,8 @@
   (org-roam-db-autosync-mode)
   (require 'org-roam-protocol))
 
-;; Whenever you reconfigure a package, make sure to wrap your config in an
+;; Whenever you reconfigure a package
+;; , make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;
 ;;   (after! PACKAGE
