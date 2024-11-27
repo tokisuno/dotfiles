@@ -1,4 +1,4 @@
-theme = catppuccin-macchiato
+theme = GruvboxDark
 window-decoration = false
 gtk-titlebar = false
 font-family = "FiraMono Nerd Font"
