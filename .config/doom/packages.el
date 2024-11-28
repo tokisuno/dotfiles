@@ -5,9 +5,14 @@
 ;; on the command line, then restart Emacs for the changes to take effect -- or
 ;; use 'M-x doom/reload'.
 
-(package! catppuccin-theme)
-(package! org-roam)
 (package! pdf-tools)
+(package! org-roam)
+(package! org-roam-bibtex
+  :recipe (:host github :repo "org-roam/org-roam-bibtex"))
+(package! org-ref)
+
+(unpin! org-roam)
+(unpin! bibtex-completion helm-bibtex ivy-bibtex)
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;; (package! some-package)

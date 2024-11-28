@@ -81,7 +81,7 @@ theme.fg_focus      = colours.light3
 theme.fg_urgent     = colours.light2
 theme.fg_minimize   = colours.light3
 
-theme.useless_gap   = dpi(0)
+theme.useless_gap   = dpi(6)
 theme.border_width  = dpi(2)
 theme.border_normal = colours.dark0_hard
 theme.border_focus  = colours.neutral_yellow

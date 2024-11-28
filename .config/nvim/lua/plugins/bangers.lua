@@ -51,4 +51,7 @@ return {
       })
     end
   },
+  {
+    "tokisuno/vling",
+  }
 }

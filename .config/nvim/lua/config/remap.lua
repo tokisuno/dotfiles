@@ -14,9 +14,13 @@ map({"i", "s"}, "<c-e>", function() snip.jump(-1) end, { silent = true })
 map({"i", "s"}, "<c-r>", function() snip.jump( 1) end, { silent = true })
 map("n", '<Leader>L', '<Cmd>lua require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/lua/snippets/"})<CR>', { desc = "Hot-load snippets"})
 
+map("n", "<C-l>", "<C-w>l")
+map("n", "<C-k>", "<C-w>k")
+map("n", "<C-j>", "<C-w>j")
+map("n", "<C-h>", "<C-w>h")
 
--- local vling = require('vling')
--- map("n", "<leader>td", function () vling.deadkeys.toggle() end, { desc = "Toggle Deadkey Macros" })
+local vling = require('vling')
+map("n", "<leader>td", function () vling.deadkeys.toggle() end, { desc = "Toggle Deadkey Macros" })
 -- map("n", "<leader>ti", function () vling.ipa.toggle() end, { desc = "Toggle IPA Macros" })
 
 -- Zettelkasten
@@ -47,24 +51,26 @@ map('n', '<C-n>', ':bnext<cr>')
 -- Yeet
 map("n", "<leader>y", function () require("yeet").list_cmd() end, { desc = "List Yeet cmds"})
 
-map("n", "<leader>lc", "<cmd>!xelatex %<cr>", { desc = "Compile LaTeX with XeLaTeX"})
-map("n", "<leader>lz", "<cmd>!zathura main.pdf &<cr>", { desc = "Open 'main.pdf' in Zathura"})
-map("n", "<leader>lw", "<cmd>!texcount %<cr>", { desc = "Get word count of document"})
+map("n", "<leader>lc", "<cmd>!xelatex %<cr>", { desc = "Compile LaTeX with XeLaTeX" })
+map("n", "<leader>lz", "<cmd>!zathura main.pdf &<cr>", { desc = "Open 'main.pdf' in Zathura" })
+map("n", "<leader>lw", "<cmd>!texcount %<cr>", { desc = "Get word count of document" })
 
 -- Quality of life
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
 map("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", opts)
-map("n", "<leader>dd", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
-map("n", "<leader>dt", ":pu=strftime('%c')<cr>")
+map("n", "<leader>dd", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", { desc = "Replace all" })
+map("n", "<leader>dt", ":pu=strftime('%c')<cr>", { desc = "Paste Local Time" })
 map("n", "<leader>re", function () trailspace.trim() end, { desc = "Remove trailing linespace" })
 map("n", "<leader>rl", function () trailspace.trim() end, { desc = "Remove empty lines with linespace" })
-map("v", "<leader>y", "\"+y")
-map("n", "<localleader><localleader>", "<cmd>noh<cr>", { desc = "Removes highlighting"})
+map("v", "<leader>y", "\"+y", { desc = "Copy to system clipboard" })
+map("n", "<localleader><localleader>", "<cmd>noh<cr>", { desc = "Removes highlighting" })
+map("n", "H", "^")
+map("n", "L", "$")
 
 -- Sets launch perms for file being written to
-map("n", "<leader>se", "<cmd>!chmod +x %<CR>", { silent = true })
-map("n", "<leader>ss", "<cmd>set spelllang=en_ca<cr>", {silent = true})
+map("n", "<leader>se", "<cmd>!chmod +x %<CR>", { desc = "chmod +x", silent = true })
+map("n", "<leader>ss", "<cmd>set spelllang=en_ca<cr>", { desc = "Spellang to ENG (CA)", silent = true })
 
 -- ctrl-backspace when in insert mode
 map("i", "<C-h>", "<C-w>", { silent = true })
@@ -78,12 +84,12 @@ map("n", "<leader>xL", "<cmd>Trouble loclist toggle<cr>")
 map("n", "<leader>xQ", "<cmd>Trouble qflist toggle<cr>")
 
 -- harpoon2: electric boogaloo
-map("n", "<leader>a", function() harpoon:list():add() end)
-map("n", "<leader>e", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
-map("n", "<A-q>", function() harpoon:list():select(1) end)
-map("n", "<A-w>", function() harpoon:list():select(2) end)
-map("n", "<A-e>", function() harpoon:list():select(3) end)
-map("n", "<A-r>", function() harpoon:list():select(4) end)
+map("n", "<leader>a", function() harpoon:list():add() end, { desc = "Add buffer to Harpoon" })
+map("n", "<leader>e", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Open Harpon Menu" })
+map("n", "<A-q>", function() harpoon:list():select(1) end, { desc = "Access Harpoon buffer 1" })
+map("n", "<A-w>", function() harpoon:list():select(2) end, { desc = "Access Harpoon buffer 2" })
+map("n", "<A-e>", function() harpoon:list():select(3) end, { desc = "Access Harpoon buffer 3" })
+map("n", "<A-r>", function() harpoon:list():select(4) end, { desc = "Access Harpoon buffer 4" })
 
 harpoon:extend({
   UI_CREATE = function(cx)
@@ -98,9 +104,9 @@ harpoon:extend({
 })
 
 -- Some quick compiling when going through textbooks
-map("n", "<leader>cn", ":!node %<cr>")
-map("n", "<leader>cc", ":!gcc % -o asdf && ./asdf<cr>")
-map("n", "<leader>ck", ":!gcc -O -Wall -W -pedantic -ansi -std=c99 -o asdf %<cr>")
+map("n", "<leader>cn", ":!node %<cr>", { desc = "Run with Node" })
+map("n", "<leader>cc", ":!gcc % -o asdf && ./asdf<cr>", { desc = "Compile w/ GCC & run" })
+map("n", "<leader>ck", ":!gcc -O -Wall -W -pedantic -ansi -std=c99 -o asdf %<cr>", { desc = "Compile w/ C99 & run" })
 
 -- Opening things
 map("n", "<leader>pv", ":e .<cr>", { desc = "Oil" })
@@ -119,4 +125,4 @@ map("n", "<leader>fo", builtin.oldfiles, {desc = "Old files" })
 map("n", "<leader>fs", require('telescope').extensions.luasnip.luasnip, { desc = "Opens Luasnip extension" })
 
 
-map("n", "<leader>qq", vim.cmd.bd)
+map("n", "<leader>qq", vim.cmd.bd, { desc = "Close buffer" })
