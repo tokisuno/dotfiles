@@ -6,6 +6,7 @@ run() {
     fi
 }
 
+# background
 run "nitrogen" --restore
 
 # compositor
@@ -26,7 +27,8 @@ run "ibus-daemon" -drxR
 run "flameshot"
 
 # file syncing
-run "dropbox"
+run "syncthing"
+# run "dropbox"
 
 # emacs daemon
 # gets annoying to run every time
