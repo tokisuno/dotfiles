@@ -2,8 +2,9 @@
 
 (setq user-full-name "Lucas Cordero"
       user-mail-address "tokisunosan@gmail.com")
-(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 16 :weight 'semi-light)
-     doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font" :size 16))
+(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 16 :height 1.0)
+      doom-variable-pitch-font (font-spec :family "ETBembo" :style "RomanOSF" :height 1.3)
+      doom-big-font (font-spec :family "JetBrainsMono Nerd Font" :size 24))
 
 (setq doom-theme 'doom-gruvbox)
 
@@ -20,13 +21,16 @@
         org-roam-ui-update-on-save t
         org-roam-ui-open-on-start t))
 
-(setq org-directory "~/Dropbox/org/")
+(setq org-directory "~/Sync/org/")
+(use-package org-bullets
+  :config
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 (use-package org-roam
   :ensure t
   :custom
   (setq org-roam-file-extensions '("org"))
-  (org-roam-directory (file-truename "~/Dropbox/org/roam/"))
+  (org-roam-directory (file-truename "~/Sync/org/roam/"))
   :bind (("C-c n l" . org-roam-buffer-toggle)
          ("C-c n f" . org-roam-node-find)
          ("C-c n g" . org-roam-graph)

@@ -6,6 +6,7 @@
 ;; use 'M-x doom/reload'.
 
 (package! pdf-tools)
+(package! org-bullets)
 (unpin! org-roam)
 (package! org-roam-ui)
 
