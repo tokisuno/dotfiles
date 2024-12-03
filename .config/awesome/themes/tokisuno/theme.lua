@@ -68,10 +68,10 @@ local colours = {
   gray = "#928374",
 }
 
-theme.font          = "IBM Plex Sans JP 10"
+theme.font          = "IBM Plex Sans JP 11"
 
 theme.bg_normal     = colours.dark0
-theme.bg_focus      = colours.dark0_soft
+theme.bg_focus      = colours.dark2
 theme.bg_urgent     = colours.dark_red
 theme.bg_minimize   = colours.dark1
 theme.bg_systray    = colours.dark0
