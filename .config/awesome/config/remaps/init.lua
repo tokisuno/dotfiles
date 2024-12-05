@@ -8,7 +8,9 @@ local browser = "firefox"
 modkey = "Mod4"
 
 globalkeys = gears.table.join(
-    awful.key({ modkey }, "Escape", awful.tag.history.restore),
+    -- awful.key({ modkey }, "Escape", awful.tag.history.restore),
+
+    awful.key({ modkey }, "a", function() awful.spawn(os.execute(os.getenv("HOME") .. "/.local/share/scripts/anki-scripts/ankard")) end),
 
     -- default movement
     awful.key({ modkey }, "j", function() awful.client.focus.byidx( 1) end),

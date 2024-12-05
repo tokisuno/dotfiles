@@ -1,5 +1,4 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
-
 (setq user-full-name "Lucas Cordero"
       user-mail-address "tokisunosan@gmail.com")
 (setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 16 :height 1.0)

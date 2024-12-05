@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+import requests
+import subprocess
+
+decks = [
+        "Tagalog",
+        "Japanese"
+        ]
+
+choices = "\n".join(decks)
+
+deckName = subprocess.check_output("echo '" + choices + "' | rofi -dmenu", shell=True).strip().decode("utf-8")
+
+def spawnWindow(deckName):
+    requests.post('http://127.0.0.1:8765', json={
+        "action": "guiAddCards",
+        "version": 6,
+        "params": {
+            "note": {
+                "deckName": f"{deckName}",
+                "modelName": "Basic",
+                "tags": []
+                }
+            }
+        })
+
+spawnWindow(deckName)
