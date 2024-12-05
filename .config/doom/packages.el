@@ -5,7 +5,9 @@
 ;; on the command line, then restart Emacs for the changes to take effect -- or
 ;; use 'M-x doom/reload'.
 
+(package! writeroom-mode)
 (package! pdf-tools)
+(package! org-noter)
 (package! org-bullets)
 (unpin! org-roam)
 (package! org-roam-ui)

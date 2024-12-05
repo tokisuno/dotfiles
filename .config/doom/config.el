@@ -43,3 +43,6 @@
   (org-roam-db-autosync-mode)
   (require 'org-roam-protocol))
 (setq org-hide-emphasis-markers t)
+
+;; doesn't run otherwise
+(pdf-tools-install)
