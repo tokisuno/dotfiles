@@ -1,17 +1,16 @@
-# tokisuno's Dotfiles!
+# my dots
 
 ## Base
-- Distro: Arch Linux
-- Shell: zsh
-- WM: awesomewm
+- arch
+- zsh (no framework)
+- awesomewm
 
 ## Core Programs
-- ghostty
-- tmux
-- neovim
+- doom emacs
 - firefox
+- ghostty
+- neovim
 - picom
 - rofi
+- tmux
 - zathura
-
-*for my neovim config, refer to [this](https://github.com/tokisuno/nvim)*
