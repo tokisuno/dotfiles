@@ -1,16 +1,17 @@
 #!/bin/bash
 ln -sf ~/code/repos/dotfiles/.local/share/scripts/ ~/.local/share
+
 ln -sf ~/code/repos/dotfiles/.config/conky/ ~/.config
-ln -sf ~/code/repos/dotfiles/.config/dconf/ ~/.config
+ln -sf ~/code/repos/dotfiles/.config/doom/ ~/.config
+ln -sf ~/code/repos/dotfiles/.config/ghostty/ ~/.config
+ln -sf ~/code/repos/dotfiles/.config/i3/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/mpv/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/nvim/ ~/.config
-ln -sf ~/code/repos/dotfiles/.config/awesome/ ~/.config
+ln -sf ~/code/repos/dotfiles/.config/polybar/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/rofi/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/tmux/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/zathura/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/zsh/ ~/.config
-ln -sf ~/code/repos/dotfiles/.config/ghostty/ ~/.config
-ln -sf ~/code/repos/dotfiles/.config/doom/ ~/.config
 
 ln -s ~/code/repos/dotfiles/.config/mimeapps.list ~/.config/
 ln -s ~/code/repos/dotfiles/.config/picom.conf ~/.config/

@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/sh
 
 run() {
     if ! pgrep -f "$1"; then
@@ -16,9 +16,6 @@ run "picom" -b
 
 # # trackpoint settings
 # xinput --set-prop 'TPPS/2 IBM TrackPoint' 'libinput Accel Speed' -0.5 &
-
-# trackball sensitivity
-run "xinput" --set-prop 'Logitech ERGO M575' 'Coordinate Transformation Matrix' 0.8 0 0 0 0.8 0 0 0 1
 
 # ibus input manager
 run "ibus-daemon" -drxR
