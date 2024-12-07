@@ -38,11 +38,8 @@ alias ka='killall'
 alias path='vim ~/.config/zsh/.zshenv'
 alias cb="cbonsai -i -l -w 3"
 
-## Neorg
-alias ni='vim -c "Neorg index"'
-alias life='vim -c "Neorg workspace life"'
-alias notes='vim -c "Neorg workspace notes"'
-alias yt='vim -c "Neorg workspace yt"'
+alias dots="cd ~/code/repos/dotfiles"
+alias conf="vim ~/.config/i3/config"
 
 ## Pacman & Yay
 alias syu="sudo pacman -Syu && setxkbmap -option 'ctrl:nocaps'"
