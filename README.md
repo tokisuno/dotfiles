@@ -1,11 +1,12 @@
-# my dots
+# my dotfilez(tm)
 
-## Base
+## base
 - arch
 - zsh (no framework)
-- awesomewm
+- i3wm
+- polybar
 
-## Core Programs
+## core programs
 - doom emacs
 - firefox
 - ghostty
