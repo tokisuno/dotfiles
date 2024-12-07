@@ -143,16 +143,25 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+set $bg #282828
+set $red #cc241d
+set $green #98971a
+set $yellow #d79921
+set $blue #458588
+set $purple #b16286
+set $aqua #689d68
+set $gray #a89984
+set $darkgray #1d2021
+set $lightgray #bdae93
+
 for_window [class=".*"] border pixel 2
 default_border pixel 2
 default_floating_border pixel 2
 
-client.focused          #555555 #555555 #ffffff #2e9ef4 #CC0000
-client.focused_inactive #ffffff #5f676a #ffffff #484e50 #555500
-client.unfocused        #000000 #000000 #888888 #292d2e #000022
-client.urgent           #2f343a #900000 #ffffff #900000 #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
+# class                 border   backgr.  text    indicator child_border
+client.focused          #555555  #32302f  #ffffff  #fabd2f  #fb4934
+client.focused_inactive #ffffff  #32302f  #ffffff  #3c3836  #504945
+client.unfocused        #000000  #000000  #888888  #282828  #282828
+client.urgent           #2f343a  #900000  #ffffff  #900000  #900000
+client.placeholder      #000000  #0c0c0c  #ffffff  #000000  #0c0c0c
 
-# bar {
-#         status_command i3status
-# }
