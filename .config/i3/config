@@ -35,7 +35,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # run programs
-bindsym $mod+Return exec "ghostty -e tmux attach"
+bindsym $mod+Return exec "alacritty -e tmux attach"
 bindsym $mod+w exec "firefox"
 bindsym $mod+e exec "Thunar"
 bindsym $mod+u exec "$HOME/.local/share/scripts/workflow"
