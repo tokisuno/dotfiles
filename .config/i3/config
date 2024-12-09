@@ -11,7 +11,10 @@ exec --no-startup-id ibus-daemon -drxR
 exec --no-startup-id pactl set-default-sink alsa_output.usb-GeneralPlus_USB_Audio_Device-00.analog-stereo
 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ 25%
 exec --no-startup-id picom
-exec --no-startup-id polybar -r mybar
+
+exec_always --no-startup-id polybar -r mybar
+# exec --no-startup-id polybar -r mybar
+
 exec --no-startup-id setxkbmap -option 'ctrl:nocaps'
 exec --no-startup-id syncthing
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -40,7 +43,7 @@ bindsym $mod+u exec "$HOME/.local/share/scripts/workflow"
 # kill focused window
 bindsym $mod+q kill
 
-bindsym $mod+p exec "rofi -modi drun,run -show drun"
+bindsym $mod+space exec "rofi -modi drun,run -show drun"
 
 # change focus
 bindsym $mod+h focus left
@@ -67,7 +70,7 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+p focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -80,15 +83,15 @@ bindsym $mod+shift+s exec betterlockscreen -l dim
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:web"
-set $ws2 "2:doom"
-set $ws3 "3:term"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9:spot"
+set $ws9 "9"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
