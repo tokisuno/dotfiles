@@ -3,7 +3,7 @@ ln -sf ~/code/repos/dotfiles/.local/share/scripts/ ~/.local/share
 
 ln -sf ~/code/repos/dotfiles/.config/conky/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/doom/ ~/.config
-ln -sf ~/code/repos/dotfiles/.config/ghostty/ ~/.config
+ln -sf ~/code/repos/dotfiles/.config/alacritty/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/i3/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/mpv/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/nvim/ ~/.config
