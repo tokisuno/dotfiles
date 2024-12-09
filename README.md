@@ -2,16 +2,16 @@
 
 ## base
 - arch
-- zsh (no framework)
 - i3wm
 - polybar
 
 ## core programs
+- alacritty
 - doom emacs
 - firefox
-- ghostty
 - neovim
 - picom
 - rofi
 - tmux
 - zathura
+- zsh (no framework)
