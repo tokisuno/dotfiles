@@ -9,6 +9,7 @@
 
 (setq display-line-numbers-type t)
 
+;;; Org Mode Stuff
 (use-package! websocket
   :after org-roam)
 
@@ -42,6 +43,8 @@
   (org-roam-db-autosync-mode)
   (require 'org-roam-protocol))
 (setq org-hide-emphasis-markers t)
+
+(after! citar (setq! citar-bibliography '("~/Sync/latex/bibs/finalproj.bib")))
 
 ;; doesn't run otherwise
 (pdf-tools-install)
