@@ -40,4 +40,7 @@ return {
       show_warnings = true,
     }
   },
+  {
+    'HiPhish/rainbow-delimiters.nvim'
+  },
 }

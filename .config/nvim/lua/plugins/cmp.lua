@@ -1,53 +1,33 @@
 return {
   {
-    'hrsh7th/nvim-cmp',
-    config = function ()
-      local cmp = require('cmp')
-      local luasnip = require('luasnip')
-      cmp.setup({
-        experimental = { ghost_text = false },
-        snippet = {
-          expand = function(args)
-            luasnip.lsp_expand(args.body)
+    'saghen/blink.cmp',
+    version = 'v0.*',
+    dependencies = 'L3MON4D3/LuaSnip',
+    opts = {
+      snippets = {
+        expand = function(snippet) require('luasnip').lsp_expand(snippet) end,
+        active = function(filter)
+          if filter and filter.direction then
+            return require('luasnip').jumpable(filter.direction)
           end
-        },
-        mapping = cmp.mapping.preset.insert {
-          ['<C-n>'] = cmp.mapping.select_next_item(),
-          ['<C-p>'] = cmp.mapping.select_prev_item(),
-          ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-          ['<C-f>'] = cmp.mapping.scroll_docs( 4),
-          ['<C-Space>'] = cmp.mapping.complete {},
-          ['<C-y>'] = cmp.mapping.confirm {
-            behavior = cmp.ConfirmBehavior.Replace,
-            select = true,
-          },
-        },
-        sources = {
-          { name = 'nvim_lsp' },
-          { name = 'luasnip' },
-          { name = 'neorg' },
-          { name = 'path' },
-          { name = 'buffer' },
-        },
-
-        window = {
-          -- completion = cmp.config.window.bordered(),
-          -- documentation = cmp.config.window.bordered(),
-        },
-      })
-    end
-  },
-  {
-    "L3MON4D3/LuaSnip",
-    event = "InsertEnter",
-    version = "v2.*",
-    build = "make install_jsregexp",
-    dependencies = {
-      {'saadparwaiz1/cmp_luasnip'},
-      {'rafamadriz/friendly-snippets'},
-    },
-    config = function ()
-      require('luasnip.loaders.from_lua').load({paths = "./lua/snippets"})
-    end
-  },
+          return require('luasnip').in_snippet()
+        end,
+        jump = function(direction) require('luasnip').jump(direction) end,
+      },
+      apperance = {
+        use_nvim_cmp_as_default = true
+      },
+      keymap = {
+        preset = 'default',
+        ['<C-n>'] = { 'select_next', 'fallback' },
+        ['<C-p>'] = { 'select_prev', 'fallback' },
+        ['<C-y>'] = { 'select_and_accept' },
+        ['<C-r>'] = { 'snippet_forward', 'fallback' },
+        ['<C-e>'] = { 'snippet_backward', 'fallback' },
+      },
+      sources = {
+        default = { 'lsp', 'path', 'luasnip', 'buffer' },
+      },
+    }
+  }
 }

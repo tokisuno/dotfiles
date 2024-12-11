@@ -4,15 +4,10 @@ return {
     config = function ()
       require('lualine').setup({
         options = {
-          icons_enabled = true,
-          theme = 'gruvbox',
-          -- component_separators = { left = '', right = ''},
-          -- section_separators = { left = '', right = ''},
+          icons_enabled = false,
+          theme = 'gruvbox-material',
           component_separators = { left = '', right = ''},
           section_separators = { left = '', right = ''},
-
-          -- component_separators = { left = '', right = ''},
-          -- section_separators = { left = '', right = ''},
           disabled_filetypes = {
             statusline = {},
             winbar = {},
@@ -21,17 +16,37 @@ return {
           always_divide_middle = true,
           globalstatus = false,
           refresh = {
-            statusline = 1000,
-            tabline = 1000,
-            winbar = 1000,
+            statusline = 100,
+            tabline = 100,
+            winbar = 100,
           }
         },
         sections = {
           lualine_a = {'mode'},
-          lualine_b = {'branch', 'diagnostics'},
-          lualine_c = {'buffers'},
-          lualine_x = {'harpoon2', 'fileformat', 'filetype'},
-          lualine_y = {'progress', 'diff'},
+          lualine_b = {'filetype'},
+          lualine_c = {'filename'},
+          lualine_x = {
+            'branch',
+            {
+              'diagnostics',
+              symbols = {
+                error = ' ',
+                warn = ' ',
+                info = ' '
+              },
+            }
+          },
+          lualine_y = {
+            'progress',
+            {
+              'diff',
+              symbols = {
+                added = ' ',
+                modified = '󰝤 ',
+                removed = ' '
+              },
+            },
+          },
           lualine_z = {'location'}
         },
         inactive_sections = {

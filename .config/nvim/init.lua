@@ -8,6 +8,3 @@ require("config.remap")
 
 vim.o.background = "dark"
 vim.cmd("colorscheme gruvbox")
-
-require('mini.ai').setup()
-require('mini.trailspace').setup()
