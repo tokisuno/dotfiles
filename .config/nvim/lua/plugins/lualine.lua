@@ -5,7 +5,7 @@ return {
       require('lualine').setup({
         options = {
           icons_enabled = false,
-          theme = 'gruvbox-material',
+          theme = 'gruvbox_dark',
           component_separators = { left = '', right = ''},
           section_separators = { left = '', right = ''},
           disabled_filetypes = {
@@ -23,8 +23,15 @@ return {
         },
         sections = {
           lualine_a = {'mode'},
-          lualine_b = {'filetype'},
-          lualine_c = {'filename'},
+          lualine_b = {
+            {
+              'buffers',
+              mode = 0,
+              show_filename_only = true,
+              show_modified_status = true,
+            },
+          },
+          lualine_c = {},
           lualine_x = {
             'branch',
             {
