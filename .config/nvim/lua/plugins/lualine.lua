@@ -2,6 +2,20 @@ return {
   {
     'nvim-lualine/lualine.nvim',
     config = function ()
+      local mode_map = {
+        n = "(ᴗ_ ᴗ。)",
+        nt = "(ᴗ_ ᴗ。)",
+        i = "(•̀ - •́ )",
+        R = "( •̯́ ₃ •̯̀)",
+        v = "(⊙ _ ⊙ )",
+        V = "(⊙ _ ⊙ )!!",
+        no = "Σ(°△°ꪱꪱꪱ)",
+        ["\22"] = "(⊙ _ ⊙ )",
+        t = "(⌐■_■)",
+        ['!'] = "Σ(°△°ꪱꪱꪱ)",
+        c = "Σ(°△°ꪱꪱꪱ)",
+        s = "SUB"
+      }
       require('lualine').setup({
         options = {
           icons_enabled = false,
@@ -22,7 +36,15 @@ return {
           }
         },
         sections = {
-          lualine_a = {'mode'},
+          lualine_a = {
+            {
+              'mode',
+              icons_enabled = true,
+              fmt = function ()
+                return mode_map[vim.api.nvim_get_mode().mode] or vim.api.nvim_get_mode().mode
+              end
+            }
+          },
           lualine_b = {
             {
               'buffers',
@@ -72,3 +94,5 @@ return {
     end
   },
 }
+
+

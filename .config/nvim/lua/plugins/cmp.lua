@@ -2,7 +2,10 @@ return {
   {
     'saghen/blink.cmp',
     version = 'v0.*',
-    dependencies = 'L3MON4D3/LuaSnip',
+    dependencies = {
+      'L3MON4D3/LuaSnip',
+      'rafamadriz/friendly-snippets',
+    },
     opts = {
       snippets = {
         expand = function(snippet) require('luasnip').lsp_expand(snippet) end,
