@@ -34,6 +34,7 @@ tiling_drag modifier titlebar
 
 # run programs
 bindsym $mod+Return exec "alacritty -e tmux attach"
+bindsym $mod+p exec "flameshot gui"
 bindsym $mod+w exec "firefox"
 bindsym $mod+e exec "Thunar"
 bindsym $mod+Control+Shift+u exec "$HOME/.local/share/scripts/workflow"
@@ -69,7 +70,6 @@ bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+t focus mode_toggle
-
 
 # lock computer
 bindsym $mod+shift+s exec betterlockscreen -l dim
