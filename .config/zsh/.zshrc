@@ -1,19 +1,18 @@
-# Prompt
-# PS1='%F{white}%~ %(?.%F{yellow}.%F{red})%#%f '
-
-# RPROMPT='$GITSTATUS_PROMPT'
 ZVM_CURSOR_STYLE_ENABLED=true
-
-# if which tmux 2>&1 >/dev/null; then
-#     if [ $TERM != "xterm-256color" ] && [  $TERM != "xterm" ]; then
-#         tmux attach -t home || tmux new -s home; exit
-#     fi
-# fi
-# fpath=(path/to/zsh-completions/src $fpath)
 fpath+=($HOME/code/repos/dotfiles/.config/zsh/pure)
 
-# ALIASES
+# Adding in PDF preference with zsh autocompletion
+zstyle ':completion:*' file-patterns '
+    *.tex(D-^/*):tex-files:"TEX file"
+    *.pdf(D-^/*):pdf-files:"PDF file"
+    *(D-*):executables:"executable file"
+    *(D-/):directories:"directory"
+    ^*.(tex|pdf)(D-^/*):files:"other file"
+'
+zstyle ':completion:*' group-order tex-files pdf-files executables directories files
+zstyle ':completion:*' group-name ''
 
+# ALIASES
 ## ls replacement
 alias ls='eza'
 alias l='eza -lbF --git'
@@ -32,14 +31,15 @@ alias iv='nvim'
 alias ivm='nvim'
 alias vi='nvim'
 alias ogvim='/bin/vim'
-alias rip='cd ~/.local/share/scripts'
-alias zse='vim ~/.config/zsh/.zshrc'
 alias ka='killall'
-alias path='vim ~/.config/zsh/.zshenv'
-alias cb="cbonsai -i -l -w 3"
 
+## dotfile stuff
 alias dots="cd ~/code/repos/dotfiles"
 alias conf="vim ~/.config/i3/config"
+alias path='vim ~/.config/zsh/.zshenv'
+alias zse='vim ~/.config/zsh/.zshrc'
+alias rip='cd ~/.local/share/scripts'
+alias bar='vim ~/.config/polybar/config.ini'
 
 ## Pacman & Yay
 alias syu="sudo pacman -Syu && setxkbmap -option 'ctrl:nocaps'"
@@ -48,23 +48,19 @@ alias syu="sudo pacman -Syu && setxkbmap -option 'ctrl:nocaps'"
 alias ccli='cobra-cli'
 
 ## Navigation
-alias aa='cd -'
-alias b='cd ..'
-alias bb='cd ../..'
-alias bbb='cd ../../..'
+alias b='cd -'
+alias a='cd ..'
+alias aa='cd ../..'
+alias aaa='cd ../../..'
+alias aaaa='cd ../../../..'
 
 # Tmux
 alias ts='tmux-sessionizer'
 alias tp='tmux-pomodoro'
+alias ta='tmux attach'
 
 # Git
-alias ga='git add .'
-alias gc='git commit -m'
-alias gp='git push'
-alias gt='git-token'
 alias lg='lazygit'
-
-alias ta='tmux attach'
 
 # Mirrors
 alias refup='sudo reflector --latest 5 --country canada --sort rate --save /etc/pacman.d/mirrorlist'
@@ -87,6 +83,7 @@ prompt pure
 
 bindkey "^H" backward-delete-char
 bindkey "^?" backward-delete-char
+
 # Custom functions
 sz () {
   zathura "$@" &
@@ -96,20 +93,6 @@ mkd () {
   mkdir -p "$@" && cd "$@"
 }
 
-vterm_printf() {
-    if [ -n "$TMUX" ] && ([ "${TERM%%-*}" = "tmux" ] || [ "${TERM%%-*}" = "screen" ]); then
-        # Tell tmux to pass the escape sequences through
-        printf "\ePtmux;\e\e]%s\007\e\\" "$1"
-    elif [ "${TERM%%-*}" = "screen" ]; then
-        # GNU screen (screen, screen-256color, screen-256color-bce)
-        printf "\eP\e]%s\007\e\\" "$1"
-    else
-        printf "\e]%s\e\\" "$1"
-    fi
-}
-
-livels() { while :; do clear; tmux display-message -p -F "#{pane_current_path}" -t0 | xargs tree -L 1 ; sleep 1; done }
-
 gmod () {
   go mod init github.com/tokisuno/$@
 }
@@ -118,5 +101,4 @@ cn () {
     cargo new "$@" --vcs none
 }
 
-beatit() { play -n -c1 synth 0.001 sine 1000 pad `awk "BEGIN { print 60/$1 -.001 }"` repeat 9999999 ; }
 source /usr/share/nvm/init-nvm.sh
