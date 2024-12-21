@@ -1,8 +1,9 @@
 # i3 config
-
 set $mod Mod4
 
-font pango:JetBrainsMono Nerd Font 8
+font pango:JetBrainsMono Nerd Font 9
+
+gaps inner 8
 
 exec --no-startup-id betterlockscreen -w dim
 exec --no-startup-id dunst
@@ -12,6 +13,8 @@ exec --no-startup-id pactl set-default-sink alsa_output.usb-GeneralPlus_USB_Audi
 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ 25%
 exec --no-startup-id picom
 
+exec_always --no-startup-id picom --corner-radius=20 --window-shader-fg=$HOME/.config/picom/rounded-borders.glsl --backend=glx;
+# exec --no-startup-id picom --corner-radius=20 --window-shader-fg=$HOME/.config/picom/rounded-borders.glsl --backend=glx;
 # exec_always --no-startup-id polybar -r mybar
 exec --no-startup-id polybar -r mybar
 
@@ -81,16 +84,16 @@ bindsym $mod+a focus parent
 bindsym $mod+d focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
-set $ws1 "1:www"
-set $ws2 "2:doom"
-set $ws3 "3:term"
+set $ws1 "1:"
+set $ws2 "2:"
+set $ws3 "3:"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9:zot"
-set $ws10 "10:spot"
+set $ws9 "9:"
+set $ws10 "10:"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
