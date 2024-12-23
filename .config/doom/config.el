@@ -48,3 +48,16 @@
 
 ;; doesn't run otherwise
 (pdf-tools-install)
+
+;; real bullets for bullet points
+(font-lock-add-keywords 'org-mode
+                        '(("^ *\\([-]\\) "
+                           (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
+
+;; Japanese input switching
+(setq default-input-method "japanese")
+(general-define-key
+ :states 'insert
+ "q" (general-key-dispatch 'self-insert-command
+       :timeout 0.25
+       "q" 'toggle-input-method))
