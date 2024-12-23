@@ -36,6 +36,7 @@
          ("C-c n g" . org-roam-graph)
          ("C-c n i" . org-roam-node-insert)
          ("C-c n c" . org-roam-capture)
+         ("C-c n u" . org-roam-db-build-cache)
          ;; Dailies
          ("C-c n j" . org-roam-dailies-capture-today))
   :config
