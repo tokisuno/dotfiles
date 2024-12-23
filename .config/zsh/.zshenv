@@ -31,11 +31,13 @@ export PATH=${PATH}:"$HOME/.luarocks/bin/digestif"
 export PATH=${PATH}:"$HOME/go"
 export PATH=${PATH}:"$NPM_PACKAGES/bin"
 export PATH=${PATH}:"/bin"
-export PATH=${PATH}:"/root/.local/share/gem/ruby/3.2.0/bin"
+# export PATH=${PATH}:"/root/.local/share/gem/ruby/3.2.0/bin"
+export PATH=${PATH}:"/home/poto/.local/share/gem/ruby/3.3.0/bin"
 export PATH=${PATH}:"/usr/bin/"
 export PATH=${PATH}:"/usr/local/bin"
 export PATH=${PATH}:"~/.npm-global/bin"
 export PATH=${PATH}:"`go env GOPATH`/bin"
+
 
 # keyboard
 export GLFW_IM_MODULE=ibus
@@ -64,9 +66,8 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 export FZF_COMPLETION_TRIGGER=']]'
 export FZF_COMPLETION_OPTS='--border --info=inline'
 
-# npm shit
+# zsh plugins
 source $ZDOTDIR/zsh-edit/zsh-edit.plugin.zsh
 source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $ZDOTDIR/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source $ZDOTDIR/.zshrc
 source $ZDOTDIR/zsh-vi-mode/zsh-vi-mode.plugin.zsh

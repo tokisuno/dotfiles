@@ -13,13 +13,6 @@ else
     git clone git@github.com:sindresorhus/pure.git
 fi
 
-if [ -d "$ZDOTDIR/zsh-autocomplete" ]; then
-    echo -e "autocomplete ${UGreen}present${WSpace}"
-else
-    echo -e "autocomplete ${URed}not present${WSpace}"
-    git clone git@github.com:marlonrichert/zsh-autocomplete.git
-fi
-
 if [ -d "$ZDOTDIR/zsh-autosuggestions" ]; then
     echo -e "autosuggest ${UGreen}present${WSpace}"
 else
