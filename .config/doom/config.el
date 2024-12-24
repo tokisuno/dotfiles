@@ -21,7 +21,7 @@
         org-roam-ui-update-on-save t
         org-roam-ui-open-on-start t))
 
-(setq org-directory "~/Sync/org/")
+(setq org-directory "~/org/")
 (use-package org-bullets
   :config
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
@@ -30,7 +30,7 @@
   :ensure t
   :custom
   (setq org-roam-file-extensions '("org"))
-  (org-roam-directory (file-truename "~/Sync/org/roam/"))
+  (org-roam-directory (file-truename "~/org/roam/"))
   :bind (("C-c n l" . org-roam-buffer-toggle)
          ("C-c n f" . org-roam-node-find)
          ("C-c n g" . org-roam-graph)
