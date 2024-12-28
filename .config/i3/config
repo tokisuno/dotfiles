@@ -5,25 +5,25 @@ font pango:JetBrainsMono Nerd Font 9
 
 gaps inner 8
 
-exec --no-startup-id betterlockscreen -w dim
+# exec --no-startup-id betterlockscreen -w dim
 exec --no-startup-id dunst
 exec --no-startup-id flameshot
 exec --no-startup-id ibus-daemon -drxR
 exec --no-startup-id pactl set-default-sink alsa_output.usb-GeneralPlus_USB_Audio_Device-00.analog-stereo
 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ 25%
-exec --no-startup-id picom
 
+# really annoying that i have to use it like this :/
 exec_always --no-startup-id picom --corner-radius=20 --window-shader-fg=$HOME/.config/picom/rounded-borders.glsl --backend=glx;
+exec_always --no-startup-id feh --bg-fill $HOME/wallpapers/after_school_stroll_gruvbox.png
 # exec --no-startup-id picom --corner-radius=20 --window-shader-fg=$HOME/.config/picom/rounded-borders.glsl --backend=glx;
 # exec_always --no-startup-id polybar -r mybar
 exec --no-startup-id polybar -r mybar
-
 exec --no-startup-id setxkbmap -option 'ctrl:nocaps'
 exec --no-startup-id syncthing
 exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen --nofork
 
-# Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
+# # Use pactl to adjust volume in PulseAudio.
+# set $refresh_i3status killall -SIGUSR1 i3status
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
@@ -87,12 +87,12 @@ bindsym $mod+d focus child
 set $ws1 "1:"
 set $ws2 "2:"
 set $ws3 "3:"
-set $ws4 "4"
+set $ws4 "4:"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9:"
+set $ws9 "9"
 set $ws10 "10:"
 
 # switch to workspace
