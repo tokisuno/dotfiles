@@ -32,7 +32,8 @@ alias ivm='nvim'
 alias vi='nvim'
 alias ogvim='/bin/vim'
 alias ka='killall'
-
+alias claer='clear'
+alias rmrf='rm -rf'
 ## dotfile stuff
 alias dots="cd ~/code/repos/dotfiles"
 alias conf="vim ~/.config/i3/config"
