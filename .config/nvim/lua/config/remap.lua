@@ -29,11 +29,6 @@ map('', '<right>', '<nop>')
 map('n', '<C-p>', ':bprev<cr>')
 map('n', '<C-n>', ':bnext<cr>')
 
--- Yeet
-map("n", "<leader>lc", "<cmd>!xelatex %<cr>", { desc = "Compile LaTeX with XeLaTeX" })
-map("n", "<leader>lz", "<cmd>!zathura main.pdf &<cr>", { desc = "Open 'main.pdf' in Zathura" })
-map("n", "<leader>lw", "<cmd>!texcount %<cr>", { desc = "Get word count of document" })
-
 -- Quality of life
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")

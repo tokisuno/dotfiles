@@ -1,10 +1,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
-require("globals")
-require("config.opts")
-require("config.lazy")
-require("config.remap")
+require("config")
 
 vim.o.background = "dark"
 vim.cmd("colorscheme gruvbox")
