@@ -3,7 +3,7 @@ set $mod Mod4
 
 font pango:JetBrainsMono Nerd Font 9
 
-gaps inner 8
+gaps inner 16
 
 # exec --no-startup-id betterlockscreen -w dim
 exec --no-startup-id dunst
@@ -13,8 +13,9 @@ exec --no-startup-id pactl set-default-sink alsa_output.usb-GeneralPlus_USB_Audi
 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ 25%
 
 # really annoying that i have to use it like this :/
+exec_always --no-startup-id i3-autolayout autolayout
 exec_always --no-startup-id picom --corner-radius=20 --window-shader-fg=$HOME/.config/picom/rounded-borders.glsl --backend=glx;
-exec_always --no-startup-id feh --bg-fill $HOME/wallpapers/after_school_stroll_gruvbox.png
+exec_always --no-startup-id feh --bg-fill $HOME/wallpapers/gruv-temple.png
 # exec --no-startup-id picom --corner-radius=20 --window-shader-fg=$HOME/.config/picom/rounded-borders.glsl --backend=glx;
 # exec_always --no-startup-id polybar -r mybar
 exec --no-startup-id polybar -r mybar
@@ -41,6 +42,9 @@ bindsym $mod+p exec "flameshot gui"
 bindsym $mod+w exec "firefox"
 bindsym $mod+e exec "Thunar"
 bindsym $mod+Control+Shift+u exec "$HOME/.local/share/scripts/workflow"
+
+# toggle polybar
+bindsym $mod+m exec --no-startup-id polybar-msg cmd toggle
 
 # kill focused window
 bindsym $mod+q kill
@@ -126,10 +130,10 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+Control+h resize shrink width 10 px or 10 ppt
-bindsym $mod+Control+j resize grow height 10 px or 10 ppt
-bindsym $mod+Control+k resize shrink height 10 px or 10 ppt
-bindsym $mod+Control+l resize grow width 10 px or 10 ppt
+bindsym $mod+Control+h resize shrink width 5 px or 5 ppt
+bindsym $mod+Control+j resize grow height 5 px or 5 ppt
+bindsym $mod+Control+k resize shrink height 5 px or 5 ppt
+bindsym $mod+Control+l resize grow width 5 px or 5 ppt
 
 for_window [class=".*"] border pixel 2
 default_border pixel 2
