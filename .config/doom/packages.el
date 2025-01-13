@@ -5,7 +5,9 @@
 ;; on the command line, then restart Emacs for the changes to take effect -- or
 ;; use 'M-x doom/reload'.
 
-(package! writeroom-mode)
+(package! olivetti)
+(package! org-make-toc)
+(package! mixed-pitch)
 (package! pdf-tools)
 (package! org-noter)
 (package! org-bullets)

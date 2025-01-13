@@ -1,12 +1,12 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 (setq user-full-name "Lucas Cordero"
       user-mail-address "tokisunosan@gmail.com")
-(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 16 :height 1.0)
-      doom-variable-pitch-font (font-spec :family "ETBembo" :style "RomanOSF" :height 1.3)
-      doom-big-font (font-spec :family "JetBrainsMono Nerd Font" :size 24))
+
+(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 16 :height 1.0 :weight 'normal)
+      doom-big-font (font-spec :family "JetBrainsMono Nerd Font" :size 24 :style "medium" :weight 'bold)
+      doom-variable-pitch-font (font-spec :family "Ubuntu" :size 24 :height 1.5 :weight 'normal))
 
 (setq doom-theme 'doom-gruvbox)
-
 (setq display-line-numbers-type t)
 
 ;;; Org Mode Stuff
@@ -22,9 +22,6 @@
         org-roam-ui-open-on-start t))
 
 (setq org-directory "~/org/")
-(use-package org-bullets
-  :config
-  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 (use-package org-roam
   :ensure t
@@ -43,17 +40,23 @@
   (setq org-roam-node-display-template (concat "${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
   (org-roam-db-autosync-mode)
   (require 'org-roam-protocol))
-(setq org-hide-emphasis-markers t)
 
-(after! citar (setq! citar-bibliography '("~/Sync/latex/bibs/finalproj.bib")))
+;; (after! citar (setq! citar-bibliography '("~/Sync/latex/bibs/finalproj.bib")))
 
 ;; doesn't run otherwise
 (pdf-tools-install)
 
-;; real bullets for bullet points
+;; making org-mode look good
+(setq org-hide-emphasis-markers t)
 (font-lock-add-keywords 'org-mode
                         '(("^ *\\([-]\\) "
                            (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
+(add-hook 'org-mode-hook (lambda ()
+                           (org-bullets-mode 1)
+                           (olivetti-mode 1)
+                           (display-line-numbers-mode -1)
+                           (mixed-pitch-mode 1)
+                           ))
 
 ;; Japanese input switching
 (setq default-input-method "japanese")

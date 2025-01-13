@@ -11,13 +11,8 @@ map("n", "<C-k>", "<C-w>k")
 map("n", "<C-j>", "<C-w>j")
 map("n", "<C-h>", "<C-w>h")
 
--- Toggling things
-map("n", "<leader>ts", ":LiveServerToggle<cr>", { desc = "Toggle LiveServer" })
-map("n", "<leader>tw", ":setlocal wrap!<cr>", { desc = "Toggle wordwrapping" })
-map("n", "<leader>tz", ":ZenMode<cr>", { desc = "Toggle ZenMode (Coding)" })
-
-map("n", "<leader>so", "<cmd>so<cr>", { desc = "Source file" })
-map("n", "<leader>qq", vim.cmd.bd, { desc = "Close buffer" })
+map("n", "<leader>bq", vim.cmd.bdelete, { desc = "Buffer quit" })
+map("n", "<leader>bu", vim.cmd.bunload, { desc = "Buffer unload" })
 
 -- Removing arrow key navigation (to turn into something later)
 map('', '<up>',    '<nop>')
