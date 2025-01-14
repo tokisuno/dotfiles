@@ -1,9 +1,9 @@
 # my dotfilez(tm)
 
 ## base
-- arch
-- i3wm
-- polybar
+- arch linux
+- [dwm](https://github.com/tokisuno/suckless)
+- [dwmblocks](https://github.com/tokisuno/suckless)
 
 ## core programs
 - alacritty
