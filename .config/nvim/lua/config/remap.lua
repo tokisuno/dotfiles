@@ -1,7 +1,7 @@
 local map = vim.keymap.set
 local opts = { noremap=true, silent=false }
-local builtin = require('telescope.builtin')
 local trailspace = require('mini.trailspace')
+local fzf = require('fzf-lua')
 
 vim.g.mapleader      = " "
 vim.g.maplocalleader = ","
@@ -64,10 +64,11 @@ map("n", "<leader>o", ":Lazy<cr>", { desc = "Open lazy.nvim" })
 map("n", "<leader>m", ":Mason<cr>", { desc = "Open Mason" })
 
 -- telescope funzies
-map("n", "<leader>fb", builtin.buffers, { desc = "Buffers" })
-map("n", "<leader>ff", builtin.find_files, { desc = "Files" })
-map("n", "<leader>fg", builtin.live_grep, { desc = "Live grep" })
-map("n", "<leader>fh", builtin.help_tags, { desc = "Help tags" })
-map("n", "<leader>fk", builtin.keymaps, { desc = "Keymaps" })
-map("n", "<leader>fm", builtin.man_pages, { desc = "Man pages" })
-map("n", "<leader>fo", builtin.oldfiles, {desc = "Old files" })
+map('n', '<leader>fb', fzf.builtin)
+map('n', '<leader>fd', fzf.lsp_definitions)
+map('n', '<leader>ff', fzf.files)
+map('n', '<leader>fg', fzf.live_grep)
+map('n', '<leader>fh', fzf.helptags)
+map('n', '<leader>fo', fzf.oldfiles)
+map('n', '<leader>fr', fzf.lsp_references)
+map('n', '<leader>ft', fzf.lsp_typedefs)
