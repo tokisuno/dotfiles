@@ -20,4 +20,11 @@ return {
       require("mini.cursorword").setup()
     end
   },
+  {
+    'echasnovski/mini.move',
+    version = false,
+    config = function ()
+      require("mini.move").setup()
+    end
+  },
 }
