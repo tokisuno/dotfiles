@@ -6,10 +6,10 @@ normal = { family = "0xProto Nerd Font" }
 
 offset = { x = 0, y = 9 }
 glyph_offset = { x = 0, y = 3 }
-size = 13
+size = 12
 
 [window]
-padding = { x = 15, y = 15 }
+padding = { x = 10, y = 10 }
 
 [colors.primary]
 background = '#282828'

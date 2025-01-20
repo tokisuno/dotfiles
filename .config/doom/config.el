@@ -23,6 +23,9 @@
 
 (setq org-directory "~/org/")
 
+;; should i start using slugs..? i don't have thattt many notes and i organize them
+;; through both metadata and by adding them to their parent node.
+;; hmm...
 (use-package org-roam
   :ensure t
   :custom
