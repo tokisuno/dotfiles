@@ -5,7 +5,7 @@ live_config_reload = true
 normal = { family = "0xProto Nerd Font" }
 
 offset = { x = 0, y = 9 }
-glyph_offset = { x = 0, y = 3 }
+glyph_offset = { x = 0, y = 5 }
 size = 12
 
 [window]
