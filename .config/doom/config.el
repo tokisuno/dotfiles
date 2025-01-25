@@ -2,9 +2,9 @@
 (setq user-full-name "Lucas Cordero"
       user-mail-address "tokisunosan@gmail.com")
 
-(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 16 :height 1.0 :weight 'normal)
+(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 18 :height 1.0 :weight 'normal)
       doom-big-font (font-spec :family "JetBrainsMono Nerd Font" :size 24 :style "medium" :weight 'bold)
-      doom-variable-pitch-font (font-spec :family "Ubuntu" :size 24 :height 1.5 :weight 'normal))
+      doom-variable-pitch-font (font-spec :family "Ubuntu" :size 26 :height 1.5 :weight 'normal))
 
 (setq doom-theme 'doom-gruvbox)
 (setq display-line-numbers-type t)
@@ -31,6 +31,7 @@
   :custom
   (setq org-roam-file-extensions '("org"))
   (org-roam-directory (file-truename "~/org/roam/"))
+  (org-roam-dailies-directory (file-truename "~/org/roam/daily/"))
   :bind (("C-c n l" . org-roam-buffer-toggle)
          ("C-c n f" . org-roam-node-find)
          ("C-c n g" . org-roam-graph)

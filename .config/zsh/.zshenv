@@ -7,8 +7,8 @@ export HISTSIZE=10000
 export SAVEHIST=10000
 
 export ALTERNATE_EDITOR=""
-export VISUAL="/usr/bin/emacs"         # $VISUAL opens in GUI mode
-export EDITOR="/usr/bin/nvim"                     # I will go back to Emacs eventually
+export VISUAL="/usr/bin/emacs"
+export EDITOR="/usr/bin/nvim"
 
 export DICTIONARY=en_US
 export PAGER=less
@@ -25,13 +25,14 @@ export PATH=${PATH}:"$HOME/.cargo/bin"
 export PATH=${PATH}:"$HOME/.config/emacs/bin"
 export PATH=${PATH}:"$HOME/.local/bin"
 export PATH=${PATH}:"$HOME/.local/share/applications"
-export PATH=${PATH}:"$HOME/.local/share/gem/ruby/3.2.0/bin"
 export PATH=${PATH}:"$HOME/.local/share/scripts"
 export PATH=${PATH}:"$HOME/.luarocks/bin/digestif"
 export PATH=${PATH}:"$HOME/go"
 export PATH=${PATH}:"$NPM_PACKAGES/bin"
 export PATH=${PATH}:"/bin"
 # export PATH=${PATH}:"/root/.local/share/gem/ruby/3.2.0/bin"
+# Gems are so fucking annoying
+export PATH=${PATH}:"$HOME/.local/share/gem/ruby/3.2.0/bin"
 export PATH=${PATH}:"/home/poto/.local/share/gem/ruby/3.3.0/bin"
 export PATH=${PATH}:"/usr/bin/"
 export PATH=${PATH}:"/usr/local/bin"

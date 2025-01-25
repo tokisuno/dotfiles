@@ -8,7 +8,6 @@ local set = vim.opt
 vim.o.background = "dark"
 vim.cmd.colorscheme("gruvbox")
 
-local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 
 vim.g.have_nerd_font = true
@@ -55,9 +54,7 @@ set.ttimeoutlen = 50
 set.foldmethod = "indent"
 set.foldlevel = 999
 
-augroup('tabsize2', { clear = true })
 autocmd('FileType', {
-    group = 'tabsize2',
     pattern = {
         'html',
         'css',
@@ -68,6 +65,15 @@ autocmd('FileType', {
     },
     callback = function()
         vim.cmd('setlocal tabstop=2 shiftwidth=2 softtabstop=2')
+    end,
+})
+
+autocmd("BufWritePre", {
+    pattern = {"*"},
+    callback = function(ev)
+        save_cursor = vim.fn.getpos(".")
+        vim.cmd([[%s/\s\+$//e]])
+        vim.fn.setpos(".", save_cursor)
     end,
 })
 

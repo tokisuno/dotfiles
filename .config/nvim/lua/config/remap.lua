@@ -1,6 +1,5 @@
 local map = vim.keymap.set
 local opts = { noremap=true, silent=false }
-local trailspace = require('mini.trailspace')
 local fzf = require('fzf-lua')
 
 vim.g.mapleader      = " "
@@ -11,8 +10,8 @@ map("n", "<C-k>", "<C-w>k")
 map("n", "<C-j>", "<C-w>j")
 map("n", "<C-h>", "<C-w>h")
 
-map("n", "<leader>bq", vim.cmd.bdelete, { desc = "Buffer quit" })
-map("n", "<leader>bu", vim.cmd.bunload, { desc = "Buffer unload" })
+map("n", "<leader>bn", vim.cmd.bdelete, { desc = "Buffer quit" })
+map("n", "<leader>bv", vim.cmd.bunload, { desc = "Buffer unload" })
 
 -- Removing arrow key navigation (to turn into something later)
 map('', '<up>',    '<nop>')
@@ -21,8 +20,10 @@ map('', '<left>',  '<nop>')
 map('', '<right>', '<nop>')
 
 -- Buffer movement
-map('n', '<C-p>', ':bprev<cr>')
-map('n', '<C-n>', ':bnext<cr>')
+-- map('n', '<C-p>', ':bprev<cr>')
+-- map('n', '<C-n>', ':bnext<cr>')
+map("n", "H", ":bprev<cr>")
+map("n", "L", ":bnext<cr>")
 
 -- Quality of life
 map("n", "n", "nzzzv")
@@ -30,12 +31,12 @@ map("n", "N", "Nzzzv")
 map("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", opts)
 map("n", "<leader>dd", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", { desc = "Replace all" })
 map("n", "<leader>dt", ":pu=strftime('%c')<cr>", { desc = "Paste Local Time" })
-map("n", "<leader>re", function () trailspace.trim() end, { desc = "Remove trailing linespace" })
-map("n", "<leader>rl", function () trailspace.trim() end, { desc = "Remove empty lines with linespace" })
+
+-- map("n", "<leader>re", function () trailspace.trim() end, { desc = "Remove trailing linespace" })
+-- map("n", "<leader>rl", function () trailspace.trim() end, { desc = "Remove empty lines with linespace" })
+
 map("v", "<leader>y", "\"+y", { desc = "Copy to system clipboard" })
-map("n", "<localleader><localleader>", "<cmd>noh<cr>", { desc = "Removes highlighting" })
-map("n", "H", "^")
-map("n", "L", "$")
+map("n", "<esc><esc>", "<cmd>noh<cr>", { silent = true, desc = "Removes highlighting" })
 
 -- Sets launch perms for file being written to
 map("n", "<leader>se", "<cmd>!chmod +x %<CR>", { desc = "chmod +x", silent = true })

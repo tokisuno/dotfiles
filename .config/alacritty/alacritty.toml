@@ -4,12 +4,10 @@ live_config_reload = true
 [font]
 normal = { family = "0xProto Nerd Font" }
 
-offset = { x = 0, y = 9 }
-glyph_offset = { x = 0, y = 5 }
 size = 12
 
 [window]
-padding = { x = 10, y = 10 }
+padding = { x = 15, y = 15 }
 
 [colors.primary]
 background = '#282828'
