@@ -3,11 +3,13 @@ live_config_reload = true
 
 [font]
 normal = { family = "0xProto Nerd Font" }
-
-size = 12
+size = 13
+builtin_box_drawing = true
+offset = { x = 0, y = 2 }
+glyph_offset = { x = 0, y = 1 }
 
 [window]
-padding = { x = 15, y = 15 }
+padding = { x = 20, y = 25 }
 
 [colors.primary]
 background = '#282828'
