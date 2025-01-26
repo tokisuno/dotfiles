@@ -1,6 +1,6 @@
 local map = vim.keymap.set
-local opts = { noremap=true, silent=false }
 local fzf = require('fzf-lua')
+-- local opts = { noremap=true, silent=false }
 
 vim.g.mapleader      = " "
 vim.g.maplocalleader = ","
@@ -19,28 +19,17 @@ map('', '<down>',  '<nop>')
 map('', '<left>',  '<nop>')
 map('', '<right>', '<nop>')
 
--- Buffer movement
--- map('n', '<C-p>', ':bprev<cr>')
--- map('n', '<C-n>', ':bnext<cr>')
 map("n", "H", ":bprev<cr>")
 map("n", "L", ":bnext<cr>")
 
 -- Quality of life
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
-map("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", opts)
 map("n", "<leader>dd", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", { desc = "Replace all" })
 map("n", "<leader>dt", ":pu=strftime('%c')<cr>", { desc = "Paste Local Time" })
 
--- map("n", "<leader>re", function () trailspace.trim() end, { desc = "Remove trailing linespace" })
--- map("n", "<leader>rl", function () trailspace.trim() end, { desc = "Remove empty lines with linespace" })
-
 map("v", "<leader>y", "\"+y", { desc = "Copy to system clipboard" })
 map("n", "<esc><esc>", "<cmd>noh<cr>", { silent = true, desc = "Removes highlighting" })
-
--- Sets launch perms for file being written to
-map("n", "<leader>se", "<cmd>!chmod +x %<CR>", { desc = "chmod +x", silent = true })
-map("n", "<leader>ss", "<cmd>set spelllang=en_ca<cr>", { desc = "Spellang to ENG (CA)", silent = true })
 
 -- ctrl-backspace when in insert mode
 map("i", "<C-h>", "<C-w>", { silent = true })
@@ -60,7 +49,6 @@ map("n", "<leader>ck", ":!gcc -O -Wall -W -pedantic -ansi -std=c99 -o asdf %<cr>
 
 -- Opening things
 map("n", "<leader>pv", ":e .<cr>", { desc = "Oil" })
-map("n", "<leader>pf", "<cmd>NvimTreeToggle<cr>", { desc = "Nvim-Tree" })
 map("n", "<leader>o", ":Lazy<cr>", { desc = "Open lazy.nvim" })
 map("n", "<leader>m", ":Mason<cr>", { desc = "Open Mason" })
 
