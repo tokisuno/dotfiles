@@ -70,3 +70,4 @@ export FZF_COMPLETION_OPTS='--border --info=inline'
 # zsh plugins
 source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZDOTDIR/.zshrc
+source $ZDOTDIR/zsh-vi-mode/zsh-vi-mode.plugin.zsh

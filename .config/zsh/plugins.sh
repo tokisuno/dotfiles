@@ -19,3 +19,10 @@ else
     echo -e "autosuggest ${URed}not present${WSpace}"
     git clone git@github.com:zsh-users/zsh-autosuggestions.git
 fi
+
+if [ -d "$ZDOTDIR/zsh-vi-mode" ]; then
+    echo -e "zsh-vi-mode ${UGreen}present${WSpace}"
+else
+    echo -e "zsh-vi-mode ${URed}not present${WSpace}"
+    git clone git@github.com:jeffreytse/zsh-vi-mode.git
+fi
