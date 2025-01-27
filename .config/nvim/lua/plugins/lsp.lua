@@ -32,12 +32,22 @@ return {
       lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
       lsp.set_preferences({
         suggest_lsp_servers = false,
-        sign_icons = {
-          error = 'E',
-          warn = 'W',
-          hint = 'H',
-          info = 'I'
-        }
+        -- sign_icons = {
+        --   error = 'E',
+        --   warn = 'W',
+        --   hint = 'H',
+        --   info = 'I'
+        -- }
+      })
+      vim.diagnostic.config({
+        signs = {
+          text = {
+            [vim.diagnostic.severity.ERROR] = '✘',
+            [vim.diagnostic.severity.WARN] = '▲',
+            [vim.diagnostic.severity.HINT] = '⚑',
+            [vim.diagnostic.severity.INFO] = '»',
+          },
+        },
       })
       lsp.on_attach(function(client, bufnr)
         local opts = {buffer = bufnr, remap = false}

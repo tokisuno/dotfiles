@@ -4,11 +4,11 @@ vim.g.maplocalleader = ","
 require("config")
 
 local set = vim.opt
+local autocmd = vim.api.nvim_create_autocmd
 
 vim.o.background = "dark"
 vim.cmd.colorscheme("gruvbox")
 
-local autocmd = vim.api.nvim_create_autocmd
 
 vim.g.have_nerd_font = true
 
