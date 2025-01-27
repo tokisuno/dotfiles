@@ -25,7 +25,8 @@ map("n", "L", ":bnext<cr>")
 -- Quality of life
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
-map("n", "<leader>dd", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", { desc = "Replace all" })
+-- can't this just be replaced with lsp renaming?
+-- map("n", "<leader>dd", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", { desc = "Replace all" })
 map("n", "<leader>dt", ":pu=strftime('%c')<cr>", { desc = "Paste Local Time" })
 
 map("v", "<leader>y", "\"+y", { desc = "Copy to system clipboard" })
@@ -42,10 +43,6 @@ map("n", "<leader>cl", "<cmd>Trouble lsp toggle focus=false win.position=right<c
 map("n", "<leader>xL", "<cmd>Trouble loclist toggle<cr>")
 map("n", "<leader>xQ", "<cmd>Trouble qflist toggle<cr>")
 
--- Some quick compiling when going through textbooks
-map("n", "<leader>cn", ":!node %<cr>", { desc = "Run with Node" })
-map("n", "<leader>cc", ":!gcc % -o asdf && ./asdf<cr>", { desc = "Compile w/ GCC & run" })
-map("n", "<leader>ck", ":!gcc -O -Wall -W -pedantic -ansi -std=c99 -o asdf %<cr>", { desc = "Compile w/ C99 & run" })
 
 -- Opening things
 map("n", "<leader>pv", ":e .<cr>", { desc = "Oil" })
