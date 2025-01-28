@@ -2,8 +2,7 @@
 
 ## base
 - arch linux
-- [dwm](https://github.com/tokisuno/suckless)
-- [dwmblocks](https://github.com/tokisuno/suckless)
+- [dwm](https://github.com/tokisuno/dwm_config)
 
 ## core programs
 - alacritty
