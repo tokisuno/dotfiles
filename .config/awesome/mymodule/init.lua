@@ -1,3 +1,6 @@
+-- modified version of the awful.widget.textclock() widget
+-- found in awesomewm source code
+
 local setmetatable = setmetatable
 local os = os
 local textbox = require("wibox.widget.textbox")
@@ -6,19 +9,12 @@ local gtable = require("gears.table")
 
 local minutes_left = { mt = {} }
 
-local ml_func = function ()
-    local time = os.date("*t")
-    local hours = time.hour
-    local minutes = time.min
-    return "MINS:" .. 1440 - ((hours * 60) + minutes)
-end
-
---- Set the clock's refresh rate.
---
--- @property refresh
--- @tparam[opt=60] number refresh How often the clock is updated, in seconds
--- @propertyunit second
--- @negativeallowed false
+-- local ml_func = function ()
+--     local time = os.date("*t")
+--     local hours = time.hour
+--     local minutes = time.min
+--     return "MINS:" .. 1440 - ((hours * 60) + minutes)
+-- end
 
 function minutes_left:set_refresh(refresh)
     self._private.refresh = refresh or self._private.refresh
@@ -29,26 +25,14 @@ function minutes_left:get_refresh()
     return self._private.refresh
 end
 
---- Force a textclock to update now.
---
--- @noreturn
--- @method force_update
 function minutes_left:force_update()
     self._timer:emit_signal("timeout")
 end
 
---- This lowers the timeout so that it occurs "correctly". For example, a timeout
--- of 60 is rounded so that it occurs the next time the clock reads ":00 seconds".
 local function calc_timeout(real_timeout)
     return real_timeout - os.time() % real_timeout
 end
 
---- Create a textclock widget. It draws the time it is in a textbox.
---
--- @tparam[opt=" %a %b %d&comma; %H:%M "] string format The time [format](#format).
--- @tparam[opt=60] number refresh How often to update the time (in seconds).
--- @treturn table A textbox widget.
--- @constructorfct wibox.widget.textclock
 local function new(refresh)
     local w = textbox()
     gtable.crush(w, minutes_left, true)
@@ -58,11 +42,7 @@ local function new(refresh)
     function w._private.minutes_left_update_cb()
         local time = os.date("*t")
         local str = "MINS:" .. 1440 - ((time.hour * 60) + time.min)
-        -- if str == nil then
-        --     require("gears.debug").print_warning("minutes_left: "
-        --     .. "g_date_time_format() failed for format "
-        --     .. "'" .. w._private.format .. "'")
-        -- end
+
         w:set_markup(str)
         w._timer.timeout = calc_timeout(w._private.refresh)
         w._timer:again()
