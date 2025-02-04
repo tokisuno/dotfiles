@@ -1,14 +1,14 @@
 local map = vim.keymap.set
 local fzf = require('fzf-lua')
--- local opts = { noremap=true, silent=false }
+local opts = { noremap=true, silent=false }
 
 vim.g.mapleader      = " "
 vim.g.maplocalleader = ","
 
-map("n", "<C-l>", "<C-w>l")
-map("n", "<C-k>", "<C-w>k")
-map("n", "<C-j>", "<C-w>j")
-map("n", "<C-h>", "<C-w>h")
+-- map("n", "<C-l>", "<C-w>l")
+-- map("n", "<C-k>", "<C-w>k")
+-- map("n", "<C-j>", "<C-w>j")
+-- map("n", "<C-h>", "<C-w>h")
 
 map("n", "<leader>bn", vim.cmd.bdelete, { desc = "Buffer quit" })
 map("n", "<leader>bv", vim.cmd.bunload, { desc = "Buffer unload" })
@@ -19,14 +19,13 @@ map('', '<down>',  '<nop>')
 map('', '<left>',  '<nop>')
 map('', '<right>', '<nop>')
 
-map("n", "H", ":bprev<cr>")
-map("n", "L", ":bnext<cr>")
+map("n", "H", ":bprev<cr>", { noremap = true, silent = true})
+map("n", "L", ":bnext<cr>", { noremap = true, silent = true})
 
 -- Quality of life
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
--- can't this just be replaced with lsp renaming?
--- map("n", "<leader>dd", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", { desc = "Replace all" })
+map("n", "<leader>s", [[:%s/<<C-r><C-w>>/<C-r><C-w>/gI<Left><Left><Left>]])
 map("n", "<leader>dt", ":pu=strftime('%c')<cr>", { desc = "Paste Local Time" })
 
 map("v", "<leader>y", "\"+y", { desc = "Copy to system clipboard" })
@@ -36,9 +35,9 @@ map("n", "<esc><esc>", "<cmd>noh<cr>", { silent = true, desc = "Removes highligh
 map("i", "<C-h>", "<C-w>", { silent = true })
 
 -- Opening things
-map("n", "<leader>pv", ":e .<cr>", { desc = "Oil" })
-map("n", "<leader>o", ":Lazy<cr>", { desc = "Open lazy.nvim" })
-map("n", "<leader>m", ":Mason<cr>", { desc = "Open Mason" })
+map("n", "<leader>pv", ":e .<cr>", { noremap = true, silent = true, desc = "Oil" })
+map("n", "<leader>o", ":Lazy<cr>", { noremap = true, silent = true, desc = "Open lazy.nvim" })
+map("n", "<leader>m", ":Mason<cr>", { noremap = true, silent = true, desc = "Open Mason" })
 
 -- telescope funzies
 map('n', '<leader>fb', fzf.builtin)

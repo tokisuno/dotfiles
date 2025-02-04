@@ -8,8 +8,6 @@ local autocmd = vim.api.nvim_create_autocmd
 
 vim.o.background = "dark"
 vim.cmd.colorscheme("gruvbox")
-
-
 vim.g.have_nerd_font = true
 
 --# opts #--
@@ -75,6 +73,34 @@ autocmd("BufWritePre", {
         vim.cmd([[%s/\s\+$//e]])
         vim.fn.setpos(".", save_cursor)
     end,
+})
+
+autocmd('CmdlineEnter', {
+    group = vim.api.nvim_create_augroup(
+        'gmr_cmdheight_1_on_cmdlineenter',
+        { clear = true }
+    ),
+    desc = 'Don\'t hide the status line when typing a command',
+    command = ':set cmdheight=1',
+})
+
+autocmd('CmdlineLeave', {
+    group = vim.api.nvim_create_augroup(
+        'gmr_cmdheight_0_on_cmdlineleave',
+        { clear = true }
+    ),
+    desc = 'Hide cmdline when not typing a command',
+    command = ':set cmdheight=0',
+})
+
+autocmd('BufWritePost', {
+    group = vim.api.nvim_create_augroup(
+        'gmr_hide_message_after_write',
+        { clear = true }
+    ),
+    desc = 'Get rid of message after writing a file',
+    pattern = { '*' },
+    command = 'redrawstatus',
 })
 
 -- show --

@@ -3,19 +3,25 @@ return {
     'nvim-lualine/lualine.nvim',
     config = function ()
       local mode_map = {
-        n = "(ᴗ_ ᴗ。)",
-        nt = "(ᴗ_ ᴗ。)",
-        i = "(•̀ - •́ )",
-        R = "( •̯́ ₃ •̯̀)",
-        v = "(⊙ _ ⊙ )",
-        V = "(⊙ _ ⊙ )!!",
-        no = "Σ(°△°ꪱꪱꪱ)",
-        ["\22"] = "(⊙ _ ⊙ )",
-        t = "(⌐■_■)",
-        ['!'] = "Σ(°△°ꪱꪱꪱ)",
-        c = "Σ(°△°ꪱꪱꪱ)",
-        s = "SUB"
+        ['NORMAL'] = 'N',
+        ['O-PENDING'] = 'N?',
+        ['INSERT'] = 'I',
+        ['VISUAL'] = 'V',
+        ['V-BLOCK'] = 'VB',
+        ['V-LINE'] = 'VL',
+        ['V-REPLACE'] = 'VR',
+        ['REPLACE'] = 'R',
+        ['COMMAND'] = '!',
+        ['SHELL'] = 'SH',
+        ['TERMINAL'] = 'T',
+        ['EX'] = 'X',
+        ['S-BLOCK'] = 'SB',
+        ['S-LINE'] = 'SL',
+        ['SELECT'] = 'S',
+        ['CONFIRM'] = 'Y?',
+        ['MORE'] = 'M',
       }
+
       require('lualine').setup({
         options = {
           icons_enabled = false,
