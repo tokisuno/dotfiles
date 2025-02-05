@@ -19,6 +19,8 @@ export NPM_DIR="$HOME/.npm-data"
 NPM_PACKAGES="$HOME/.npm-packages"
 
 # path
+export XDG_DATA_DIRS=${XDG_DATA_DIRS}:"/var/lib/flatpak/exports/share"
+export XDG_DATA_DIRS=${XDG_DATA_DIRS}:"/home/poto/.local/share/flatpak/exports/share"
 export PATH="$PATH:$HOME/bin"
 export PATH=${PATH}:"$GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin"
 export PATH=${PATH}:"$HOME/.cargo/bin"
@@ -42,9 +44,9 @@ export PATH=${PATH}:"`go env GOPATH`/bin"
 
 # keyboard
 export GLFW_IM_MODULE=ibus
-export XMODIFIERS="@im=ibus"
+export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
-export GTK_IM_MODULE=ibus
+export GTK_IM_MODULE=xim
 
 # misc
 export CC="clang"

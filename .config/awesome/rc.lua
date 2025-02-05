@@ -1,3 +1,10 @@
+-- This is used later as the default terminal and editor to run.
+local terminal = "wezterm connect unix"
+local browser = "flatpak run one.ablaze.floorp"
+local editor = os.getenv("EDITOR") or "vim"
+local editor_cmd = terminal .. " -e " .. editor
+local file_manager = 'thunar'
+
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
@@ -53,11 +60,6 @@ end
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_configuration_dir() .. "/themes/lucas/theme.lua")
 
--- This is used later as the default terminal and editor to run.
-local terminal = "wezterm connect unix"
-local editor = os.getenv("EDITOR") or "vim"
-local editor_cmd = terminal .. " -e " .. editor
-local file_manager = 'thunar'
 
 modkey = "Mod4"
 
@@ -216,8 +218,8 @@ globalkeys = gears.table.join(
         end,
         {description = "focus previous by index", group = "client"}
     ),
-    awful.key({ modkey,           }, "w", function () awful.spawn("firefox") end,
-              {description = "open firefox", group = "awesome"}),
+    awful.key({ modkey,           }, "w", function () awful.spawn(browser) end,
+              {description = "open browser", group = "awesome"}),
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
               {description = "swap with next client by index", group = "client"}),

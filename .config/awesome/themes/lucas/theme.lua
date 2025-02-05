@@ -10,18 +10,18 @@ local themes_path  = gfs.get_themes_dir()
 
 local theme        = {}
 
-theme.font                 = "Noto Sans Mono CJK JP 10"
+theme.font                 = "Noto Sans Mono CJK JP 12"
 
 theme.bg_normal            = "#282828"
-theme.bg_focus             = "#d79921"
+theme.bg_focus             = "#79740e"
 theme.bg_urgent            = "#cc241d"
 theme.bg_minimize          = "#665c54"
-theme.taglist_fg_occupied  = "#d79921"
+theme.taglist_fg_occupied  = "#83a598"
 theme.bg_systray           = theme.bg_normal
-theme.systray_icon_spacing = dpi(8)
+theme.systray_icon_spacing = dpi(4)
 
 theme.fg_normal     = "#504945"
-theme.fg_focus      = "#fbf1c7"
+theme.fg_focus      = "#fabd2f"
 theme.fg_urgent     = "#fbf1c7"
 theme.fg_minimize   = "#fbf1c7"
 
@@ -33,7 +33,7 @@ theme.border_marked = "#91231c"
 
 theme.tasklist_disable_icon = true
 theme.tasklist_align = 'center'
-theme.tasklist_bg_focus = "#b47109"
+theme.tasklist_bg_focus = "#b57614"
 
 theme.menu_submenu_icon = themes_path.."default/submenu.png"
 theme.menu_height = dpi(50)

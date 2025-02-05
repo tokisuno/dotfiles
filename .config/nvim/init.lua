@@ -74,7 +74,6 @@ autocmd("BufWritePre", {
         vim.fn.setpos(".", save_cursor)
     end,
 })
-
 -- show --
 set.showmode  = true
 set.showmatch = true
