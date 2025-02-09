@@ -171,22 +171,20 @@ awful.screen.connect_for_each_screen(function(s)
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            s.mylayoutbox,
-            s.spacer,
             s.mytaglist,
+            s.mylayoutbox,
             s.mypromptbox,
-            s.spacer,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             s.mypromptbox,
-            s.spacer,
+            wibox.widget({ text = " ", widget = wibox.widget.textbox }),
             wibox.widget.systray(),
             s.spacer,
             wibox.widget({
               s.mymodule,
-              fg = "#ff0000",
+              fg = "#98971a",
               widget = wibox.container.background
             }),
             wibox.widget({ text = " ", widget = wibox.widget.textbox })

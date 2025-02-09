@@ -12,7 +12,7 @@ local cmds =
   "pactl set-sink-volume @DEFAULT_SINK@ 25%",
   "syncthing",
   "setxkbmap -option 'ctrl:nocaps'",
-  "picom",
+  -- "picom", -- this shit is broken right now. im getting 60% cpu and idk why
   "feh --bg-fill $HOME/wallpapers/gruv-temple.png",
 
 }

@@ -13,10 +13,10 @@ local theme        = {}
 theme.font                 = "Noto Sans Mono CJK JP 12"
 
 theme.bg_normal            = "#282828"
-theme.bg_focus             = "#79740e"
+theme.bg_focus             = "#427b58"
 theme.bg_urgent            = "#cc241d"
 theme.bg_minimize          = "#665c54"
-theme.taglist_fg_occupied  = "#83a598"
+theme.taglist_fg_occupied  = "#98971a"
 theme.bg_systray           = theme.bg_normal
 theme.systray_icon_spacing = dpi(4)
 
