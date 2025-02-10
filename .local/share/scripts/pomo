@@ -1,3 +1,0 @@
-#!/usr/bin/bash
-
-tomatoshell -t 50 -d 10 -n 999

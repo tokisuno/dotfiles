@@ -11,6 +11,7 @@ ln -sf ~/code/repos/dotfiles/.config/picom/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/rofi/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/zathura/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/zsh/ ~/.config
+ln -sf ~/code/repos/dotfiles/.config/wezterm/ ~/.config
 ln -s ~/code/repos/dotfiles/.config/mimeapps.list ~/.config/
 
 # TBA
