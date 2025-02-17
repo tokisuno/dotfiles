@@ -30,17 +30,18 @@ alias vim='nvim'
 alias iv='nvim'
 alias ivm='nvim'
 alias vi='nvim'
+alias v='nvim'
 alias ogvim='/bin/vim'
 alias ka='killall'
 alias claer='clear'
 alias rmrf='rm -rf'
+
 ## dotfile stuff
 alias dots="cd ~/code/repos/dotfiles"
-alias conf="vim ~/.config/i3/config"
+alias wm="cd ~/.config/awesome"
 alias path='vim ~/.config/zsh/.zshenv'
 alias zse='vim ~/.config/zsh/.zshrc'
 alias rip='cd ~/.local/share/scripts'
-alias bar='vim ~/.config/polybar/config.ini'
 
 ## Pacman & Yay
 alias syu="sudo pacman -Syu && setxkbmap -option 'ctrl:nocaps'"
@@ -54,11 +55,6 @@ alias a='cd ..'
 alias aa='cd ../..'
 alias aaa='cd ../../..'
 alias aaaa='cd ../../../..'
-
-# Tmux
-alias ts='tmux-sessionizer'
-alias tp='tmux-pomodoro'
-alias ta='tmux attach'
 
 # Git
 alias lg='lazygit'

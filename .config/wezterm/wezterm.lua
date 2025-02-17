@@ -7,42 +7,31 @@ local config = {}
 if wezterm.config_builder then config = wezterm.config_builder() end
 
 local smart_splits = wezterm.plugin.require('https://github.com/mrjones2014/smart-splits.nvim')
-local sessionizer = wezterm.plugin.require("https://github.com/mikkasendke/sessionizer.wezterm")
-
-sessionizer.apply_to_config(config, true)
 
 config.term = 'xterm-256color'
 
 config.window_padding = {
   left = 10,
   right = 10,
-  top = 10,
+  top = 15,
   bottom = 0
-}
-
-sessionizer.config = {
-  paths = {
-    os.getenv("HOME") .. ".config/nvim",
-    os.getenv("HOME") .. "code/repos"
-  }
 }
 
 config.max_fps = 120
 
-config.font = wezterm.font('JetBrainsMono Nerd Font')
-config.font_size = 12
+config.font = wezterm.font {
+  family = 'IosevkaTermSlab Nerd Font',
+  harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
+}
+config.font_size = 13
 config.freetype_load_flags = 'NO_HINTING'
 
--- config.color_scheme = 'Kanagawa (Gogh)'
 config.color_scheme = 'GruvboxDark'
 
 config.automatically_reload_config = true
+config.enable_tab_bar = false
 config.use_fancy_tab_bar = false
-config.tab_max_width = 32
-
--- config.window_background_opacity = 0.8
-
-config.tab_bar_at_bottom = false
+config.disable_default_key_bindings = true
 
 config.leader = {
   key = 'a',
@@ -119,7 +108,7 @@ config.keys = {
   },
   -- vsplit
   {
-    key = '|',
+    key = 'v',
     mods = 'LEADER|SHIFT',
     action = act.SplitPane {
       direction = 'Right',
@@ -128,24 +117,19 @@ config.keys = {
   },
   -- hsplit
   {
-    key = '-',
+    key = 'h',
     mods = 'LEADER',
     action = act.SplitPane {
       direction = 'Down',
       size = { Percent = 50 },
     },
   },
-  -- sessionizer
+  -- ctrl_shift_v pasting
   {
-    key = "s",
-    mods = "LEADER",
-    action = sessionizer.show,
-  },
-  {
-    key = "r",
-    mods = "LEADER",
-    action = sessionizer.switch_to_most_recent,
-  },
+    key = 'v',
+    mods = 'CTRL|SHIFT',
+    action = act.PasteFrom 'PrimarySelection'
+  }
 }
 
 smart_splits.apply_to_config(config, {

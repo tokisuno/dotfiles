@@ -1,6 +1,6 @@
 -- This is used later as the default terminal and editor to run.
-local terminal = "wezterm connect unix"
-local browser = "flatpak run one.ablaze.floorp"
+local terminal = "kitty"
+local browser = "firefox"
 local editor = os.getenv("EDITOR") or "vim"
 local editor_cmd = terminal .. " -e " .. editor
 local file_manager = 'thunar'
@@ -25,10 +25,6 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 require("awful.hotkeys_popup.keys")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
-
--- this is to shut my lsp up
--- local awesome = awesome
--- local client = client
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -65,22 +61,9 @@ modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
-    -- awful.layout.suit.tile.left,
-    -- awful.layout.suit.tile.bottom,
-    -- awful.layout.suit.tile.top,
-
     awful.layout.suit.tile,
     awful.layout.suit.max,
     awful.layout.suit.floating,
-
-    -- awful.layout.suit.fair.horizontal,
-    -- awful.layout.suit.spiral,
-    -- awful.layout.suit.spiral.dwindle,
-    -- awful.layout.suit.magnifier,
-    -- awful.layout.suit.corner.nw,
-    -- awful.layout.suit.corner.ne,
-    -- awful.layout.suit.corner.sw,
-    -- awful.layout.suit.corner.se,
 }
 -- }}}
 

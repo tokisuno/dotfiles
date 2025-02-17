@@ -6,6 +6,8 @@ export HISTFILE="$ZDOTDIR/.zhistory"
 export HISTSIZE=10000
 export SAVEHIST=10000
 
+export COLORTERM=truecolor
+
 export ALTERNATE_EDITOR=""
 export VISUAL="/usr/bin/emacs"
 export EDITOR="/usr/bin/nvim"
@@ -40,7 +42,6 @@ export PATH=${PATH}:"/usr/bin/"
 export PATH=${PATH}:"/usr/local/bin"
 export PATH=${PATH}:"~/.npm-global/bin"
 export PATH=${PATH}:"`go env GOPATH`/bin"
-
 
 # keyboard
 export GLFW_IM_MODULE=ibus
