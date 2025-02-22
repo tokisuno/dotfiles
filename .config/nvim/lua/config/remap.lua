@@ -25,6 +25,7 @@ map("i", "<C-h>", "<C-w>", opts)
 
 -- opening menus
 map("n", "<leader>o", ":e .<cr>", { noremap = true, silent = true, desc = "Open oil.nvim" })
+map("n", "<C-x><C-f>", ":e .<cr>", { noremap = true, silent = true, desc = "Opens oil.nvim (emacs style)"})
 map("n", "<leader>l", ":Lazy<cr>", { noremap = true, silent = true, desc = "Open lazy.nvim" })
 map("n", "<leader>m", ":Mason<cr>", { noremap = true, silent = true, desc = "Open Mason" })
 
