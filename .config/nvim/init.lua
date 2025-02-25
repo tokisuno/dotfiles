@@ -1,17 +1,17 @@
-vim.g.mapleader      = " "
+vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
 require("config")
 
-local set     = vim.opt
+local set = vim.opt
 local autocmd = vim.api.nvim_create_autocmd
 
-vim.o.background     = "dark"
+vim.o.background = "dark"
 vim.cmd.colorscheme("gruvbox")
 vim.g.have_nerd_font = true
 set.termguicolors = true
-set.guicursor     = ""
-set.cursorline    = true
+set.guicursor = ""
+set.cursorline = true
 
 set.wildmode   = "list:longest"
 set.wildignore = {'*.docx','*.jpg','*.png','*.gif','*.pdf','*.pyc','*.exe','*.flv','*.img','*.xlsx'}
@@ -30,35 +30,35 @@ vim.diagnostic.config({
   },
 })
 
-set.nu             = true
+set.nu = true
 set.relativenumber = true
-set.signcolumn     = "number"
+set.signcolumn = "number"
 
 set.swapfile = false
 vim.o.backup = false
 set.undofile = true
-set.undodir  = os.getenv("HOME") .. "/.vim/undodir"
+set.undodir = os.getenv("HOME") .. "/.vim/undodir"
 set.isfname:append("@-@")
 set.undofile = true
 
-set.tabstop     = 4
-set.shiftwidth  = 4
+set.tabstop = 4
+set.shiftwidth = 4
 set.softtabstop = 4
 set.smartindent = false
-set.expandtab   = true
+set.expandtab = true
 
-set.updatetime  = 50
-set.scrolloff   = 10
-set.wrap        = true
-set.linebreak   = true
+set.updatetime = 50
+set.scrolloff = 10
+set.wrap = true
+set.linebreak = true
 set.colorcolumn = "80"
-set.ignorecase  = true
-set.smartcase   = true
-set.inccommand  = 'split'
+set.ignorecase = true
+set.smartcase = true
+set.inccommand = 'split'
 set.breakindent = true
 set.ttimeoutlen = 50
-set.foldmethod  = "manual"
-set.foldlevel   = 999
+set.foldmethod = "manual"
+set.foldlevel = 999
 
 autocmd('FileType', {
     pattern = {
@@ -84,6 +84,7 @@ autocmd("BufWritePre", {
     end,
 })
 
+-- flash highlight when yanking
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 autocmd('TextYankPost', {
   callback = function()

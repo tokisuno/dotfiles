@@ -42,17 +42,10 @@ return {
     end
   },
   {
-    'echasnovski/mini.indentscope',
+    'echasnovski/mini.statusline',
     version = false,
-    config = function ()
-      require('mini.indentscope').setup({
-        mappings = {
-          object_scope = 'ii',
-          object_scope_with_border = 'ai',
-          goto_top = '[i',
-          goto_bottom = ']i',
-        },
-      })
-    end
-  },
+		config = function ()
+			require('mini.statusline').setup()
+		end
+  }
 }
