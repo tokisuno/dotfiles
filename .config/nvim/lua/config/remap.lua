@@ -4,8 +4,7 @@ local opts = { noremap=true, silent=true }
 vim.g.mapleader      = " "
 vim.g.maplocalleader = ","
 
-map("n", "<C-w><C-w>", vim.cmd.bdelete, { noremap=true, silent=true, desc = "Buffer quit" })
-map("n", "<C-w><C-d>", vim.cmd.bunload, { noremap=true, silent=true, desc = "Buffer unload" })
+map("n", "<C-w><C-u>", vim.cmd.bunload, { noremap=true, silent=true, desc = "Buffer unload" })
 
 map("n", "<C-p>", ":bprev<cr>", opts)
 map("n", "<C-n>", ":bnext<cr>", opts)
@@ -24,14 +23,12 @@ map("i", "<C-h>", "<C-w>", opts)
 
 -- opening menus
 map("n", "<leader>e", ":e .<cr>", { noremap = true, silent = true, desc = "Open oil.nvim" })
-map("n", "<C-x><C-f>", ":e .<cr>", { noremap = true, silent = true, desc = "Opens oil.nvim (emacs style)"})
 map("n", "<leader>l", ":Lazy<cr>", { noremap = true, silent = true, desc = "Open lazy.nvim" })
 map("n", "<leader>m", ":Mason<cr>", { noremap = true, silent = true, desc = "Open Mason" })
 
--- snacks picker
--- -- map('n', '<leader>fd', builtin.diagnostics, { desc = 'Telescope diagnostics' })
--- -- map('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
--- -- map('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
--- -- map('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
--- -- map('n', '<leader>fi', builtin.buffers, { desc = 'Telescope buffers' })
--- -- map('n', '<leader>fq', builtin.quickfix, { desc = 'Telescope quickfix' })
+-- some native emacs bindings i prefer
+map("n", "<C-x><C-f>", ":e .<cr>", { noremap = true, silent = true, desc = "Opens oil.nvim (emacs style)"})
+map('n', '<C-x>k', vim.cmd.bdelete, { noremap=true, silent=true, desc="Buffer delete"})
+-- map('n', '<C-x><C-c>', vim.cmd(':wq'), { noremap=true, silent=true, desc="Close Neovim"}) -- fucking ass
+-- this is the default undo mapping but i can't think of anything else to map this to...
+map('n', '<C-x>u', vim.cmd.unload, { noremap=true, silent=true, desc="Buffer unload"})
