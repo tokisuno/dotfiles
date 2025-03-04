@@ -20,6 +20,7 @@ theme.taglist_fg_occupied  = "#98971a"
 theme.bg_systray           = theme.bg_normal
 theme.systray_icon_spacing = dpi(4)
 
+theme.notification_fg = "#fbf1c7"
 theme.fg_normal     = "#504945"
 -- theme.fg_focus      = "#fabd2f"
 theme.fg_focus      = "#fbf1c7"
