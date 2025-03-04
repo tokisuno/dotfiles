@@ -24,10 +24,10 @@ vim.diagnostic.config({
   underline = true,
   update_in_insert = true,
   severity_sort = true,
-  float = {
-    border = "rounded",
-    source = true,
-  },
+  -- float = {
+  --   border = "rounded",
+  --   source = true,
+  -- },
 })
 
 set.nu = true
@@ -39,11 +39,11 @@ vim.o.backup = false
 set.undofile = true
 set.undodir = os.getenv("HOME") .. "/.vim/undodir"
 set.isfname:append("@-@")
-set.undofile = true
 
-set.tabstop = 4
-set.shiftwidth = 4
-set.softtabstop = 4
+set.tabstop = 2
+set.shiftwidth = 2
+set.softtabstop = 2
+set.smartcase = true
 set.smartindent = false
 set.expandtab = true
 
@@ -53,7 +53,6 @@ set.wrap = true
 set.linebreak = true
 set.colorcolumn = "80"
 set.ignorecase = true
-set.smartcase = true
 set.inccommand = 'split'
 set.breakindent = true
 set.ttimeoutlen = 50
@@ -62,15 +61,10 @@ set.foldlevel = 999
 
 autocmd('FileType', {
     pattern = {
-        'html',
-        'css',
-        'lua',
-        'luajit',
-        'rs',
-        'rb'
+      'py'
     },
     callback = function()
-        vim.cmd('setlocal tabstop=2 shiftwidth=2 softtabstop=2')
+        vim.cmd('setlocal tabstop=4 shiftwidth=4 softtabstop=4')
     end,
 })
 
@@ -82,6 +76,15 @@ autocmd("BufWritePre", {
         vim.cmd([[%s/\s\+$//e]])
         vim.fn.setpos(".", save_cursor)
     end,
+})
+
+autocmd('CursorMoved', {
+  group = vim.api.nvim_create_augroup('auto-hlsearch', { clear = true }),
+  callback = function ()
+    if vim.v.hlsearch == 1 and vim.fn.searchcount().exact_match == 0 then
+      vim.schedule(function () vim.cmd.nohlsearch() end)
+    end
+  end
 })
 
 -- flash highlight when yanking
