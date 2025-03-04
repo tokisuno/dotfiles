@@ -17,6 +17,7 @@ return {
     { "<leader>fg", function() Snacks.picker.grep() end, desc = "Find Git Files" },
     { "<leader>fh", function() Snacks.picker.help() end, desc = "Open help files" },
     { "<leader>fp", function() Snacks.picker.projects() end, desc = "Projects" },
+    { "<leader>fu", function() Snacks.picker.undo() end, desc = "Undo history" },
     { "<leader>fr", function() Snacks.picker.recent() end, desc = "Recent" },
     { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
     { "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition" },
