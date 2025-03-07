@@ -11,7 +11,7 @@ zstyle ':completion:*' file-patterns '
 '
 zstyle ':completion:*' group-order tex-files pdf-files executables directories files
 zstyle ':completion:*' group-name ''
-
+alias mic='arecord --device="hw:1,0" --format=s16_le --rate=48 rec_$(date "+%F_%H-%M-%S").wav'
 # ALIASES
 ## ls replacement
 alias ls='eza'
