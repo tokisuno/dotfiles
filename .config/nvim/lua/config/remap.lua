@@ -4,6 +4,19 @@ local opts = { noremap=true, silent=true }
 vim.g.mapleader      = " "
 vim.g.maplocalleader = ","
 
+-- i did get some emacs brainrot with ctrl combos...
+map("n", "<C-w><C-j>", function ()
+  vim.diagnostic.jump({ count = 1, float = true})
+end)
+
+map("n", "<C-w><C-k>", function ()
+  vim.diagnostic.jump({ count = -1, float = true})
+end)
+
+map("n", "<C-w><C-o>", function ()
+  vim.diagnostic.open_float()
+end)
+
 map("n", "<C-w><C-u>", vim.cmd.bunload, { noremap=true, silent=true, desc = "Buffer unload" })
 
 map("n", "<C-p>", ":bprev<cr>", opts)
@@ -29,6 +42,5 @@ map("n", "<leader>m", ":Mason<cr>", { noremap = true, silent = true, desc = "Ope
 -- some native emacs bindings i prefer
 map("n", "<C-x><C-f>", ":e .<cr>", { noremap = true, silent = true, desc = "Opens oil.nvim (emacs style)"})
 map('n', '<C-x>k', vim.cmd.bdelete, { noremap=true, silent=true, desc="Buffer delete"})
--- map('n', '<C-x><C-c>', vim.cmd(':wq'), { noremap=true, silent=true, desc="Close Neovim"}) -- fucking ass
 -- this is the default undo mapping but i can't think of anything else to map this to...
 map('n', '<C-x>u', vim.cmd.unload, { noremap=true, silent=true, desc="Buffer unload"})

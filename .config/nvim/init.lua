@@ -17,17 +17,24 @@ set.wildmode   = "list:longest"
 set.wildignore = {'*.docx','*.jpg','*.png','*.gif','*.pdf','*.pyc','*.exe','*.flv','*.img','*.xlsx'}
 
 vim.diagnostic.config({
-  virtual_text = true,
+  virtual_text = false,
   signs = {
-    text = { " ", " ", " ", " " },
+    text = {
+      [vim.diagnostic.severity.ERROR] = '',
+      [vim.diagnostic.severity.WARN] = '',
+      [vim.diagnostic.severity.INFO] = '',
+      [vim.diagnostic.severity.HINT] = '',
+    },
+    numhl = {
+      [vim.diagnostic.severity.WARN] = 'WarningMsg',
+      [vim.diagnostic.severity.ERROR] = 'ErrorMsg',
+      [vim.diagnostic.severity.INFO] = 'DiagnosticInfo',
+      [vim.diagnostic.severity.HINT] = 'DiagnosticHint',
+    },
   },
+  update_in_insert = false,
   underline = true,
-  update_in_insert = true,
   severity_sort = true,
-  -- float = {
-  --   border = "rounded",
-  --   source = true,
-  -- },
 })
 
 set.nu = true
@@ -88,12 +95,11 @@ autocmd('CursorMoved', {
 })
 
 -- flash highlight when yanking
-local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 autocmd('TextYankPost', {
+  group = vim.api.nvim_create_augroup('YankHighlight', { clear = true }),
   callback = function()
     vim.highlight.on_yank()
   end,
-  group = highlight_group,
   pattern = '*',
 })
 

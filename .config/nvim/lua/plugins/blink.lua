@@ -12,10 +12,11 @@ return {
       },
       keymap = {
         preset = "none",
-        ["<C-n>"] = { "select_next", "fallback" },
-        ["<C-p>"] = { "select_prev", "fallback" },
+        ["<C-n>"] = { "select_next" },
+        ["<C-p>"] = { "select_prev" },
         ["<C-y>"] = { "select_and_accept" },
-        ["<C-r>"] = { "snippet_forward", "fallback" },
+        ["<C-r>"] = { "snippet_forward" },
+        ["<Tab>"] = {},
       },
       sources = {
         default = { "lsp", "path", "snippets", "buffer" },
@@ -23,3 +24,4 @@ return {
     },
   },
 }
+

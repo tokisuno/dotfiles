@@ -2,6 +2,7 @@ return {
   'folke/snacks.nvim',
   priority = 1000,
   lazy = false,
+  ---@diagnostic disable: undefined-doc-name
   ---@type snacks.Config
   opts = {
     explorer = { enabled = true },
@@ -11,6 +12,7 @@ return {
     picker = { enabled = true },
   },
   keys = {
+  ---@diagnostic disable: undefined-global
     { "<leader>b", function() Snacks.picker.buffers() end, desc = "Buffers" },
     { "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Find Config File" },
     { "<leader>ff", function() Snacks.picker.files() end, desc = "Find Files" },
