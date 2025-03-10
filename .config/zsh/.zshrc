@@ -11,7 +11,9 @@ zstyle ':completion:*' file-patterns '
 '
 zstyle ':completion:*' group-order tex-files pdf-files executables directories files
 zstyle ':completion:*' group-name ''
+
 alias mic='arecord --device="hw:1,0" --format=s16_le --rate=48 rec_$(date "+%F_%H-%M-%S").wav'
+
 # ALIASES
 ## ls replacement
 alias ls='eza'
@@ -33,10 +35,12 @@ alias iv='nvim'
 alias ivm='nvim'
 alias vi='nvim'
 alias v='nvim'
-alias ogvim='/bin/vim'
+alias ovim='/bin/vim'
 alias ka='killall'
 alias claer='clear'
 alias rmrf='rm -rf'
+
+alias btw='neofetch'
 
 ## dotfile stuff
 alias dots="cd ~/code/repos/dotfiles"
