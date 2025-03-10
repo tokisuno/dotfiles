@@ -56,7 +56,6 @@ end
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_configuration_dir() .. "/themes/lucas/theme.lua")
 
-
 modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
@@ -144,8 +143,8 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Create the wibox
     s.mywibox = awful.wibar({
-      height = dpi(20),
-      position = "top",
+      height = dpi(22),
+      position = "bottom",
       screen = s
     })
 

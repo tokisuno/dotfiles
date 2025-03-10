@@ -10,11 +10,10 @@ local cmds =
   "ibus-daemon -rxRd",
   "pactl set-default-sink alsa_output.usb-GeneralPlus_USB_Audio_Device-00.analog-stereo",
   "pactl set-sink-volume @DEFAULT_SINK@ 25%",
-  "syncthing",
   "setxkbmap -option 'ctrl:nocaps'",
   -- "picom", -- this shit is broken right now. im getting 60% cpu and idk why
   "feh --bg-fill $HOME/wallpapers/gruv-temple.png",
-
+  "syncthing",
 }
 
 for _,i in pairs(cmds) do
