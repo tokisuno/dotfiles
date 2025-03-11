@@ -28,6 +28,12 @@ return {
       local lspconfig = require('lspconfig')
       lspconfig.emmet_ls.setup{}
       lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
+      lspconfig.ruby_lsp.setup({
+        init_options = {
+          formatter = 'standard',
+          linters = { 'standard' }
+        }
+      })
       lsp.set_preferences({
         suggest_lsp_servers = false,
         sign_icons = {

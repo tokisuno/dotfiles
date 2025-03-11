@@ -38,6 +38,7 @@ export PATH=${PATH}:"/bin"
 # Gems are so fucking annoying
 export PATH=${PATH}:"$HOME/.local/share/gem/ruby/3.2.0/bin"
 export PATH=${PATH}:"/home/poto/.local/share/gem/ruby/3.3.0/bin"
+export PATH=${PATH}:"/home/poto/.local/share/gem/ruby/3.6.5/bin"
 export PATH=${PATH}:"/usr/bin/"
 export PATH=${PATH}:"/usr/local/bin"
 export PATH=${PATH}:"~/.npm-global/bin"
