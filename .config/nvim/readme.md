@@ -1,7 +1,12 @@
 # NVIM CONFIG
+![start screen](assets/startscreen.png)
+![plugin list](assets/pluginlist.png)
+
 ## Explanation
 - All of my configuration stuff is done inside of ``~/.config/nvim/lua/lucas``.
 - I make sure to keep the amount of plugins I use to the minimal due to me having slow SSDs.
+- This might not work on your system, but it works on mine so that's all what matters
+- I compile [Neovim](https://www.github.com/neovim/neovim) from source, though I don't think it makes much of a difference for this
 
 ## Base configuration files
 - [autocmd](https://github.com/tokisuno/dotfiles/blob/main/.config/nvim/lua/lucas/autocmd.lua)
