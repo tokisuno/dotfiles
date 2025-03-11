@@ -1,8 +1,8 @@
 # NVIM CONFIG
-1. [Explanation](#explanation-a-nameexplanationa)
-2. [Base configuration files](#base-configuration-files-a-namebasea)
-3. [Plugin configuration files](#plugin-configuration-files-a-namepluginsa)
-4. [Screenshots](#screenshots-a-namescreenshotsa)
+1. [Explanation](#explanation)
+2. [Base configuration files](#base)
+3. [Plugin configuration files](#plugins)
+4. [Screenshots](#screenshots)
 
 ## Explanation <a name="explanation"></a>
 - All of my configuration stuff is done inside of ``~/.config/nvim/lua/lucas``.
