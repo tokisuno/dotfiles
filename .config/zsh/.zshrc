@@ -44,6 +44,7 @@ alias btw='neofetch'
 
 ## dotfile stuff
 alias dots="cd ~/code/repos/dotfiles"
+alias vc="cd ~/.config/nvim/lua/lucas/"
 alias wm="cd ~/.config/awesome"
 alias path='vim ~/.config/zsh/.zshenv'
 alias zse='vim ~/.config/zsh/.zshrc'
