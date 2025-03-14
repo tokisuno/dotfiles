@@ -1,5 +1,5 @@
 -- This is used later as the default terminal and editor to run.
-local terminal = "kitty"
+local terminal = "ghostty"
 local browser = "firefox"
 local editor = os.getenv("EDITOR") or "vim"
 local editor_cmd = terminal .. " -e " .. editor
@@ -380,7 +380,7 @@ awful.rules.rules = {
                      keys = clientkeys,
                      buttons = clientbuttons,
                      screen = awful.screen.preferred,
-                     placement = awful.placement.no_overlap+awful.placement.no_offscreen
+                     placement = awful.placement.centered + awful.placement.no_overlap+awful.placement.no_offscreen
      }
     },
 
