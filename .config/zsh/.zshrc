@@ -16,16 +16,16 @@ alias mic='arecord --device="hw:1,0" --format=s16_le --rate=48 rec_$(date "+%F_%
 
 # ALIASES
 ## ls replacement
-alias ls='eza'
-alias l='eza -lbF --git'
-alias ll='eza -lbGF --git'
-alias llm='eza -lbGd --git --sort=modified'
-alias la='eza -lbhHigUmuSa --time-style=long-iso --git --color-scale'
-alias lx='eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale'
-alias lS='eza -1'
-alias lt='eza --tree --level=2'
-alias lz='ls -a'
-alias ltr='eza -s modified -r'
+alias ls='eza --icons=always'
+alias l='eza -lbF --git --icons=always'
+alias ll='eza -lbGF --git --icons=always'
+alias llm='eza -lbGd --git --sort=modified --icons=always'
+alias la='eza -lbhHigUmuSa --time-style=long-iso --git --color-scale --icons=always'
+alias lx='eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale --icons=always'
+alias lS='eza -1 --icons=always'
+alias lt='eza --tree --level=2 --icons=always'
+alias lz='ls -a --icons=always'
+alias ltr='eza -s modified -r --icons=always'
 
 alias makevim='git pull && git clean -xfd && make CMAKE_BUILD_TYPE=RelWithDebInfo'
 
