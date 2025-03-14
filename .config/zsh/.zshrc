@@ -27,7 +27,7 @@ alias lt='eza --tree --level=2'
 alias lz='ls -a'
 alias ltr='eza -s modified -r'
 
-alias makevim='make CMAKE_BUILD_TYPE=RelWithDebInfo'
+alias makevim='git pull && git clean -xfd && make CMAKE_BUILD_TYPE=RelWithDebInfo'
 
 ## Quality of life
 alias vim='nvim'
