@@ -7,7 +7,7 @@
 ## core programs
 - [awesomewm](https://github.com/tokisuno/dotfiles/tree/main/.config/awesome)
 - [doom emacs](https://github.com/tokisuno/dotfiles/tree/main/.config/doom)
-- [kitty](https://github.com/tokisuno/dotfiles/tree/main/.config/kitty)
+- [kitty](https://github.com/tokisuno/dotfiles/tree/main/.config/kitty)/[ghostty](https://github.com/tokisuno/dotfiles/tree/main/.config/ghostty)
 - [neovim](https://github.com/tokisuno/dotfiles/tree/main/.config/nvim)
 - [picom](https://github.com/tokisuno/dotfiles/tree/main/.config/picom)
 - [rofi](https://github.com/tokisuno/dotfiles/tree/main/.config/rofi)
