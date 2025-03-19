@@ -15,11 +15,11 @@ return {
   ---@diagnostic disable: undefined-global
     { "<leader>b", function() Snacks.picker.buffers() end, desc = "Buffers" },
     { "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Find Config File" },
-    { "<leader>ff", function() Snacks.picker.files() end, desc = "Find Files" },
-    { "<leader>fg", function() Snacks.picker.grep() end, desc = "Find Git Files" },
-    { "<leader>fh", function() Snacks.picker.help() end, desc = "Open help files" },
-    { "<leader>fp", function() Snacks.picker.projects() end, desc = "Projects" },
-    { "<leader>fu", function() Snacks.picker.undo() end, desc = "Undo history" },
+    { "<leader>fi", function() Snacks.picker.files() end, desc = "Find Files" },
+    { "<leader><leader>", function() Snacks.picker.grep() end, desc = "Grep" },
+    { "<leader>h", function() Snacks.picker.help() end, desc = "Open help files" },
+    { "<leader>pp", function() Snacks.picker.projects() end, desc = "Projects" },
+    { "<leader>u", function() Snacks.picker.undo() end, desc = "Undo history" },
     { "<leader>fr", function() Snacks.picker.recent() end, desc = "Recent" },
     { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
     { "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition" },
@@ -28,6 +28,6 @@ return {
     { "gi", function() Snacks.picker.lsp_implementations() end, desc = "Goto Implementation" },
     { "gy", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto T[y]pe Definition" },
     { "<leader>ss", function() Snacks.picker.lsp_symbols() end, desc = "LSP Symbols" },
-    { "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
+    { "<leader>sw", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
   }
 }

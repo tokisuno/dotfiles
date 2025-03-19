@@ -33,7 +33,7 @@ map("v", "<leader>y", "\"+y", { desc = "Copy to system clipboard" })
 -- ctrl-backspace when in insert mode
 map("i", "<C-h>", "<C-w>", opts)
 
-map("n", "<leader>d", ":Trouble diagnostics filter.buf=0 win = { type = split, position = right, relative = win, size = 0.4}<cr>")
+map("n", "<leader>d", ":Trouble diagnostics filter.buf=0 win = { type = split, position = right, relative = win, size = 0.4}<cr>", { desc = "Split diagnostics window"})
 
 -- opening menus
 map("n", "<leader>e", ":e .<cr>", { noremap = true, silent = true, desc = "Open oil.nvim" })
