@@ -4,15 +4,15 @@ vim.g.maplocalleader = ","
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
-map("n", "<C-w><C-j>", function ()
+map("n", "<leader>n", function ()
   vim.diagnostic.jump({ count = 1, float = true})
 end)
 
-map("n", "<C-w><C-k>", function ()
+map("n", "<leader>p", function ()
   vim.diagnostic.jump({ count = -1, float = true})
 end)
 
-map("n", "<C-w><C-o>", function ()
+map("n", "<C-e>", function ()
   vim.diagnostic.open_float()
 end)
 
