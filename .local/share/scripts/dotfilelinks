@@ -15,6 +15,7 @@ ln -sf ~/code/repos/dotfiles/.config/zsh/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/kitty/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/ghostty/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/tmux/ ~/.config
+ln -sf ~/code/repos/dotfiles/.config/starship/ ~/.config
 
 # Default programs
 ln -s ~/code/repos/dotfiles/.config/mimeapps.list ~/.config/
