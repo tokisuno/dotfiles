@@ -14,6 +14,9 @@ zstyle ':completion:*' group-name ''
 
 alias mic='arecord --device="hw:1,0" --format=s16_le --rate=48 rec_$(date "+%F_%H-%M-%S").wav'
 
+# ssh
+alias shetup='eval "$(ssh-agent -s)" && ssh-add'
+
 # ALIASES
 ## ls replacement
 alias ls='eza --icons=always'
@@ -41,6 +44,7 @@ alias claer='clear'
 alias rmrf='rm -rf'
 
 alias btw='neofetch'
+alias eo='setxkbmap -option esperanto:qwerty'
 
 ## dotfile stuff
 alias dots="cd ~/code/repos/dotfiles"
@@ -82,8 +86,8 @@ compinit
 _comp_options+=(globdots)
 eval "$(zoxide init --cmd cd zsh)"
 
-autoload -U promptinit; promptinit
-prompt pure
+# autoload -U promptinit; promptinit
+# prompt pure
 
 bindkey "^H" backward-delete-char
 bindkey "^?" backward-delete-char
@@ -107,5 +111,6 @@ cn () {
 
 source /usr/share/nvm/init-nvm.sh
 
+eval "$(starship init zsh)"
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"

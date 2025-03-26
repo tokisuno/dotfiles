@@ -43,6 +43,9 @@ export PATH=${PATH}:"/usr/bin/"
 export PATH=${PATH}:"/usr/local/bin"
 export PATH=${PATH}:"~/.npm-global/bin"
 export PATH=${PATH}:"`go env GOPATH`/bin"
+# export PATH=${PATH}:"$HOME/.rvm/bin"
+
+export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 
 # keyboard
 export GLFW_IM_MODULE=ibus
