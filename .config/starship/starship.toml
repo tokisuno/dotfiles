@@ -1,0 +1,4 @@
+[character]
+success_symbol = '[λ](bold green) '
+error_symbol = '[E](bold red) '
+vimcmd_symbol = '[γ](bold yellow) '
