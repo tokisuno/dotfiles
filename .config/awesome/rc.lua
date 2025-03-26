@@ -200,6 +200,10 @@ globalkeys = gears.table.join(
     ),
     awful.key({ modkey,           }, "w", function () awful.spawn(browser) end,
               {description = "open browser", group = "awesome"}),
+    awful.key({ modkey,           }, "=", function () awful.tag.setgap(dpi(16)) end,
+              {description = "set useless gap to dpi(16)", group = "awesome"}),
+    awful.key({ modkey,           }, "-", function () awful.tag.setgap(dpi(0)) end,
+              {description = "remove useless gap (set to dpi(0))", group = "awesome"}),
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
               {description = "swap with next client by index", group = "client"}),

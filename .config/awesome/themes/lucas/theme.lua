@@ -28,10 +28,10 @@ theme.fg_urgent     = "#fbf1c7"
 theme.fg_minimize   = "#fbf1c7"
 
 theme.useless_gap   = dpi(0)
-theme.border_width  = dpi(2)
+theme.border_width  = dpi(3)
 theme.border_normal = "#282828"
-theme.border_focus  = "#fabd2f"
--- theme.border_focus  = "#fbf1c7"
+-- theme.border_focus  = "#458588"
+theme.border_focus  = "#fbf1c7"
 theme.border_marked = "#91231c"
 
 theme.tasklist_disable_icon = true
