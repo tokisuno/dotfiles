@@ -47,7 +47,7 @@ return {
         local opts = {buffer = bufnr, remap = false}
         vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
         vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts)
-        vim.keymap.set("n", "<leader>nm", function() vim.lsp.buf.rename() end, opts)
+        vim.keymap.set("n", "<leader>cr", function() vim.lsp.buf.rename() end, opts)
         vim.keymap.set("i", "<C-s>", function() vim.lsp.buf.signature_help() end, opts)
       end)
       lsp.setup()
