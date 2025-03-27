@@ -16,6 +16,8 @@ map("n", "<C-e>", function ()
   vim.diagnostic.open_float()
 end)
 
+map("n", "<leader>s", [[:%s/<<C-r><C-w>>/<C-r><C-w>/gI<Left><Left><Left>]], { noremap = true, silent = true, desc = "Replace word" })
+
 map("n", "<C-w><C-u>", vim.cmd.bunload, { noremap = true, silent = true, desc = "Buffer unload" })
 
 map("n", "<C-p>", ":bprev<cr>", opts)
