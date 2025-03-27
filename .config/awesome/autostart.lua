@@ -12,6 +12,7 @@ local cmds =
   "pactl set-sink-volume @DEFAULT_SINK@ 25%",
   "setxkbmap -option 'ctrl:nocaps'",
   "nitrogen --restore",
+  "conky",
   -- "feh --bg-fill $HOME/wallpapers/gruv-temple.png",
   "syncthing",
 }
