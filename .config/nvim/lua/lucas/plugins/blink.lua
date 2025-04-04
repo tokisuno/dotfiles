@@ -15,7 +15,8 @@ return {
         ["<C-n>"] = { "select_next" },
         ["<C-p>"] = { "select_prev" },
         ["<C-y>"] = { "select_and_accept" },
-        ["<C-r>"] = { "snippet_forward" },
+        ["<C-b>"] = { "snippet_backward" },
+        ["<C-f>"] = { "snippet_forward" },
         ["<Tab>"] = {},
       },
       sources = {

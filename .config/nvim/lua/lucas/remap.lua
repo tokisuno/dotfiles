@@ -1,6 +1,9 @@
 vim.g.mapleader      = " "
 vim.g.maplocalleader = ","
 
+vim.keymap.del({ 'i', 's' }, '<Tab>')
+vim.keymap.del({ 'i', 's' }, '<S-Tab>')
+
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
@@ -45,3 +48,5 @@ map("n", "<leader>m", ":Mason<cr>", { noremap = true, silent = true, desc = "Ope
 -- some native emacs bindings i prefer
 map("n", "<C-x><C-f>", ":e .<cr>", { noremap = true, silent = true, desc = "Opens oil.nvim (emacs style)"})
 map('n', '<C-x>k', vim.cmd.bdelete, { noremap = true, silent = true, desc = "Buffer delete"})
+
+vim.keymap.set("x", "<leader>p", [["_dP]])

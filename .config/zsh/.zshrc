@@ -12,10 +12,6 @@ zstyle ':completion:*' file-patterns '
 zstyle ':completion:*' group-order tex-files pdf-files executables directories files
 zstyle ':completion:*' group-name ''
 
-alias mic='arecord --device="hw:1,0" --format=s16_le --rate=48 rec_$(date "+%F_%H-%M-%S").wav'
-
-# ssh
-alias shetup='eval "$(ssh-agent -s)" && ssh-add'
 
 # ALIASES
 ## ls replacement
@@ -30,7 +26,11 @@ alias lt='eza --tree --level=2 --icons=always'
 alias lz='ls -a --icons=always'
 alias ltr='eza -s modified -r --icons=always'
 
+# from when i was using neovim nightly
 alias makevim='git pull && git clean -xfd && make CMAKE_BUILD_TYPE=RelWithDebInfo'
+
+# ssh
+alias shetup='eval "$(ssh-agent -s)" && ssh-add'
 
 ## Quality of life
 alias vim='nvim'
@@ -44,6 +44,7 @@ alias claer='clear'
 alias rmrf='rm -rf'
 
 alias btw='neofetch'
+alias ff='fastfetch'
 alias eo='setxkbmap -option esperanto:qwerty'
 
 ## dotfile stuff

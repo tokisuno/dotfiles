@@ -29,9 +29,16 @@ return {
       lspconfig.emmet_ls.setup{}
       lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
       lspconfig.ruby_lsp.setup({
+        cmd = { 'ruby-lsp' },
+        filetypes = { 'ruby', 'eruby' },
+        root_dir = lspconfig.util.root_pattern('Gemfile', '.git'),
+        single_file_support = true,
         init_options = {
           formatter = 'standard',
-          linters = { 'standard' }
+          linters = { 'standard' },
+          document_highlights = true,
+          document_symbols = true,
+          signature_help = true,
         }
       })
       lsp.set_preferences({
@@ -47,7 +54,7 @@ return {
         local opts = {buffer = bufnr, remap = false}
         vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
         vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts)
-        vim.keymap.set("n", "<leader>cr", function() vim.lsp.buf.rename() end, opts)
+        vim.keymap.set("n", "<leader>crn", function() vim.lsp.buf.rename() end, opts)
         vim.keymap.set("i", "<C-s>", function() vim.lsp.buf.signature_help() end, opts)
       end)
       lsp.setup()
