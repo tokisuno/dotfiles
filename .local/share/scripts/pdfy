@@ -1,0 +1,3 @@
+#!/bin/sh
+
+cd $HOME/pdfs && fd -epdf | fzf --bind "enter:execute-silent(zathura  {} &)"
