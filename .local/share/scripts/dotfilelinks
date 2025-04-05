@@ -1,6 +1,5 @@
 #!/bin/bash
 ln -sf ~/code/repos/dotfiles/.local/share/scripts/ ~/.local/share
-
 ln -sf ~/code/repos/dotfiles/.config/awesome/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/conky/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/dconf/ ~/.config
@@ -9,17 +8,9 @@ ln -sf ~/code/repos/dotfiles/.config/mpv/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/nvim/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/picom/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/zathura/ ~/.config
-ln -sf ~/code/repos/dotfiles/.config/zsh/ ~/.config
-
-# I can't escape...
-ln -sf ~/code/repos/dotfiles/.config/kitty/ ~/.config
+ln -sf ~/code/repos/dotfiles/.config/fish/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/ghostty/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/tmux/ ~/.config
-ln -sf ~/code/repos/dotfiles/.config/starship/ ~/.config
 
 # Default programs
 ln -s ~/code/repos/dotfiles/.config/mimeapps.list ~/.config/
-
-# TBA
-# ln -sf ~/code/repos/dotfiles/.config/suckless ~/.config
-# ln -sf ~/code/repos/dotfiles/.config/dunst/ ~/.config
