@@ -15,13 +15,13 @@ SETUVAR NPM_DIR:/home/poto/\x2enpm\x2ddata
 SETUVAR NPM_PACKAGES:/home/poto/\x2enpm\x2dpackages
 SETUVAR NVM_DIR:\x7e/\x2envm
 SETUVAR PAGER:less
-SETUVAR --export --path PATH:/home/poto/\x2enpm\x2dglobal/bin\x1e/usr/local/bin\x1e/usr/bin\x1e/home/poto/\x2elocal/share/gem/ruby/3\x2e2\x2e0/bin\x1e/home/poto/go\x1e/home/poto/\x2elocal/share/scripts\x1e/home/poto/\x2elocal/share/applications\x1e/home/poto/\x2elocal/bin\x1e/home/poto/\x2econfig/emacs/bin\x1e/home/poto/\x2ecargo/bin\x1e/bin\x1e/sbin\x1e/usr/local/sbin\x1e/usr/sbin\x1e/home/poto/\x2elocal/share/flatpak/exports/bin\x1e/usr/lib/jvm/default/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/usr/lib/rustup/bin\x1e/home/poto/bin\x1e/\x2eghcup/bin\x1e/home/poto/\x2eluarocks/bin/digestif\x1e/home/poto/\x2enpm\x2dpackages/bin\x1e/bin\x1e/home/poto/\x2elocal/share/gem/ruby/3\x2e3\x2e0/bin\x1e/home/poto/\x2elocal/share/gem/ruby/3\x2e6\x2e5/bin\x1e/usr/bin/\x1e/usr/local/bin\x1e\x7e/\x2enpm\x2dglobal/bin\x1e/home/poto/go/bin\x1e\x60go\x20env\x20GOPATH\x60/bin
+SETUVAR --export --path PATH:/home/poto/\x2enpm\x2dglobal/bin\x1e/usr/local/bin\x1e/usr/bin\x1e/home/poto/\x2elocal/share/gem/ruby/3\x2e2\x2e0/bin\x1e/home/poto/go\x1e/home/poto/\x2elocal/share/scripts\x1e/home/poto/\x2elocal/share/applications\x1e/home/poto/\x2elocal/bin\x1e/home/poto/\x2econfig/emacs/bin\x1e/home/poto/\x2ecargo/bin\x1e/bin\x1e/sbin\x1e/usr/local/sbin\x1e/usr/sbin\x1e/home/poto/\x2elocal/share/flatpak/exports/bin\x1e/usr/lib/jvm/default/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/usr/lib/rustup/bin\x1e/home/poto/\x2ervm/bin\x1e\x60go\x20env\x20GOPATH\x60/bin
 SETUVAR QT_IM_MODULE:ibus
 SETUVAR SAVEHIST:10000
 SETUVAR STARSHIP_CONFIG:/home/poto/\x2econfig/starship/starship\x2etoml
 SETUVAR VIRTUAL_ENV_DISABLE_PROMPT:true
 SETUVAR VISUAL:/usr/bin/emacs
-SETUVAR XDG_DATA_DIRS:/home/poto/\x2elocal/share/flatpak/exports/share\x3a/var/lib/flatpak/exports/share\x3a/usr/local/share/\x3a/usr/share/\x3a/var/lib/flatpak/exports/share\x3a/home/poto/\x2elocal/share/flatpak/exports/share\x1e/home/poto/\x2elocal/share/flatpak/exports/share
+SETUVAR XDG_DATA_DIRS:/home/poto/\x2elocal/share/flatpak/exports/share\x3a/var/lib/flatpak/exports/share\x3a/usr/local/share/\x3a/usr/share/\x1e/home/poto/\x2elocal/share/flatpak/exports/share
 SETUVAR XMODIFIERS:\x40im\x3dibus
 SETUVAR ZDOTDIR:/home/poto/\x2econfig/zsh
 SETUVAR __fish_initialized:3800
@@ -29,14 +29,13 @@ SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fish
 SETUVAR _fisher_jorgebucaran_2F_hydro_files:\x7e/\x2econfig/fish/functions/fish_mode_prompt\x2efish\x1e\x7e/\x2econfig/fish/functions/fish_prompt\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/hydro\x2efish
 SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejorgebucaran/hydro
 SETUVAR _fisher_upgraded_to_4_4:\x1d
-SETUVAR _hydro_git_85134:main\u2022\x20
-SETUVAR _hydro_git_85983:\x1d
-SETUVAR _hydro_git_87533:main\x20
-SETUVAR _hydro_git_91031:main\x20
-SETUVAR _hydro_git_92704:main\x20
-SETUVAR _hydro_git_94246:\x1d
-SETUVAR _hydro_git_94536:\x1d
-SETUVAR _hydro_git_95317:main\u2022\x20
+SETUVAR _hydro_git_15173:main\u2022\x20
+SETUVAR _hydro_git_15519:main\u2022\x20
+SETUVAR _hydro_git_16282:main\u2022\x20
+SETUVAR _hydro_git_16634:main\u2022\x20
+SETUVAR _hydro_git_3455:main\u2022\x20
+SETUVAR _hydro_git_94246:\x20
+SETUVAR _hydro_git_99043:main\x20
 SETUVAR _tide_left_items:pwd\x1egit\x1enewline\x1echaracter
 SETUVAR _tide_right_items:status\x1ecmd_duration\x1econtext\x1ejobs\x1edirenv\x1enode\x1epython\x1erustc\x1ejava\x1eruby\x1ego\x1eelixir\x1ezig
 SETUVAR fish_color_autosuggestion:747369
@@ -64,6 +63,7 @@ SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrbl
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
+SETUVAR fish_greeting:
 SETUVAR fish_key_bindings:fish_default_key_bindings
 SETUVAR fish_pager_color_background:\x1d
 SETUVAR fish_pager_color_completion:normal

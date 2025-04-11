@@ -47,6 +47,9 @@ set -U XMODIFIERS "@im=ibus"
 set -U QT_IM_MODULE "ibus"
 set -U GTK_IM_MODULE "xim"
 
+# greeting
+set -U fish_greeting ""
+
 # misc
 set -U CC "clang"
 set -U NVM_DIR "~/.nvm"
