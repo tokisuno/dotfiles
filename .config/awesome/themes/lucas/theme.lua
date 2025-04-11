@@ -10,33 +10,33 @@ local themes_path  = gfs.get_themes_dir()
 
 local theme        = {}
 
-theme.font                 = "Noto Sans Mono CJK JP 13"
+theme.font                 = "Noto Sans Mono CJK JP 12"
 
 theme.bg_normal            = "#282828"
--- theme.bg_focus             = "#427b58"
 theme.bg_urgent            = "#cc241d"
-theme.bg_minimize          = "#665c54"
-theme.taglist_fg_occupied  = "#98971a"
+theme.bg_minimize          = "#504945"
+theme.taglist_fg_occupied  = "#a89984"
+theme.taglist_fg_focus     = "#d79921"
 theme.bg_systray           = theme.bg_normal
 theme.systray_icon_spacing = dpi(4)
 
+-- theme.fg_focus      = "#fabd2f"
 theme.notification_fg = "#fbf1c7"
 theme.fg_normal     = "#504945"
--- theme.fg_focus      = "#fabd2f"
 theme.fg_focus      = "#fbf1c7"
 theme.fg_urgent     = "#fbf1c7"
 theme.fg_minimize   = "#fbf1c7"
 
-theme.useless_gap   = dpi(0)
-theme.border_width  = dpi(3)
-theme.border_normal = "#282828"
 -- theme.border_focus  = "#458588"
-theme.border_focus  = "#fbf1c7"
+theme.useless_gap   = dpi(0)
+theme.border_width  = dpi(2)
+theme.border_normal = "#282828"
+theme.border_focus  = "#cc241d"
 theme.border_marked = "#91231c"
 
 theme.tasklist_disable_icon = true
 theme.tasklist_align = 'center'
-theme.tasklist_bg_focus = "#076678"
+theme.tasklist_bg_focus = "#79740e"
 
 theme.menu_submenu_icon = themes_path.."default/submenu.png"
 theme.menu_height = dpi(50)
