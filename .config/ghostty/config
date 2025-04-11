@@ -1,5 +1,5 @@
 font-family = JetBrainsMono Nerd Font
-font-size = 13
+font-size = 14
 font-feature = -calt, -liga, -dlig
 
 theme = GruvboxDark
@@ -17,6 +17,8 @@ cursor-style = block
 cursor-style-blink = true
 adjust-cell-height = 10%
 
-shell-integration = zsh
+background-opacity = 0.9
+
+shell-integration = fish
 shell-integration-features = no-cursor
 shell-integration-features = no-title
