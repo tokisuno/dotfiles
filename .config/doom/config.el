@@ -3,8 +3,8 @@
       user-mail-address "tokisunosan@gmail.com")
 
 (setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 18 :height 1.0 :weight 'normal)
-      doom-big-font (font-spec :family "JetBrainsMono Nerd Font" :size 24 :style "medium" :weight 'bold)
-      doom-variable-pitch-font (font-spec :family "Ubuntu" :size 26 :height 1.5 :weight 'normal))
+      doom-big-font (font-spec :family "JetBrainsMono Nerd Font" :size 24 :style "medium" :weight 'bold))
+      ;; doom-variable-pitch-font (font-spec :family "Ubuntu" :size 26 :height 1.5 :weight 'normal))
 
 (setq doom-theme 'doom-gruvbox)
 (setq display-line-numbers-type t)
@@ -59,7 +59,7 @@
                            (org-bullets-mode 1)
                            (olivetti-mode 1)
                            (display-line-numbers-mode -1)
-                           (mixed-pitch-mode 1)
+                           ;; (mixed-pitch-mode 1)
                            ))
 
 ;; Japanese input switching
