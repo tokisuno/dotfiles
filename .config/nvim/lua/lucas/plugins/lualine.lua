@@ -3,6 +3,23 @@ return {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function ()
+      local mode_map = {
+        n = "ノーマル",
+        nt = "ノーマル",
+        i = "挿入",
+        o = "オペレータ待機",
+        R = "置換",
+        v = "ビジュアル",
+        V = "ビジュアル",
+        x = "ビジュアル",
+        no = "コマンド",
+        ["\22"] = "コマンド",
+        t = "端末ジョブ",
+        ['!'] = "コマンド",
+        c = "コマンドライン",
+        s = "選択"
+      }
+
       require('lualine').setup {
         options = {
           icons_enabled = true,
@@ -27,8 +44,10 @@ return {
           lualine_a = {
             {
               'mode',
-              fmt = function(res) return res:sub(1,1) end
-            }
+              fmt = function()
+                return mode_map[vim.api.nvim_get_mode().mode] or vim.api.nvim_get_mode().mode
+              end
+            },
           },
           lualine_b = {
             {
