@@ -3,7 +3,7 @@ return {
     "saghen/blink.cmp",
     version = "*",
     dependencies = {
-      "rafamadriz/friendly-snippets",
+      'rafamadriz/friendly-snippets',
     },
     opts = {
       appearance = {

@@ -13,7 +13,6 @@ local cmds =
   "setxkbmap -option 'ctrl:nocaps'",
   "nitrogen --restore",
   "conky",
-  "picom",
   -- "feh --bg-fill $HOME/wallpapers/gruv-temple.png",
   "syncthing",
 }

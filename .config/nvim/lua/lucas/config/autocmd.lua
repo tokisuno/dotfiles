@@ -9,7 +9,6 @@ autocmd("FileType", {
 	end,
 })
 
--- going to try replacing with confirm.nvim
 autocmd("BufWritePre", {
 	pattern = { "*" },
 	callback = function(ev)

@@ -6,9 +6,6 @@
 ;; use 'M-x doom/reload'.
 
 (package! olivetti)
-(package! org-make-toc)
-(package! mixed-pitch)
-(package! pdf-tools)
 (package! org-noter)
 (package! org-bullets)
 (package! org-wc)

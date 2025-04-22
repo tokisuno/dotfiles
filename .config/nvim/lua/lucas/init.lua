@@ -2,11 +2,12 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
 require("lucas.lazy")
-require("lucas.remap")
-require("lucas.opts")
-require("lucas.autocmd")
-require("lucas.globals")
+require("lucas.config")
+-- require("lucas.opts")
+-- require("lucas.remap")
+-- require("lucas.autocmd")
 
--- fucking hate this
--- vim.keymap.del("i", "<Tab>")
--- vim.keymap.del("i", "<S-Tab>")
+P = function (v)
+  print(vim.inspect(v))
+  return v
+end

@@ -15,8 +15,8 @@ return {
   ---@diagnostic disable: undefined-global
     { "<leader>b", function() Snacks.picker.buffers() end, desc = "Buffers" },
     { "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Find Config File" },
-    { "<leader>fi", function() Snacks.picker.files() end, desc = "Find Files" },
-    { "<leader><leader>", function() Snacks.picker.grep() end, desc = "Grep" },
+    { "<leader>ff", function() Snacks.picker.files() end, desc = "Find Files" },
+    { "<leader>fg", function() Snacks.picker.grep() end, desc = "Grep" },
     { "<leader>h", function() Snacks.picker.help() end, desc = "Open help files" },
     -- { "<leader>pp", function() Snacks.picker.projects() end, desc = "Projects" },
     { "<leader>u", function() Snacks.picker.undo() end, desc = "Undo history" },

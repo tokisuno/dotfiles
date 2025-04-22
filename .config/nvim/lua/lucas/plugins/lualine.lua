@@ -24,7 +24,8 @@ return {
         options = {
           icons_enabled = true,
           theme = 'auto',
-          component_separators = { left = '', right = ''},
+          component_separators = '|',
+          -- component_separators = { left = '', right = ''},
           section_separators = { left = '', right = ''},
           disabled_filetypes = {
             statusline = {},
@@ -44,39 +45,14 @@ return {
           lualine_a = {
             {
               'mode',
+              color = { gui = 'bold' },
               fmt = function()
                 return mode_map[vim.api.nvim_get_mode().mode] or vim.api.nvim_get_mode().mode
               end
             },
           },
-          lualine_b = {
-            {
-              'buffers',
-              show_filename_only = true,   -- Shows shortened relative path when set to false.
-              hide_filename_extension = false,   -- Hide filename extension when set to true.
-              show_modified_status = true, -- Shows indicator when the buffer is modified.
-
-              mode = 0, -- 0: Shows buffer name
-              -- 1: Shows buffer index
-              -- 2: Shows buffer name + buffer index
-              -- 3: Shows buffer number
-              -- 4: Shows buffer name + buffer number
-
-              max_length = vim.o.columns * 2 / 3, -- Maximum width of buffers component,
-              use_mode_colors = true,
-              buffers_color = {
-                -- Same values as the general color option can be used here.
-                active = 'lualine_b_normal',     -- Color for active buffer.
-                inactive = 'lualine_b_inactive', -- Color for inactive buffer.
-              },
-              symbols = {
-                modified = ' ●',      -- Text to show when the buffer is modified
-                alternate_file = '#', -- Text to show to identify the alternate file
-                directory =  '',     -- Text to show when the buffer is a directory
-              },
-            }
-          },
-          lualine_c = {'diff', 'diagnostics'},
+          lualine_b = {'diagnostics', 'diff'},
+          lualine_c = {'filename'},
           lualine_x = {'encoding', 'fileformat', 'filetype'},
           lualine_y = {'progress'},
           lualine_z = {'location'}

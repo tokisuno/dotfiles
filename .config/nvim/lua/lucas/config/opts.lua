@@ -12,7 +12,7 @@ vim.opt.wildmode = "list:longest"
 vim.opt.wildignore = { "*.docx", "*.jpg", "*.png", "*.gif", "*.pdf", "*.pyc", "*.exe", "*.flv", "*.img", "*.xlsx" }
 
 vim.diagnostic.config({
-	virtual_text = false,
+	-- virtual_text = false,
 	--  virtual_lines = {
 	--    current_line = true
 	--  },

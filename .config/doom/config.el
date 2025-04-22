@@ -21,7 +21,24 @@
         org-roam-ui-update-on-save t
         org-roam-ui-open-on-start t))
 
+(use-package! org-habit
+  :after org
+  :config
+  (setq org-habit-following-days 7
+        org-habit-preceding-days 365
+        org-habit-show-habits t))
+
+(setq org-log-into-drawer t)
+
+(setq org-todo-keyword-faces
+      '(("TODO" . "red")
+        ("NEXT" . "blue")
+        ("WAITING" . "yellow")))
+
+;; #+SEQ_TODO: NEXT(n) TODO(t) WAITING(w) PROJ(p) | DONE(d)
 (setq org-directory "~/org/")
+
+
 
 ;; should i start using slugs..? i don't have thattt many notes and i organize them
 ;; through both metadata and by adding them to their parent node.
@@ -46,9 +63,6 @@
   (require 'org-roam-protocol))
 
 ;; (after! citar (setq! citar-bibliography '("~/Sync/latex/bibs/finalproj.bib")))
-
-;; doesn't run otherwise
-(pdf-tools-install)
 
 ;; making org-mode look good
 (setq org-hide-emphasis-markers t)

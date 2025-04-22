@@ -7,6 +7,10 @@ function shetup
   eval "'$(ssh-agent -s)' && ssh-add"
 end
 
+function rs
+  rspec $argv[1]
+end
+
 ## Quality of life
 function vim
   nvim $argv[1]
@@ -35,35 +39,40 @@ end
 function ka
   killall $argv[1]
 end
+
 function claer
   clear
 end
+
 function rmrf
   rm -rf $argv[1]
 end
+
 function btw
   neofetch
 end
+
 function ff
   fastfetch
-end
-function eo
-  setxkbmap -option esperanto:qwerty
 end
 
 ## dotfile stuff
 function dots
   cd ~/code/repos/dotfiles
 end
+
 function vc
   cd ~/.config/nvim/lua/lucas/
 end
+
 function vc
   cd ~/.config/nvim/lua/lucas/
 end
+
 function wm
   cd ~/.config/awesome
 end
+
 function rip
   cd ~/.local/share/scripts
 end
