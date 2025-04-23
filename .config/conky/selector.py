@@ -1,7 +1,10 @@
 import json
+import os
 from random import choice
 
-with open('quotes.json') as fp:
+home = os.path.expanduser('~')
+
+with open(home + '/.config/conky/quotes.json') as fp:
     content = json.loads(fp.read())
 
 quote = choice(content)
