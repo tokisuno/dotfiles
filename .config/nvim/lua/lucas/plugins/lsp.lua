@@ -3,8 +3,6 @@ return {
     'neovim/nvim-lspconfig',
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
-      'williamboman/mason.nvim',
-      'williamboman/mason-lspconfig.nvim',
       {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
     },
     config = function ()

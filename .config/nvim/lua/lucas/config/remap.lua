@@ -4,6 +4,8 @@ vim.g.maplocalleader = ","
 vim.keymap.del({ 'i', 's' }, '<Tab>')
 vim.keymap.del({ 'i', 's' }, '<S-Tab>')
 
+vim.keymap.set("n", "<C-c>", "yygccp", { remap = true })
+
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 

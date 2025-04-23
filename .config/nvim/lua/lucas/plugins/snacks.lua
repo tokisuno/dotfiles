@@ -6,7 +6,7 @@ return {
   ---@type snacks.Config
   opts = {
     explorer = { enabled = true },
-    indent = { enabled = true },
+    indent = { enabled = false },
     scope = { enabled = true },
     lazygit = { enabled = true },
     picker = { enabled = true },
