@@ -32,6 +32,7 @@ fish_add_path "$HOME/poto/.local/share/gem/ruby/3.6.5/bin"
 fish_add_path "$HOME/.npm-global/bin"
 fish_add_path "/usr/bin/"
 fish_add_path "/usr/local/bin"
+fish_add_path "$HOME/.config/emacs/bin/doom"
 fish_add_path "`go env GOPATH`/bin"
 # export PATH=${PATH}:"$HOME/.rvm/bin"
 
