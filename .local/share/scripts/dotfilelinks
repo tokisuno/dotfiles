@@ -9,7 +9,7 @@ ln -sf ~/code/repos/dotfiles/.config/nvim/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/picom/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/zathura/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/fish/ ~/.config
-ln -sf ~/code/repos/dotfiles/.config/kitty/ ~/.config
+ln -sf ~/code/repos/dotfiles/.config/alacritty/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/tmux/ ~/.config
 
 # Default programs

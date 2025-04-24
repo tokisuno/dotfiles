@@ -69,4 +69,5 @@ vim.o.foldlevel = 999
 vim.o.showmode = true
 vim.o.showmatch = true
 
-vim.cmd("set guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20")
+-- vim.cmd("set guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20")
+vim.opt.guicursor = { "n-v-c-sm:block","i-ci-ve:ver25","r-cr-o:hor20" }

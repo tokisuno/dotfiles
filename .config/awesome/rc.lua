@@ -1,5 +1,5 @@
 -- This is used later as the default terminal and editor to run.
-local terminal = "ghostty"
+local terminal = "alacritty"
 local browser = "firefox"
 local editor = os.getenv("EDITOR") or "vim"
 local editor_cmd = terminal .. " -e " .. editor
@@ -114,8 +114,8 @@ mymodule = require("mymodule")
 
 awful.screen.connect_for_each_screen(function(s)
     -- Each screen has its own tag table.
-    -- awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
-    awful.tag({ "●", "●", "●", "●", "●", "●", "●", "●", "●" }, s, awful.layout.layouts[1])
+    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+    -- awful.tag({ "●", "●", "●", "●", "●", "●", "●", "●", "●" }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
