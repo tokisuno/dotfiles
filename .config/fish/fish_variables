@@ -5,9 +5,9 @@ SETUVAR CC:clang
 SETUVAR COLORTERM:truecolor
 SETUVAR DICTIONARY:en_US
 SETUVAR EDITOR:/usr/bin/nvim
-SETUVAR GLFW_IM_MODULE:ibus
+SETUVAR --export GLFW_IM_MODULE:ibus
 SETUVAR --path GOPATH:/home/toki/go
-SETUVAR GTK_IM_MODULE:xim
+SETUVAR GTK_IM_MODULE:ibus
 SETUVAR GTK_THEME:Arc\x2dDark
 SETUVAR HISTFILE:/home/poto/\x2econfig/zsh/\x2ezhistory
 SETUVAR HISTSIZE:10000
@@ -15,13 +15,13 @@ SETUVAR NPM_DIR:/home/toki/\x2enpm\x2ddata
 SETUVAR NPM_PACKAGES:/home/toki/\x2enpm\x2dpackages
 SETUVAR NVM_DIR:\x7e/\x2envm
 SETUVAR PAGER:less
-SETUVAR --export --path PATH:/home/toki/\x2econfig/emacs/bin\x1e/home/toki/go\x1e/home/toki/\x2elocal/share/scripts\x1e/home/toki/\x2ecargo/bin\x1e/home/poto/\x2enpm\x2dglobal/bin\x1e/usr/local/bin\x1e/usr/bin\x1e/home/poto/\x2elocal/share/gem/ruby/3\x2e2\x2e0/bin\x1e/home/poto/go\x1e/home/poto/\x2elocal/share/scripts\x1e/home/poto/\x2elocal/share/applications\x1e/home/poto/\x2elocal/bin\x1e/home/poto/\x2econfig/emacs/bin\x1e/home/poto/\x2ecargo/bin\x1e/bin\x1e/usr/local/sbin\x1e/bin
+SETUVAR --export --path PATH:/home/toki/\x2erbenv/shims\x1e/home/toki/\x2erbenv/bin\x1e/home/toki/\x2econfig/emacs/bin\x1e/home/toki/go\x1e/home/toki/\x2elocal/share/scripts\x1e/home/toki/\x2ecargo/bin\x1e/home/poto/\x2enpm\x2dglobal/bin\x1e/usr/local/bin\x1e/usr/bin\x1e/home/poto/\x2elocal/share/gem/ruby/3\x2e2\x2e0/bin\x1e/home/poto/go\x1e/home/poto/\x2elocal/share/scripts\x1e/home/poto/\x2elocal/share/applications\x1e/home/poto/\x2elocal/bin\x1e/home/poto/\x2econfig/emacs/bin\x1e/home/poto/\x2ecargo/bin\x1e/bin\x1e/home/toki/\x2erbenv/shims\x1e/home/toki/\x2erbenv/shims\x1e/usr/local/sbin\x1e/bin
 SETUVAR QT_IM_MODULE:ibus
 SETUVAR SAVEHIST:10000
 SETUVAR STARSHIP_CONFIG:/home/poto/\x2econfig/starship/starship\x2etoml
 SETUVAR VIRTUAL_ENV_DISABLE_PROMPT:true
 SETUVAR VISUAL:/usr/bin/emacs
-SETUVAR --export --path XDG_DATA_DIRS:/home/toki/\x2elocal/share/flatpak/exports/share\x1e/var/lib/flatpak/exports/share\x1e/usr/local/share\x1e/usr/share\x1e/home/poto/\x2elocal/share/flatpak/exports/share
+SETUVAR --export --path XDG_DATA_DIRS:/home/toki/\x2elocal/share/flatpak/exports/share\x1e/var/lib/flatpak/exports/share\x1e/usr/local/share\x1e/usr/share\x1e/home/toki/\x2elocal/share/flatpak/exports/share
 SETUVAR XMODIFIERS:\x40im\x3dibus
 SETUVAR ZDOTDIR:/home/poto/\x2econfig/zsh
 SETUVAR __fish_initialized:3800
@@ -42,7 +42,11 @@ SETUVAR _hydro_git_25736:main\u2022\x20
 SETUVAR _hydro_git_28018:main\u2022\x20
 SETUVAR _hydro_git_28132:\x1d
 SETUVAR _hydro_git_3032:main\u2022\x20
+SETUVAR _hydro_git_31118:main\u2022\x20
 SETUVAR _hydro_git_3455:main\u2022\x20
+SETUVAR _hydro_git_35814:main\u2022\x20
+SETUVAR _hydro_git_43941:main\u2022\x20
+SETUVAR _hydro_git_6053:main\u2022\x20
 SETUVAR _hydro_git_94246:\x20
 SETUVAR _hydro_git_99043:main\x20
 SETUVAR _tide_left_items:pwd\x1egit\x1enewline\x1echaracter
@@ -87,7 +91,7 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/home/toki/\x2econfig/emacs/bin\x1e/home/toki/go\x1e/home/toki/\x2elocal/share/scripts\x1e/home/toki/\x2ecargo/bin\x1e/home/poto/\x2enpm\x2dglobal/bin\x1e/usr/local/bin\x1e/usr/bin\x1e/home/poto/\x2elocal/share/gem/ruby/3\x2e2\x2e0/bin\x1e/home/poto/go\x1e/home/poto/\x2elocal/share/scripts\x1e/home/poto/\x2elocal/share/applications\x1e/home/poto/\x2elocal/bin\x1e/home/poto/\x2econfig/emacs/bin\x1e/home/poto/\x2ecargo/bin\x1e/bin
+SETUVAR fish_user_paths:/home/toki/\x2erbenv/shims\x1e/home/toki/\x2erbenv/bin\x1e/home/toki/\x2econfig/emacs/bin\x1e/home/toki/go\x1e/home/toki/\x2elocal/share/scripts\x1e/home/toki/\x2ecargo/bin\x1e/home/poto/\x2enpm\x2dglobal/bin\x1e/usr/local/bin\x1e/usr/bin\x1e/home/poto/\x2elocal/share/gem/ruby/3\x2e2\x2e0/bin\x1e/home/poto/go\x1e/home/poto/\x2elocal/share/scripts\x1e/home/poto/\x2elocal/share/applications\x1e/home/poto/\x2elocal/bin\x1e/home/poto/\x2econfig/emacs/bin\x1e/home/poto/\x2ecargo/bin\x1e/bin
 SETUVAR tide_aws_bg_color:normal
 SETUVAR tide_aws_color:yellow
 SETUVAR tide_aws_icon:\uf270

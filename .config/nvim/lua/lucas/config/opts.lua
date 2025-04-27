@@ -1,12 +1,12 @@
 vim.o.background = "dark"
-vim.cmd.colorscheme("gruvbox")
+vim.cmd.colorscheme("evergarden")
 
 vim.o.conceallevel = 0
-vim.o.cursorline = true
 vim.o.guicursor = ""
 vim.o.mouse = "a"
 vim.o.termguicolors = true
 vim.g.have_nerd_font = true
+vim.o.winborder = "rounded"
 
 vim.opt.wildmode = "list:longest"
 vim.opt.wildignore = { "*.docx", "*.jpg", "*.png", "*.gif", "*.pdf", "*.pyc", "*.exe", "*.flv", "*.img", "*.xlsx" }
@@ -55,6 +55,7 @@ vim.o.smartindent = true
 vim.o.breakindent = true
 vim.o.smartcase = true
 
+vim.o.cursorline = true
 vim.o.updatetime = 50
 vim.o.scrolloff = 10
 vim.o.wrap = true

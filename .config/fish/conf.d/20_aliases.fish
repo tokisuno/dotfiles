@@ -7,109 +7,37 @@ function shetup
   eval "'$(ssh-agent -s)' && ssh-add"
 end
 
-function rs
-  rspec $argv[1]
-end
+alias rs "rspec"
+
+alias b "bash -c"
 
 ## Quality of life
-function vim
-  nvim $argv[1]
-end
-
-function iv
-  nvim $argv[1]
-end
-
-function ivm
-  nvim $argv[1]
-end
-
-function vi
-  nvim $argv[1]
-end
-
-function v
-  nvim $argv[1]
-end
-
-function ovim
-  /bin/vim $argv[1]
-end
-
-function ka
-  killall $argv[1]
-end
-
-function claer
-  clear
-end
-
-function rmrf
-  rm -rf $argv[1]
-end
-
-function btw
-  neofetch
-end
-
-function ff
-  fastfetch
-end
+alias vim "nvim"
+alias iv "nvim"
+alias ivm "nvim"
+alias vi "nvim"
+alias v "nvim"
+alias ovim "/bin/vim"
+alias ka "killall"
+alias claer "clear"
+alias ff "fastfetch"
 
 ## dotfile stuff
-function dots
-  cd ~/code/repos/dotfiles
-end
+alias dots "cd ~/code/repos/dotfiles"
+alias vc "cd ~/.config/nvim/lua/lucas/"
+alias vc "cd ~/.config/nvim/lua/lucas/"
+alias wm "cd ~/.config/awesome"
+alias rip "cd ~/.local/share/scripts"
 
-function vc
-  cd ~/.config/nvim/lua/lucas/
-end
-
-function vc
-  cd ~/.config/nvim/lua/lucas/
-end
-
-function wm
-  cd ~/.config/awesome
-end
-
-function rip
-  cd ~/.local/share/scripts
-end
-
-## Pacman & Yay
-function syu
-  sudo pacman -Syu && setxkbmap -option 'ctrl:nocaps'
-end
+## laptop keyboard mapping
+alias kb "setxkbmap -option 'ctrl:nocaps'"
 
 ## Navigation
-function b
-  cd -
-end
-
-function a
-  cd ..
-end
-
-function aa
-  cd ../..
-end
-
-function aaa
-  cd ../../..
-end
-
-function aaaa
-  cd ../../../..
-end
+alias b "cd -"
+alias a "cd .."
+alias aa "cd ../.."
+alias aaa "cd ../../.."
+alias aaaa "cd ../../../.."
 
 # Git
-function lg
-  lazygit
-end
-
-# Mirrors
-function refup
-  sudo reflector --latest 5 --country canada --sort rate --save /etc/pacman.d/mirrorlist
-end
-
+alias lg "lazygit"

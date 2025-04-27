@@ -10,7 +10,7 @@ local cmds =
   "ibus-daemon -rxRd",
   "pactl set-default-sink alsa_output.usb-GeneralPlus_USB_Audio_Device-00.analog-stereo",
   "pactl set-sink-volume @DEFAULT_SINK@ 25%",
-  "setxkbmap -option 'ctrl:nocaps'",
+  -- "setxkbmap -option 'ctrl:nocaps'",
   "nitrogen --restore",
   "conky",
   -- "feh --bg-fill $HOME/wallpapers/gruv-temple.png",

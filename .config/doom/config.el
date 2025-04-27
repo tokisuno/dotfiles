@@ -4,9 +4,11 @@
 
 (setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 18 :height 1.0 :weight 'normal)
       doom-big-font (font-spec :family "JetBrainsMono Nerd Font" :size 24 :style "medium" :weight 'bold))
-      ;; doom-variable-pitch-font (font-spec :family "Ubuntu" :size 26 :height 1.5 :weight 'normal))
 
-(setq doom-theme 'doom-gruvbox)
+(add-to-list 'custom-theme-load-path "~/.config/doom/everforest-theme")
+(load-theme 'everforest-hard-dark t)
+
+;; (setq doom-theme 'doom-gruvbox)
 (setq display-line-numbers-type t)
 
 ;;; Org Mode Stuff

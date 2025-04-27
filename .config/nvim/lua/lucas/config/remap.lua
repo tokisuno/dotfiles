@@ -4,24 +4,17 @@ vim.g.maplocalleader = ","
 vim.keymap.del({ 'i', 's' }, '<Tab>')
 vim.keymap.del({ 'i', 's' }, '<S-Tab>')
 
-vim.keymap.set("n", "<C-c>", "yygccp", { remap = true })
-
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
-map("n", "<C-f>", function ()
-  vim.diagnostic.jump({ count = 1, float = true})
-end)
+-- super useful remap
+map("n", "<C-c>", "yygccp", { remap = true })
 
-map("n", "<C-b>", function ()
-  vim.diagnostic.jump({ count = -1, float = true})
-end)
+map("n", "<C-f>", function () vim.diagnostic.jump({ count = 1, float = true}) end)
+map("n", "<C-b>", function () vim.diagnostic.jump({ count = -1, float = true}) end)
+map("n", "<C-e>", function () vim.diagnostic.open_float() end)
 
-map("n", "<C-e>", function ()
-  vim.diagnostic.open_float()
-end)
-
-map("n", "<leader>w", [[:%s/<<C-r><C-w>>/<C-r><C-w>/gI<Left><Left><Left>]], { noremap = true, silent = true, desc = "Replace word" })
+map("n", "<leader>w", [[:%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>]], { noremap = true, silent = true, desc = "Replace word" })
 
 map("n", "<C-w><C-u>", vim.cmd.bunload, { noremap = true, silent = true, desc = "Buffer unload" })
 
@@ -51,7 +44,7 @@ map("v", "<leader>y", "\"+y", { desc = "Copy to system clipboard" })
 map("i", "<C-h>", "<C-w>", opts)
 
 map("n", "<leader>d",
-    ":Trouble diagnostics filter.buf=0 win = { type = split, position = right, relative = win, size = 0.4}<cr>",
+    ":Trouble diagnostics filter.buf=0 win = { type = split, position = right, relative = win, size = 0.4 }<cr>",
     { desc = "Split diagnostics window"})
 
 -- opening menus
@@ -62,5 +55,12 @@ map("n", "<leader>m", ":Mason<cr>", { noremap = true, silent = true, desc = "Ope
 -- some native emacs bindings i prefer
 map("n", "<C-x><C-f>", ":e .<cr>", { noremap = true, silent = true, desc = "Opens oil.nvim (emacs style)"})
 map('n', '<C-x>k', vim.cmd.bdelete, { noremap = true, silent = true, desc = "Buffer delete"})
+
+-- rspec.nvim mappings
+map("n", "<leader>rn", ":RSpecNearest<CR>", { noremap = true, silent = true })
+map("n", "<leader>rf", ":RSpecCurrentFile<CR>", { noremap = true, silent = true })
+map("n", "<leader>rr", ":RSpecRerun<CR>", { noremap = true, silent = true })
+map("n", "<leader>rF", ":RSpecOnlyFailures<CR>", { noremap = true, silent = true })
+map("n", "<leader>rs", ":RSpecShowLastResult<CR>", { noremap = true, silent = true })
 
 vim.keymap.set("x", "<leader>p", [["_dP]])

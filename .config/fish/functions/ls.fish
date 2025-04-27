@@ -1,6 +1,4 @@
-function ls
-  command eza --icons=always --sort=type $argv
-end
+alias ls "eza --icons=always --sort=type $argv"
 
 function l
   command eza -lbF --git --icons=always --sort=type

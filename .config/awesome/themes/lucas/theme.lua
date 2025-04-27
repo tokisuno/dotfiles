@@ -10,33 +10,32 @@ local themes_path  = gfs.get_themes_dir()
 
 local theme        = {}
 
-theme.font                 = "Noto Sans Mono CJK JP 12"
+theme.font                 = "Noto Sans Mono CJK JP 13"
 
-theme.bg_normal            = "#282828"
-theme.bg_urgent            = "#cc241d"
-theme.bg_minimize          = "#504945"
-theme.taglist_fg_occupied  = "#a89984"
-theme.taglist_fg_focus     = "#d79921"
+theme.bg_normal            = "#171c1f"
+theme.bg_urgent            = "#ebb9dd"
+theme.bg_minimize          = "#3d494d"
+theme.taglist_fg_occupied  = "#96b4aa"
+theme.taglist_fg_focus     = "#e1c182"
 theme.bg_systray           = theme.bg_normal
-theme.systray_icon_spacing = dpi(4)
+theme.systray_icon_spacing = dpi(6)
 
 -- theme.fg_focus      = "#fabd2f"
-theme.notification_fg = "#fbf1c7"
-theme.fg_normal     = "#504945"
-theme.fg_focus      = "#fbf1c7"
-theme.fg_urgent     = "#fbf1c7"
-theme.fg_minimize   = "#fbf1c7"
+theme.notification_fg = "#dddecf"
+theme.fg_normal       = "#3d494d"
+theme.fg_focus        = "#232a2e"
+theme.fg_urgent       = "#dddecf"
+theme.fg_minimize     = "#dddecf"
 
--- theme.border_focus  = "#458588"
 theme.useless_gap   = dpi(0)
 theme.border_width  = dpi(2)
-theme.border_normal = "#282828"
-theme.border_focus  = "#cc241d"
-theme.border_marked = "#91231c"
+theme.border_normal = "#1d2428"
+theme.border_focus  = "#e67e80"
+theme.border_marked = "#a1cfad"
 
 theme.tasklist_disable_icon = true
 theme.tasklist_align = 'center'
-theme.tasklist_bg_focus = "#79740e"
+theme.tasklist_bg_focus = "#9bb5cf"
 
 theme.menu_submenu_icon = themes_path.."default/submenu.png"
 theme.menu_height = dpi(50)
@@ -71,4 +70,4 @@ theme.icon_theme = nil
 
 return theme
 
--- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:textwidth=80
+-- vim: filetype=lua:expandtab:shiftwidth=2:tabstop=2:softtabstop=2:textwidth=80
