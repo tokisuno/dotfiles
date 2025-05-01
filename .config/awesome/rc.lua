@@ -257,9 +257,9 @@ globalkeys = gears.table.join(
 
     -- Prompt
     awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
-              {description = "run prompt", group = "launcher"}),
-    awful.key({ modkey }, "p", function() awful.spawn("rofi -show drun") end,
-              {description = "launch rofi", group = "launcher"})
+              {description = "run prompt", group = "launcher"})
+    -- awful.key({ modkey }, "p", function() awful.spawn("ulauncher ") end,
+    --           {description = "launch ulauncher", group = "launcher"})
 )
 
 clientkeys = gears.table.join(
@@ -398,6 +398,7 @@ awful.rules.rules = {
           "pinentry",
         },
         class = {
+          "ULauncher",
           "Arandr",
           "Blueman-manager",
           "Gpick",

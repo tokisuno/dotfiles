@@ -15,6 +15,7 @@ local cmds =
   "conky",
   -- "feh --bg-fill $HOME/wallpapers/gruv-temple.png",
   "syncthing",
+  "ulauncher --no-window-shadow",
 }
 
 for _,i in pairs(cmds) do
