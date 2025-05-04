@@ -17,5 +17,11 @@ return {
         color = 'surface0',
       },
     },
+    integrations = {
+      blink_cmp = true,
+      rainbow_delimiters = true,
+      which_key = true,
+      symbols_outline = true
+    }
   }
 }
