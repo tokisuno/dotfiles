@@ -12,27 +12,35 @@ vim.opt.wildmode = "list:longest"
 vim.opt.wildignore = { "*.docx", "*.jpg", "*.png", "*.gif", "*.pdf", "*.pyc", "*.exe", "*.flv", "*.img", "*.xlsx" }
 
 vim.diagnostic.config({
-	-- virtual_text = false,
-	--  virtual_lines = {
-	--    current_line = true
-	--  },
+	virtual_text = false,
+	 virtual_lines = {
+	   current_line = true
+	 },
 	signs = {
 		text = {
-			[vim.diagnostic.severity.ERROR] = "",
-			[vim.diagnostic.severity.WARN] = "",
-			[vim.diagnostic.severity.INFO] = "",
-			[vim.diagnostic.severity.HINT] = "",
-		},
-		numhl = {
-			[vim.diagnostic.severity.WARN] = "WarningMsg",
-			[vim.diagnostic.severity.ERROR] = "ErrorMsg",
-			[vim.diagnostic.severity.INFO] = "DiagnosticInfo",
-			[vim.diagnostic.severity.HINT] = "DiagnosticHint",
-		},
-	},
-	update_in_insert = false,
-	underline = true,
-	severity_sort = true,
+      [vim.diagnostic.severity.ERROR] = '󰅚',
+      [vim.diagnostic.severity.WARN] = '⚠',
+      [vim.diagnostic.severity.INFO] = 'ⓘ',
+      [vim.diagnostic.severity.HINT] = '󰌶',
+    },
+    numhl = {
+      [vim.diagnostic.severity.WARN] = "WarningMsg",
+      [vim.diagnostic.severity.ERROR] = "ErrorMsg",
+      [vim.diagnostic.severity.INFO] = "DiagnosticInfo",
+      [vim.diagnostic.severity.HINT] = "DiagnosticHint",
+    },
+  },
+  update_in_insert = false,
+  underline = true,
+  severity_sort = true,
+  float = {
+    focusable = false,
+    style = 'minimal',
+    border = 'rounded',
+    source = 'if_many',
+    header = '',
+    prefix = '',
+  },
 })
 
 vim.o.nu = true
