@@ -10,7 +10,7 @@ local themes_path  = gfs.get_themes_dir()
 
 local theme        = {}
 
-theme.font                 = "Noto Sans Mono CJK JP 13"
+theme.font                 = "Noto Sans Mono CJK JP 14"
 
 theme.bg_normal            = "#171c1f"
 theme.bg_urgent            = "#ebb9dd"
@@ -27,7 +27,7 @@ theme.fg_focus        = "#232a2e"
 theme.fg_urgent       = "#dddecf"
 theme.fg_minimize     = "#dddecf"
 
-theme.useless_gap   = dpi(0)
+theme.useless_gap   = dpi(8)
 theme.border_width  = dpi(2)
 theme.border_normal = "#1d2428"
 theme.border_focus  = "#e67e80"

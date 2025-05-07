@@ -262,6 +262,10 @@ globalkeys = gears.table.join(
     --           {description = "launch ulauncher", group = "launcher"})
 )
 
+local function toggle_pinned(c)
+  c.sticky = not c.sticky
+  c.ontop = not c.ontop
+end
 clientkeys = gears.table.join(
     awful.key({ modkey,           }, "f",
         function (c)
@@ -277,8 +281,10 @@ clientkeys = gears.table.join(
               {description = "move to master", group = "client"}),
     awful.key({ modkey,           }, "o",      function (c) c:move_to_screen()               end,
               {description = "move to screen", group = "client"}),
-    awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end,
-              {description = "toggle keep on top", group = "client"}),
+    -- awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end,
+    --           {description = "toggle keep on top", group = "client"}),
+    awful.key({ modkey,           }, "t",     function (c) toggle_pinned(c) end ,
+                {description = "toggle sticky", group = "client"}),
     awful.key({ modkey,           }, "n",
         function (c)
             -- The client currently has the input focus, so it cannot be
