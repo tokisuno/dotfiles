@@ -15,7 +15,7 @@ SETUVAR NPM_DIR:/home/toki/\x2enpm\x2ddata
 SETUVAR NPM_PACKAGES:/home/toki/\x2enpm\x2dpackages
 SETUVAR NVM_DIR:\x7e/\x2envm
 SETUVAR PAGER:less
-SETUVAR --export --path PATH:/home/toki/\x2erbenv/shims\x1e/home/toki/\x2erbenv/bin\x1e/home/toki/\x2econfig/emacs/bin\x1e/home/toki/go\x1e/home/toki/\x2elocal/share/scripts\x1e/home/toki/\x2ecargo/bin\x1e/home/poto/\x2enpm\x2dglobal/bin\x1e/usr/local/bin\x1e/usr/bin\x1e/home/poto/\x2elocal/share/gem/ruby/3\x2e2\x2e0/bin\x1e/home/poto/go\x1e/home/poto/\x2elocal/share/scripts\x1e/home/poto/\x2elocal/share/applications\x1e/home/poto/\x2elocal/bin\x1e/home/poto/\x2econfig/emacs/bin\x1e/home/poto/\x2ecargo/bin\x1e/bin\x1e/home/toki/\x2erbenv/shims\x1e/home/toki/\x2erbenv/shims\x1e/usr/local/sbin\x1e/bin
+SETUVAR --export --path PATH:/home/toki/\x2elocal/share/applications\x1e/home/toki/\x2enpm\x2dglobal/bin\x1e/home/toki/code/builds/zig\x2dmaster/build/stage3/bin\x1e/home/toki/code/builds/zig\x2dmaster\x1e/home/toki/code/builds/zig\x2dlinux\x2dx86_64\x2d0\x2e14\x2e0\x1e/home/toki/\x2erbenv/shims\x1e/home/toki/\x2erbenv/bin\x1e/home/toki/\x2econfig/emacs/bin\x1e/home/toki/go\x1e/home/toki/\x2elocal/share/scripts\x1e/home/toki/\x2ecargo/bin\x1e/home/poto/\x2enpm\x2dglobal/bin\x1e/usr/local/bin\x1e/usr/bin\x1e/home/poto/\x2elocal/share/gem/ruby/3\x2e2\x2e0/bin\x1e/home/poto/go\x1e/home/poto/\x2elocal/share/scripts\x1e/home/poto/\x2elocal/share/applications\x1e/home/poto/\x2elocal/bin\x1e/home/poto/\x2econfig/emacs/bin\x1e/home/poto/\x2ecargo/bin\x1e/bin\x1e/home/toki/\x2erbenv/shims\x1e/home/toki/\x2erbenv/shims\x1e/usr/local/sbin\x1e/bin
 SETUVAR QT_IM_MODULE:ibus
 SETUVAR SAVEHIST:10000
 SETUVAR STARSHIP_CONFIG:/home/poto/\x2econfig/starship/starship\x2etoml
@@ -31,6 +31,7 @@ SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejorgebucaran/hydro
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR _hydro_git_101836:main\u2022\x20
 SETUVAR _hydro_git_10257:main\u2022\x20
+SETUVAR _hydro_git_111092:main\u2022\x20
 SETUVAR _hydro_git_11954:main\u2022\x20
 SETUVAR _hydro_git_14588:main\u2022\x20
 SETUVAR _hydro_git_1491:main\u2022\x20
@@ -40,14 +41,15 @@ SETUVAR _hydro_git_1678:main\u2022\x20
 SETUVAR _hydro_git_1900:main\u2022\x20
 SETUVAR _hydro_git_2091:\x1d
 SETUVAR _hydro_git_25736:main\u2022\x20
-SETUVAR _hydro_git_2678:main\u2022\x20
 SETUVAR _hydro_git_28018:main\u2022\x20
 SETUVAR _hydro_git_28132:\x1d
 SETUVAR _hydro_git_3032:main\u2022\x20
 SETUVAR _hydro_git_31118:main\u2022\x20
 SETUVAR _hydro_git_3455:main\u2022\x20
 SETUVAR _hydro_git_35814:main\u2022\x20
+SETUVAR _hydro_git_4097:main\u2022\x20\u21911\x20
 SETUVAR _hydro_git_43941:main\u2022\x20
+SETUVAR _hydro_git_91800:main\x20
 SETUVAR _hydro_git_94246:\x20
 SETUVAR _hydro_git_99043:main\x20
 SETUVAR _tide_left_items:pwd\x1egit\x1enewline\x1echaracter
@@ -92,7 +94,7 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/home/toki/\x2erbenv/shims\x1e/home/toki/\x2erbenv/bin\x1e/home/toki/\x2econfig/emacs/bin\x1e/home/toki/go\x1e/home/toki/\x2elocal/share/scripts\x1e/home/toki/\x2ecargo/bin\x1e/home/poto/\x2enpm\x2dglobal/bin\x1e/usr/local/bin\x1e/usr/bin\x1e/home/poto/\x2elocal/share/gem/ruby/3\x2e2\x2e0/bin\x1e/home/poto/go\x1e/home/poto/\x2elocal/share/scripts\x1e/home/poto/\x2elocal/share/applications\x1e/home/poto/\x2elocal/bin\x1e/home/poto/\x2econfig/emacs/bin\x1e/home/poto/\x2ecargo/bin\x1e/bin
+SETUVAR fish_user_paths:/home/toki/\x2elocal/share/applications\x1e/home/toki/\x2enpm\x2dglobal/bin\x1e/home/toki/code/builds/zig\x2dmaster/build/stage3/bin\x1e/home/toki/code/builds/zig\x2dmaster\x1e/home/toki/code/builds/zig\x2dlinux\x2dx86_64\x2d0\x2e14\x2e0\x1e/home/toki/\x2erbenv/shims\x1e/home/toki/\x2erbenv/bin\x1e/home/toki/\x2econfig/emacs/bin\x1e/home/toki/go\x1e/home/toki/\x2elocal/share/scripts\x1e/home/toki/\x2ecargo/bin\x1e/home/poto/\x2enpm\x2dglobal/bin\x1e/usr/local/bin\x1e/usr/bin\x1e/home/poto/\x2elocal/share/gem/ruby/3\x2e2\x2e0/bin\x1e/home/poto/go\x1e/home/poto/\x2elocal/share/scripts\x1e/home/poto/\x2elocal/share/applications\x1e/home/poto/\x2elocal/bin\x1e/home/poto/\x2econfig/emacs/bin\x1e/home/poto/\x2ecargo/bin\x1e/bin
 SETUVAR tide_aws_bg_color:normal
 SETUVAR tide_aws_color:yellow
 SETUVAR tide_aws_icon:\uf270
