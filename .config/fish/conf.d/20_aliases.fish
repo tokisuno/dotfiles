@@ -29,6 +29,8 @@ alias vc "cd ~/.config/nvim/lua/lucas/"
 alias wm "cd ~/.config/awesome"
 alias rip "cd ~/.local/share/scripts"
 
+alias chr "google-chrome "
+
 ## laptop keyboard mapping
 alias kb "setxkbmap -option 'ctrl:nocaps'"
 
