@@ -11,11 +11,14 @@ vim.o.winborder = "rounded"
 vim.opt.wildmode = "list:longest"
 vim.opt.wildignore = { "*.docx", "*.jpg", "*.png", "*.gif", "*.pdf", "*.pyc", "*.exe", "*.flv", "*.img", "*.xlsx" }
 
+vim.api.nvim_set_hl(0, 'LineNr', { fg = "grey"})
+vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = "yellow"})
+
 vim.diagnostic.config({
-	virtual_text = false,
-	 virtual_lines = {
-	   current_line = true
-	 },
+  -- virtual_text = false,
+  -- virtual_lines = {
+  --   current_line = true
+  -- },
 	signs = {
 		text = {
       [vim.diagnostic.severity.ERROR] = '󰅚',
@@ -48,6 +51,7 @@ vim.o.relativenumber = true
 vim.o.numberwidth=3
 vim.o.signcolumn="yes:1"
 vim.o.statuscolumn="%l %s"
+
 
 vim.o.backup = false
 vim.o.swapfile = false
