@@ -1,6 +1,6 @@
 -- This is used later as the default terminal and editor to run.
 local terminal = "alacritty"
-local browser = "firefox"
+local browser = "google-chrome"
 local editor = os.getenv("EDITOR") or "vim"
 local editor_cmd = terminal .. " -e " .. editor
 local file_manager = 'thunar'
