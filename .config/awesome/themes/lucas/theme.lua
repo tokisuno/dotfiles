@@ -30,7 +30,7 @@ theme.fg_minimize     = "#dddecf"
 theme.useless_gap   = dpi(8)
 theme.border_width  = dpi(2)
 theme.border_normal = "#1d2428"
-theme.border_focus  = "#e67e80"
+theme.border_focus  = "#dddecf"
 theme.border_marked = "#a1cfad"
 
 theme.tasklist_disable_icon = true
