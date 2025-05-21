@@ -1,12 +1,12 @@
 vim.o.background = "dark"
-vim.cmd.colorscheme("evergarden")
+-- vim.cmd.colorscheme("catppuccin")
 
 vim.o.conceallevel = 0
 vim.o.guicursor = ""
 vim.o.mouse = "a"
 vim.o.termguicolors = true
 vim.g.have_nerd_font = true
-vim.o.winborder = "rounded"
+-- vim.o.winborder = "rounded"
 
 vim.opt.wildmode = "list:longest"
 vim.opt.wildignore = { "*.docx", "*.jpg", "*.png", "*.gif", "*.pdf", "*.pyc", "*.exe", "*.flv", "*.img", "*.xlsx" }

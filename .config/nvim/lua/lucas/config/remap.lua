@@ -48,9 +48,10 @@ map("n", "<leader>d",
     { desc = "Split diagnostics window"})
 
 -- opening menus
-map("n", "<leader>e", ":e .<cr>", { noremap = true, silent = true, desc = "Open oil.nvim" })
-map("n", "<leader>l", ":Lazy<cr>", { noremap = true, silent = true, desc = "Open lazy.nvim" })
-map("n", "<leader>m", ":Mason<cr>", { noremap = true, silent = true, desc = "Open Mason" })
+--
+map("n", "<localleader>e", ":e .<cr>", { noremap = true, silent = true, desc = "Open oil.nvim" })
+map("n", "<localleader>l", ":Lazy<cr>", { noremap = true, silent = true, desc = "Open lazy.nvim" })
+map("n", "<localleader>m", ":Mason<cr>", { noremap = true, silent = true, desc = "Open Mason" })
 
 -- some native emacs bindings i prefer
 map("n", "<C-x><C-f>", ":e .<cr>", { noremap = true, silent = true, desc = "Opens oil.nvim (emacs style)"})
