@@ -2,13 +2,12 @@
 (setq user-full-name "Lucas Cordero"
       user-mail-address "tokisunosan@gmail.com")
 
-(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 18 :height 1.0 :weight 'normal)
-      doom-big-font (font-spec :family "JetBrainsMono Nerd Font" :size 24 :style "medium" :weight 'bold))
+(setq doom-font (font-spec :family "IosevkaTerm Nerd Font" :size 18 :height 1.0 :weight 'normal)
+      doom-big-font (font-spec :family "IosevkaTerm Nerd Font" :size 24 :style "medium" :weight 'bold))
 
 (add-to-list 'custom-theme-load-path "~/.config/doom/everforest-theme")
 (load-theme 'everforest-hard-dark t)
 
-;; (setq doom-theme 'doom-gruvbox)
 (setq display-line-numbers-type t)
 
 ;;; Org Mode Stuff
