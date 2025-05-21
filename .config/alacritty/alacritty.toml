@@ -1,85 +1,14 @@
 [general]
 live_config_reload = true
+import = ["~/.config/alacritty/catppuccin-frappe.toml"]
 
 [window]
 padding = { x = 10, y = 10 }
 
 [env]
 WINIT_X11_SCALE_FACTOR = '1.0'
+TERM = "xterm-256color"
 
 [font]
-normal = { family = 'JetBrainsMono Nerd Font' }
-size = 13
-
-### name: evergarden winter green
-## author: comfysage
-## license: GPL-3.0
-## blurb: a comfy colorscheme for cozy morning coding
-
-[colors.primary]
-background = "#1d2428"
-foreground = "#dddecf"
-dim_foreground = "#96b4aa"
-bright_foreground = "#dddecf"
-
-[colors.cursor]
-text = "#171c1f"
-cursor = "#bcd19c"
-
-[colors.vi_mode_cursor]
-text = "#171c1f"
-cursor = "#bcd19c"
-
-[colors.search.matches]
-foreground = "#e69f7f"
-background = "#171c1f"
-
-[colors.search.focused_match]
-foreground = "#171c1f"
-background = "#e69f7f"
-
-[colors.footer_bar]
-foreground = "#839e9a"
-background = "#171c1f"
-
-[colors.hints.start]
-foreground = "#171c1f"
-background = "#e1c182"
-
-[colors.hints.end]
-foreground = "#171c1f"
-background = "#96b4aa"
-
-[colors.selection]
-text = "#dddecf"
-background = "#3d494d"
-
-[colors.normal]
-black = "#1d2428"
-red = "#e67e80"
-green = "#bcd19c"
-yellow = "#e1c182"
-blue = "#9bb5cf"
-magenta = "#ebb9dd"
-cyan = "#a1cfad"
-white = "#dddecf"
-
-[colors.bright]
-black = "#232a2e"
-red = "#e67e80"
-green = "#bcd19c"
-yellow = "#e1c182"
-blue = "#9bb5cf"
-magenta = "#ebb9dd"
-cyan = "#a1cfad"
-white = "#96b4aa"
-
-[colors.dim]
-black = "#1d2428"
-red = "#e67e80"
-green = "#bcd19c"
-yellow = "#e1c182"
-blue = "#9bb5cf"
-magenta = "#ebb9dd"
-cyan = "#a1cfad"
-white = "#dddecf"
+normal = { family = 'IosevkaTerm Nerd Font' }
+size = 15
