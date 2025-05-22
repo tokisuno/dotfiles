@@ -16,7 +16,6 @@ return {
       ["<C-y>"] = { "select_and_accept" },
       ["<C-b>"] = { "snippet_backward" },
       ["<C-f>"] = { "snippet_forward" },
-      ["<Tab>"] = {},
     },
     sources = {
       default = { "lsp", "path", "snippets", "buffer" },

@@ -1,12 +1,11 @@
 vim.o.background = "dark"
--- vim.cmd.colorscheme("catppuccin")
 
 vim.o.conceallevel = 0
 vim.o.guicursor = ""
 vim.o.mouse = "a"
 vim.o.termguicolors = true
 vim.g.have_nerd_font = true
--- vim.o.winborder = "rounded"
+vim.o.winborder = "bold"
 
 vim.opt.wildmode = "list:longest"
 vim.opt.wildignore = { "*.docx", "*.jpg", "*.png", "*.gif", "*.pdf", "*.pyc", "*.exe", "*.flv", "*.img", "*.xlsx" }
@@ -15,10 +14,6 @@ vim.api.nvim_set_hl(0, 'LineNr', { fg = "grey"})
 vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = "yellow"})
 
 vim.diagnostic.config({
-  -- virtual_text = false,
-  -- virtual_lines = {
-  --   current_line = true
-  -- },
 	signs = {
 		text = {
       [vim.diagnostic.severity.ERROR] = '󰅚',

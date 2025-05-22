@@ -5,8 +5,11 @@
 (setq doom-font (font-spec :family "IosevkaTerm Nerd Font" :size 18 :height 1.0 :weight 'normal)
       doom-big-font (font-spec :family "IosevkaTerm Nerd Font" :size 24 :style "medium" :weight 'bold))
 
-(add-to-list 'custom-theme-load-path "~/.config/doom/everforest-theme")
-(load-theme 'everforest-hard-dark t)
+(setq doom-theme 'catppuccin)
+(setq catppuccin-flavor 'frappe) ;; or 'latte, 'macchiato, or 'mocha
+
+;; (add-to-list 'custom-theme-load-path "~/.config/doom/everforest-theme")
+;; (load-theme 'everforest-hard-dark t)
 
 (setq display-line-numbers-type t)
 
