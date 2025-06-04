@@ -11,9 +11,9 @@ return {
 			rust = {
 				"rustfmt",
 			},
-			javascript = {
-				"prettierd",
-			},
+			-- javascript = {
+			-- 	"prettierd",
+			-- },
 		},
 		format_on_save = {
 			timeout_ms = 500,
