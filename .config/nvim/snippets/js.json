@@ -1,0 +1,16 @@
+{
+  "esf": {
+    "prefix": "esf",
+    "body": [
+      "const ${1:name} = (${2:param}) => {",
+      "  ${3:body}",
+      "}"
+    ]
+  },
+  "zz": {
+    "prefix": "zz",
+    "body": [
+      "console.log(${1:print});"
+    ]
+  }
+}
