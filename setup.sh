@@ -19,4 +19,3 @@ wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/do
 && unzip JetBrainsMono.zip \
 && rm JetBrainsMono.zip \
 && fc-cache -fv
-
