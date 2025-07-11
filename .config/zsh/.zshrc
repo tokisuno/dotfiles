@@ -72,25 +72,6 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 export FZF_COMPLETION_TRIGGER=']]'
 export FZF_COMPLETION_OPTS='--border --info=inline'
 
-zsh_plugins=${ZDOTDIR:-~}/.zsh_plugins
-
-# Ensure the .zsh_plugins.txt file exists so you can add plugins.
-[[ -f ${zsh_plugins}.txt ]] || touch ${zsh_plugins}.txt
-
-# Lazy-load antidote from its functions directory.
-fpath=(/path/to/antidote/functions $fpath)
-autoload -Uz antidote
-
-# Generate a new static file whenever .zsh_plugins.txt is updated.
-if [[ ! ${zsh_plugins}.zsh -nt ${zsh_plugins}.txt ]]; then
-  antidote bundle <${zsh_plugins}.txt >|${zsh_plugins}.zsh
-fi
-
-# Source your static plugins file.
-
-alias shetup="'$(ssh-agent -s)' && ssh-add"
-alias rs="rspec"
-
 alias vim="nvim"
 alias iv="nvim"
 alias ivm="nvim"
@@ -119,6 +100,9 @@ alias aaaa="cd ../../../.."
 
 alias lg="lazygit"
 
+alias ta="tmux attach"
+alias td="tmux detach-client"
+
 alias ls="eza --icons=always --sort=type"
 alias l="eza -lbF --git --icons=always --sort=type"
 alias ll="eza -lbGF --git --icons=always --sort=type"
@@ -130,6 +114,26 @@ alias lt="eza --tree --level=2 --icons=always --sort=type"
 alias lh="eza --all --icons=always --sort=type"
 alias ltr="eza -s modified -r --icons=always --sort=type"
 
+alias shsh="'$(ssh-agent -s)' && ssh-add"
+
+mcd() { mkdir "$@" 2> >(sed s/mkdir/mcd/ 1>&2) && cd "$_"; }
+
+zsh_plugins=${ZDOTDIR:-~}/.zsh_plugins
+
+# Ensure the .zsh_plugins.txt file exists so you can add plugins.
+[[ -f ${zsh_plugins}.txt ]] || touch ${zsh_plugins}.txt
+
+# Lazy-load antidote from its functions directory.
+fpath=(/path/to/antidote/functions $fpath)
+autoload -Uz antidote
+
+# Generate a new static file whenever .zsh_plugins.txt is updated.
+if [[ ! ${zsh_plugins}.zsh -nt ${zsh_plugins}.txt ]]; then
+  antidote bundle <${zsh_plugins}.txt >|${zsh_plugins}.zsh
+fi
+
+# Source your static plugins file.
+
 source ${zsh_plugins}.zsh
-eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh --cmd cd)"
 source <(fzf --zsh)

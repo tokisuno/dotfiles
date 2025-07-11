@@ -1,5 +1,5 @@
 -- This is used later as the default terminal and editor to run.
-local terminal = "alacritty"
+local terminal = "kitty"
 local browser = "google-chrome"
 local editor = os.getenv("EDITOR") or "vim"
 local editor_cmd = terminal .. " -e " .. editor
@@ -161,8 +161,8 @@ awful.screen.connect_for_each_screen(function(s)
 
 	-- Create the wibox
 	s.mywibox = awful.wibar({
-		height = dpi(22),
-		position = "top",
+		height = dpi(20),
+		position = "bottom",
 		screen = s,
 	})
 
@@ -276,7 +276,7 @@ globalkeys = gears.table.join(
 		awful.screen.focused().mypromptbox:run()
 	end, { description = "run prompt", group = "launcher" }),
 	awful.key({ modkey }, "p", function()
-		awful.spawn("rofi -combi-modi window,drun,ssh -show combi")
+		awful.spawn("rofi -show run")
 	end, { description = "launch rofi", group = "launcher" })
 )
 
@@ -325,7 +325,10 @@ clientkeys = gears.table.join(
 	awful.key({ modkey, "Shift" }, "m", function(c)
 		c.maximized_horizontal = not c.maximized_horizontal
 		c:raise()
-	end, { description = "(un)maximize horizontally", group = "client" })
+	end, { description = "(un)maximize horizontally", group = "client" }),
+	awful.key({}, "Print", function(c)
+		awful.spawn("flameshot gui")
+	end, { description = "screenshot", group = "launcher" })
 )
 
 -- Bind all key numbers to tags.

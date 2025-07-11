@@ -10,43 +10,42 @@ vim.o.winborder = "bold"
 vim.opt.wildmode = "list:longest"
 vim.opt.wildignore = { "*.docx", "*.jpg", "*.png", "*.gif", "*.pdf", "*.pyc", "*.exe", "*.flv", "*.img", "*.xlsx" }
 
-vim.api.nvim_set_hl(0, 'LineNr', { fg = "grey"})
-vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = "yellow"})
+vim.api.nvim_set_hl(0, "LineNr", { fg = "grey" })
+vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "yellow" })
 
 vim.diagnostic.config({
 	signs = {
 		text = {
-      [vim.diagnostic.severity.ERROR] = '󰅚',
-      [vim.diagnostic.severity.WARN] = '⚠',
-      [vim.diagnostic.severity.INFO] = 'ⓘ',
-      [vim.diagnostic.severity.HINT] = '󰌶',
-    },
-    numhl = {
-      [vim.diagnostic.severity.WARN] = "WarningMsg",
-      [vim.diagnostic.severity.ERROR] = "ErrorMsg",
-      [vim.diagnostic.severity.INFO] = "DiagnosticInfo",
-      [vim.diagnostic.severity.HINT] = "DiagnosticHint",
-    },
-  },
-  update_in_insert = false,
-  underline = true,
-  severity_sort = true,
-  float = {
-    focusable = false,
-    style = 'minimal',
-    border = 'rounded',
-    source = 'if_many',
-    header = '',
-    prefix = '',
-  },
+			[vim.diagnostic.severity.ERROR] = "󰅚",
+			[vim.diagnostic.severity.WARN] = "⚠",
+			[vim.diagnostic.severity.INFO] = "ⓘ",
+			[vim.diagnostic.severity.HINT] = "󰌶",
+		},
+		numhl = {
+			[vim.diagnostic.severity.WARN] = "WarningMsg",
+			[vim.diagnostic.severity.ERROR] = "ErrorMsg",
+			[vim.diagnostic.severity.INFO] = "DiagnosticInfo",
+			[vim.diagnostic.severity.HINT] = "DiagnosticHint",
+		},
+	},
+	update_in_insert = false,
+	underline = true,
+	severity_sort = true,
+	float = {
+		focusable = false,
+		style = "minimal",
+		border = "rounded",
+		source = "if_many",
+		header = "",
+		prefix = "",
+	},
 })
 
 vim.o.nu = true
 vim.o.relativenumber = true
-vim.o.numberwidth=3
-vim.o.signcolumn="yes:1"
-vim.o.statuscolumn="%l %s"
-
+vim.o.numberwidth = 3
+vim.o.signcolumn = "yes:1"
+vim.o.statuscolumn = "%s%l "
 
 vim.o.backup = false
 vim.o.swapfile = false
@@ -78,4 +77,4 @@ vim.o.showmode = true
 vim.o.showmatch = true
 
 -- vim.cmd("set guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20")
-vim.opt.guicursor = { "n-v-c-sm:block","i-ci-ve:ver25","r-cr-o:hor20" }
+vim.opt.guicursor = { "n-v-c-sm:block", "i-ci-ve:ver25", "r-cr-o:hor20" }
