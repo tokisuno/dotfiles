@@ -276,7 +276,7 @@ globalkeys = gears.table.join(
 		awful.screen.focused().mypromptbox:run()
 	end, { description = "run prompt", group = "launcher" }),
 	awful.key({ modkey }, "p", function()
-		awful.spawn("rofi -show run")
+		awful.spawn("rofi -show drun")
 	end, { description = "launch rofi", group = "launcher" })
 )
 
@@ -419,15 +419,18 @@ awful.rules.rules = {
 				"pinentry",
 			},
 			class = {
-				"ULauncher",
+				"Anki",
 				"Arandr",
 				"Blueman-manager",
 				"Gpick",
 				"Kruler",
 				"MessageWin", -- kalarm.
 				"Sxiv",
+				"Thunar",
 				"Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
+				"ULauncher",
 				"Wpa_gui",
+				"rofi",
 				"veromix",
 				"xtightvncviewer",
 			},

@@ -31,6 +31,7 @@ for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
 export PATH="/bin"
 export PATH=${PATH}:"$HOME/bin"
+export PATH=${PATH}:"/var/lib/flatpak/exports/share/applications"
 export PATH=${PATH}:"$HOME/.cargo/bin"
 export PATH=${PATH}:"$HOME/.config/emacs/bin"
 export PATH=${PATH}:"$HOME/.local/bin"
@@ -116,7 +117,7 @@ alias ltr="eza -s modified -r --icons=always --sort=type"
 
 alias shsh="'$(ssh-agent -s)' && ssh-add"
 
-mcd() { mkdir "$@" 2> >(sed s/mkdir/mcd/ 1>&2) && cd "$_"; }
+mkd() { mkdir "$@" 2> >(sed s/mkdir/mkd/ 1>&2) && cd "$_"; }
 
 zsh_plugins=${ZDOTDIR:-~}/.zsh_plugins
 
