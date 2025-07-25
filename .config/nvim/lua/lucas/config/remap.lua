@@ -29,8 +29,6 @@ map(
 	{ noremap = true, silent = true, desc = "Replace word" }
 )
 
--- map("n", "<C-w><C-u>", vim.cmd.bunload, { noremap = true, silent = true, desc = "Buffer unload" })
-
 map({ "n", "x" }, "H", "^")
 map({ "n", "x" }, "L", "g_")
 
@@ -50,6 +48,7 @@ map("n", "g#", "g#zz", opts)
 
 map("n", "<leader>p", "m`o<ESC>p``", { desc = "paste below current line" })
 map("n", "<leader>P", "m`O<ESC>p``", { desc = "paste above current line" })
+map("n", "<leader><C-p>", '"+p', { desc = "paste above current line" })
 
 map("v", "<leader>y", '"+y', { desc = "Copy to system clipboard" })
 
@@ -69,9 +68,7 @@ map("n", "<localleader><localleader>", ":e .<cr>", { noremap = true, silent = tr
 map("n", "<localleader>l", ":Lazy<cr>", { noremap = true, silent = true, desc = "Open lazy.nvim" })
 map("n", "<localleader>m", ":Mason<cr>", { noremap = true, silent = true, desc = "Open Mason" })
 
--- some native emacs bindings i prefer
-map("n", "<C-x><C-f>", ":e .<cr>", { noremap = true, silent = true, desc = "Opens oil.nvim (emacs style)" })
-map("n", "<C-x>k", vim.cmd.bdelete, { noremap = true, silent = true, desc = "Buffer delete" })
+map("n", "<leader>bd", vim.cmd.bdelete, { noremap = true, silent = true, desc = "Close current buffer" })
 
 local toggle_wrap = function()
 	vim.o.wrap = not vim.o.wrap
