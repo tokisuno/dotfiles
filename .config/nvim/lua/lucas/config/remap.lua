@@ -92,13 +92,11 @@ map("n", "<leader>rs", ":RSpecShowLastResult<CR>", { noremap = true, silent = tr
 
 map("x", "<leader>p", [["_dP]])
 
--- telescope
-local builtin = require("telescope.builtin")
-map("n", "<leader>ff", builtin.find_files, { desc = "Find Files" })
-map("n", "<leader>fg", builtin.live_grep, { desc = "Live Grep" })
-map("n", "<leader>fb", builtin.buffers, { desc = "Buffers" })
-map("n", "<leader>fh", builtin.help_tags, { desc = "Help Tags" })
-map("n", "<leader>fc", builtin.command_history, { desc = "Command History" })
-map("n", "<leader>fr", builtin.lsp_references, { desc = "LSP References" })
-map("n", "<leader>fi", builtin.lsp_implementations, { desc = "LSP Implementations" })
-map("n", "<leader>fd", builtin.lsp_type_definitions, { desc = "LSP Type Definitions" })
+-- fzf
+local fzf = require("fzf-lua")
+map("n", "<leader>ff", fzf.files, { desc = "Find files" })
+map("n", "<leader>fg", fzf.grep, { desc = "Grep" })
+map("n", "<leader>fl", fzf.live_grep, { desc = "Grep in project" })
+map("n", "<leader>fr", fzf.lsp_references, { desc = "Grep in project" })
+map("n", "<leader>fd", fzf.lsp_definitions, { desc = "Grep in project" })
+map("n", "<leader>fh", fzf.helptags, { desc = "Grep in project" })
