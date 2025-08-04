@@ -83,20 +83,8 @@ map("n", "<leader>t", "", { noremap = true, silent = true, desc = "Toggle..." })
 map("n", "<leader>tw", toggle_wrap, { noremap = true, silent = true, desc = "Toggle..." })
 map("n", "<leader>ts", toggle_spell, { noremap = true, silent = true, desc = "Toggle..." })
 
--- rspec.nvim mappings
-map("n", "<leader>rn", ":RSpecNearest<CR>", { noremap = true, silent = true })
-map("n", "<leader>rf", ":RSpecCurrentFile<CR>", { noremap = true, silent = true })
-map("n", "<leader>rr", ":RSpecRerun<CR>", { noremap = true, silent = true })
-map("n", "<leader>rF", ":RSpecOnlyFailures<CR>", { noremap = true, silent = true })
-map("n", "<leader>rs", ":RSpecShowLastResult<CR>", { noremap = true, silent = true })
-
 map("x", "<leader>p", [["_dP]])
 
--- fzf
-local fzf = require("fzf-lua")
-map("n", "<leader>ff", fzf.files, { desc = "Find files" })
-map("n", "<leader>fg", fzf.grep, { desc = "Grep" })
-map("n", "<leader>fl", fzf.live_grep, { desc = "Grep in project" })
-map("n", "<leader>fr", fzf.lsp_references, { desc = "Grep in project" })
-map("n", "<leader>fd", fzf.lsp_definitions, { desc = "Grep in project" })
-map("n", "<leader>fh", fzf.helptags, { desc = "Grep in project" })
+-- rest.nvim
+map("n", "<leader>rr", ":Rest run<CR>", { desc = "Run HTTP Request" })
+map("n", "<leader>ro", ":Rest open<CR>", { desc = "Open REST.nvim" })

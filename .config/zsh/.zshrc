@@ -26,8 +26,7 @@ setopt AUTO_PUSHD           # Push the current directory visited on the stack.
 setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
 setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
 
-alias d='dirs -v'
-for index ({1..9}) alias "$index"="cd +${index}"; unset index
+source ${ZDOTDIR}/.antidote/antidote.zsh
 
 export PATH="/bin"
 export PATH=${PATH}:"$HOME/bin"
@@ -56,8 +55,6 @@ export CC="clang"
 export NVM_DIR="~/.nvm"
 export GOPATH="$HOME/go"
 
-source ${ZDOTDIR}/.antidote/antidote.zsh
-
 export FZF_DEFAULT_OPTS="--height 60% --layout=reverse --border --inline-info"
 export FZF_PREVIEW_COMMAND="bat --style=numbers,changes --wrap never --color always {} || cat {} || tree -C {}"
 
@@ -73,14 +70,19 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 export FZF_COMPLETION_TRIGGER=']]'
 export FZF_COMPLETION_OPTS='--border --info=inline'
 
+alias d='dirs -v'
+for index ({1..9}) alias "$index"="cd +${index}"; unset index
+
 alias vim="nvim"
 alias iv="nvim"
 alias ivm="nvim"
 alias vi="nvim"
 alias v="nvim"
-alias ovim="/bin/vim"
+alias ovi="/bin/vim"
 alias ka="killall"
 alias claer="clear"
+alias clae="clear"
+alias clera="clear"
 alias ff="fastfetch"
 
 alias dots="cd ~/code/repos/dotfiles"
@@ -101,8 +103,9 @@ alias aaaa="cd ../../../.."
 
 alias lg="lazygit"
 
-alias ta="tmux attach"
-alias td="tmux detach-client"
+alias tm="tmux"
+alias tma="tmux attach"
+alias tmd="tmux detach-client"
 
 alias ls="eza --icons=always --sort=type"
 alias l="eza -lbF --git --icons=always --sort=type"
