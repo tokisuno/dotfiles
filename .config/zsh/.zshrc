@@ -83,6 +83,7 @@ alias ka="killall"
 alias claer="clear"
 alias clae="clear"
 alias clera="clear"
+alias clea="clear"
 alias ff="fastfetch"
 
 alias dots="cd ~/code/repos/dotfiles"
