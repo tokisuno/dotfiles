@@ -10,26 +10,13 @@ local opts = { noremap = true, silent = true }
 -- super useful remap
 map("n", "<C-c>", "yygccp", { remap = true })
 
-map("n", "<C-f>", function()
-	vim.diagnostic.jump({ count = 1, float = true })
-end)
+map("n", "<C-f>", function() vim.diagnostic.jump({ count = 1, float = true }) end)
+map("n", "<C-b>", function() vim.diagnostic.jump({ count = -1, float = true }) end)
+map("n", "<C-e>", function() vim.diagnostic.open_float() end)
 
-map("n", "<C-b>", function()
-	vim.diagnostic.jump({ count = -1, float = true })
-end)
+map( "n", "<leader>w", [[:%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>]], { noremap = true, silent = true, desc = "Replace word" })
 
-map("n", "<C-e>", function()
-	vim.diagnostic.open_float()
-end)
-
-map(
-	"n",
-	"<leader>w",
-	[[:%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>]],
-	{ noremap = true, silent = true, desc = "Replace word" }
-)
-
-map("n", "<M-s>", "g_a;<esc>")
+map("n", "<leader>i", "gg=G", { noremap = true, silent = true, desc = "Indents file" })
 
 map({ "n", "x" }, "H", "^")
 map({ "n", "x" }, "L", "g_")
@@ -53,16 +40,16 @@ map("n", "<leader>P", "m`O<ESC>p``", { desc = "paste above current line" })
 map("n", "<leader><C-p>", '"+p', { desc = "paste above current line" })
 
 map("v", "<leader>y", '"+y', { desc = "Copy to system clipboard" })
+map("n", "<leader>Y", '"+yy', { desc = "Copy line to system clipboard" })
 
 -- ctrl-backspace when in insert mode
 map("i", "<C-h>", "<C-w>", opts)
 
 map("n", "<leader>d",
-	":Trouble diagnostics filter.buf=0 win = { type = split, position = right, relative = win, size = 0.4 }<cr>",
-	{ desc = "Split diagnostics window", silent = true })
+":Trouble diagnostics filter.buf=0 win = { type = split, position = right, relative = win, size = 0.4 }<cr>",
+{ desc = "Split diagnostics window", silent = true })
 
 -- opening menus
---
 map("n", "<localleader><localleader>", ":e .<cr>", { noremap = true, silent = true, desc = "Open oil.nvim" })
 map("n", "<localleader>l", ":Lazy<cr>", { noremap = true, silent = true, desc = "Open lazy.nvim" })
 map("n", "<localleader>m", ":Mason<cr>", { noremap = true, silent = true, desc = "Open Mason" })
@@ -70,11 +57,11 @@ map("n", "<localleader>m", ":Mason<cr>", { noremap = true, silent = true, desc =
 map("n", "<leader>bd", vim.cmd.bdelete, { noremap = true, silent = true, desc = "Close current buffer" })
 
 local toggle_wrap = function()
-	vim.o.wrap = not vim.o.wrap
+  vim.o.wrap = not vim.o.wrap
 end
 
 local toggle_spell = function()
-	vim.o.spell = not vim.o.spell
+  vim.o.spell = not vim.o.spell
 end
 
 -- toggling things
