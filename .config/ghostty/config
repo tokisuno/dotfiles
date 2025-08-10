@@ -1,0 +1,11 @@
+font-family = JetBrainsMono Nerd Font
+font-size = 13
+
+theme = GruvboxDarkHard
+shell-integration-features = no-cursor, sudo, no-title
+
+window-decoration = none
+window-padding-x = 2
+window-padding-y = 2
+
+copy-on-select = clipboard

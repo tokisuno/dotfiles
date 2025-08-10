@@ -55,10 +55,14 @@ export CC="clang"
 export NVM_DIR="~/.nvm"
 export GOPATH="$HOME/go"
 
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
+
 export FZF_DEFAULT_OPTS="--height 60% --layout=reverse --border --inline-info"
 export FZF_PREVIEW_COMMAND="bat --style=numbers,changes --wrap never --color always {} || cat {} || tree -C {}"
 
-export FZF_CTRL_T_COMMAND="command find -L \$dir -type f 2> /dev/null | sed '1d; s#^\./##'"
+# export FZF_CTRL_T_COMMAND="command find -L \$dir -type f 2> /dev/null | sed '1d; s#^\./##'"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 export FZF_CTRL_T_OPTS="--min-height 30 --preview-window down:60% --preview-window noborder --preview '($FZF_PREVIEW_COMMAND) 2> /dev/null'"
 export FZF_CTRL_R_OPTS="
   --preview 'echo {}' --preview-window up:3:hidden:wrap
@@ -73,17 +77,26 @@ export FZF_COMPLETION_OPTS='--border --info=inline'
 alias d='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
-alias vim="nvim"
-alias iv="nvim"
-alias ivm="nvim"
-alias vi="nvim"
-alias v="nvim"
+# -------------------------------- #
+# EASILY MY MOST IMPORTANT ALIASES #
+# -------------------------------- #
+alias claer="clear"                #
+alias clae="clear"                 #
+alias clera="clear"                #
+alias clea="clear"                 #
+alias lear="clear"                 #
+                                   #
+alias vim="nvim"                   #
+alias iv="nvim"                    #
+alias ivm="nvim"                   #
+alias vi="nvim"                    #
+alias v="nvim"                     #
+# -------------------------------- #
+# EASILY MY MOST IMPORTANT ALIASES #
+# -------------------------------- #
+
 alias ovi="/bin/vim"
 alias ka="killall"
-alias claer="clear"
-alias clae="clear"
-alias clera="clear"
-alias clea="clear"
 alias ff="fastfetch"
 
 alias dots="cd ~/code/repos/dotfiles"

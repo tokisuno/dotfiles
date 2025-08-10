@@ -3,7 +3,6 @@
 -- by making the package manager a variable you can change
 PkgManager = " dnf install -y "
 local packages = {
-	"kitty",
 	"awesome",
 	"emacs",
 	"zsh",
@@ -25,7 +24,11 @@ print("This is just in case flatpak doesn't auto-add its own repo")
 os.execute("flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo")
 
 -- This is Fedora specific
-print("Controversially installing Google Chrome")
+print("Controversially installing Google Chrome...")
 os.execute("sudo" .. PkgManager .. "fedora-workstation-repositories")
 os.execute("sudo dnf config-manager setopt google-chrome.enabled=1")
 os.execute("sudo" .. PkgManager .. "google-chrome-stable")
+
+print("Installing Ghostty through Copr...")
+os.execute("sudo dnf copr enable scottames/ghostty")
+os.execute("sudo" .. PkgManager .. "ghostty")
