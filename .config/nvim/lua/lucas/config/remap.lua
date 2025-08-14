@@ -10,8 +10,8 @@ local opts = { noremap = true, silent = true }
 -- super useful remap
 map("n", "<C-c>", "yygccp", { remap = true })
 
-map("n", "<C-f>", function() vim.diagnostic.jump({ count = 1, float = true }) end)
-map("n", "<C-b>", function() vim.diagnostic.jump({ count = -1, float = true }) end)
+map("n", "<M-n>", function() vim.diagnostic.jump({ count = 1, float = true }) end)
+map("n", "<M-p>", function() vim.diagnostic.jump({ count = -1, float = true }) end)
 map("n", "<C-e>", function() vim.diagnostic.open_float() end)
 
 map( "n", "<leader>w", [[:%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>]], { noremap = true, silent = true, desc = "Replace word" })

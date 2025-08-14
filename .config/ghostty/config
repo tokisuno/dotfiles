@@ -4,6 +4,10 @@ font-size = 13
 theme = GruvboxDarkHard
 shell-integration-features = no-cursor, sudo, no-title
 
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
+
 window-decoration = none
 window-padding-x = 2
 window-padding-y = 2
