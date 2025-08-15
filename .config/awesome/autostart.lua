@@ -24,7 +24,7 @@ end
 local trackball_name = 'Logitech ERGO M575'
 
 local trackball_settings = {
-  "xinput set-prop " ..trackball_name.. " 'Coordinate Transformation Matrix' 0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8",
+  "xinput set-prop " ..trackball_name.. " 'Coordinate Transformation Matrix' 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6",
   "xinput set-prop " ..trackball_name.. " 'libinput Accel Speed' 1"
 }
 for _, i in pairs(trackball_settings) do
