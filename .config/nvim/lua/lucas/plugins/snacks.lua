@@ -12,28 +12,35 @@ return {
 	},
 	keys = {
 		{
-			"<leader>fb",
+			"<leader>,", -- taken from doom emacs
 			function()
 				Snacks.picker.buffers()
 			end,
 			desc = "Buffers",
 		},
 		{
-			"<leader>fg",
+			"<leader>B", -- personal neovim version
+			function()
+				Snacks.picker.buffers()
+			end,
+			desc = "Buffers",
+		},
+		{
+			"<leader>sg",
 			function()
 				Snacks.picker.grep()
 			end,
 			desc = "Grep",
 		},
 		{
-			"<leader>fs",
+			"<leader>sf",
 			function()
 				Snacks.picker.smart()
 			end,
 			desc = "Smart Find Files",
 		},
 		{
-			"<leader>fw",
+			"<leader>sw",
 			function()
 				Snacks.picker.grep_word()
 			end,

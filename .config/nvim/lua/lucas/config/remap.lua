@@ -16,7 +16,9 @@ map("n", "<C-e>", function() vim.diagnostic.open_float() end)
 
 map( "n", "<leader>w", [[:%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>]], { noremap = true, silent = true, desc = "Replace word" })
 
-map("n", "<leader>i", "gg=G", { noremap = true, silent = true, desc = "Indents file" })
+map("n", "<leader>i", "gg=G<C-o>", { noremap = true, silent = true, desc = "Indents file" })
+
+map("n", "<esc>", ":noh<cr>:lua vim.snippet.stop()<cr>", { noremap = true, silent = true, desc = "Does the useful stuff"})
 
 map({ "n", "x" }, "H", "^")
 map({ "n", "x" }, "L", "g_")

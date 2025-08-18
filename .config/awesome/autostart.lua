@@ -21,11 +21,9 @@ for _, i in pairs(cmds) do
 	run_once(i)
 end
 
-local trackball_name = 'Logitech ERGO M575'
-
 local trackball_settings = {
-  "xinput set-prop " ..trackball_name.. " 'Coordinate Transformation Matrix' 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6",
-  "xinput set-prop " ..trackball_name.. " 'libinput Accel Speed' 1"
+  "xinput set-prop 'Logitech ERGO M575' 'Coordinate Transformation Matrix' 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6",
+  "xinput set-prop 'Logitech ERGO M575' 'libinput Accel Speed' 1"
 }
 for _, i in pairs(trackball_settings) do
   run_once(i)
