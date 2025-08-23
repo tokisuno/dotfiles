@@ -10,11 +10,7 @@ local cmds = {
 	"pactl set-default-sink alsa_output.usb-GeneralPlus_USB_Audio_Device-00.analog-stereo",
 	"pactl set-sink-volume @DEFAULT_SINK@ 25%",
 	"picom -b",
-	-- "setxkbmap -option 'ctrl:nocaps'",
 	"nitrogen --restore",
-	"conky",
-	-- "feh --bg-fill $HOME/wallpapers/gruv-temple.png",
-	"syncthing",
 }
 
 for _, i in pairs(cmds) do

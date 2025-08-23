@@ -1,6 +1,6 @@
 -- This is used later as the default terminal and editor to run.
 local terminal = "ghostty"
-local browser = "google-chrome"
+local browser = "google-chrome --disable-breakpad"
 local editor = os.getenv("EDITOR") or "vim"
 local editor_cmd = terminal .. " -e " .. editor
 local file_manager = "thunar"
