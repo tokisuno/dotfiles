@@ -31,14 +31,7 @@ vim.diagnostic.config({
 	update_in_insert = false,
 	underline = true,
 	severity_sort = true,
-	float = {
-		focusable = false,
-		style = "minimal",
-		border = "rounded",
-		source = "if_many",
-		header = "",
-		prefix = "",
-	},
+  float = { focusable = false }
 })
 
 vim.o.nu = true
@@ -67,7 +60,6 @@ vim.o.scrolloff = 10
 vim.o.wrap = true
 vim.o.linebreak = true
 vim.o.colorcolumn = "120"
-vim.o.ignorecase = true
 vim.o.inccommand = "split"
 vim.o.ttimeoutlen = 50
 vim.o.foldmethod = "manual"

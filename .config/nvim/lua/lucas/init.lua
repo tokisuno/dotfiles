@@ -1,4 +1,4 @@
-vim.g.mapleader = " "
+vim.g.mapleader = vim.keycode("<space>")
 vim.g.maplocalleader = ","
 
 require("lucas.lazy")

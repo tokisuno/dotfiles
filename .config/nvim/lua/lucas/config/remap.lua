@@ -7,14 +7,15 @@ vim.keymap.del({ "i", "s" }, "<S-Tab>");
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
+vim.keymap.set('n', 'j', [[(v:count > 1 ? 'm`' . v:count : 'g') . 'j']], { expr = true })
+vim.keymap.set('n', 'k', [[(v:count > 1 ? 'm`' . v:count : 'g') . 'k']], { expr = true })
+
 -- super useful remap
 map("n", "<C-c>", "yygccp", { remap = true })
 
 map("n", "<M-n>", function() vim.diagnostic.jump({ count = 1, float = true }) end)
 map("n", "<M-p>", function() vim.diagnostic.jump({ count = -1, float = true }) end)
 map("n", "<C-e>", function() vim.diagnostic.open_float() end)
-
-map( "n", "<leader>w", [[:%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>]], { noremap = true, silent = true, desc = "Replace word" })
 
 map("n", "<leader>i", "gg=G<C-o>", { noremap = true, silent = true, desc = "Indents file" })
 
@@ -25,6 +26,11 @@ map({ "n", "x" }, "L", "g_")
 
 map("n", "<C-p>", ":bprev<cr>", opts)
 map("n", "<C-n>", ":bnext<cr>", opts)
+
+map('v', '<', '<gv')
+map('v', '>', '>gv')
+
+map({'i', 'c'}, "<C-l>", "<C-o>A", { desc = "Go to the end of the line while in insert mode"})
 
 -- MILC
 -- Man I Love Centring

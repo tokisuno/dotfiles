@@ -26,7 +26,21 @@ return {
 			desc = "Buffers",
 		},
 		{
+			"<leader>sh", -- taken from doom emacs
+			function()
+				Snacks.picker.help()
+			end,
+			desc = "Help Pages",
+		},
+		{
 			"<leader>sg",
+			function()
+				Snacks.picker.grep()
+			end,
+			desc = "Grep",
+		},
+		{
+			"<leader>/",
 			function()
 				Snacks.picker.grep()
 			end,
