@@ -85,17 +85,15 @@ alias clae="clear"                 #
 alias clera="clear"                #
 alias clea="clear"                 #
 alias lear="clear"                 #
+alias clar="clear"                 #
+alias laer="clear"                 #
                                    #
 alias vim="nvim"                   #
-alias iv="nvim"                    #
-alias ivm="nvim"                   #
-alias vi="nvim"                    #
-alias v="nvim"                     #
 # -------------------------------- #
 # EASILY MY MOST IMPORTANT ALIASES #
 # -------------------------------- #
 
-alias ovi="/bin/vim"
+alias vi="/bin/vim"
 alias ka="killall"
 alias ff="fastfetch"
 
