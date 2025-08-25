@@ -28,10 +28,18 @@ vim.diagnostic.config({
 			[vim.diagnostic.severity.HINT] = "DiagnosticHint",
 		},
 	},
+  virtual_text = false,
 	update_in_insert = false,
 	underline = true,
 	severity_sort = true,
-  float = { focusable = false }
+  float = {
+    focusable = false,
+    style = "minimal",
+    border = "rounded",
+    source = "always",
+    header = "",
+    prefix = "",
+  },
 })
 
 vim.o.nu = true
