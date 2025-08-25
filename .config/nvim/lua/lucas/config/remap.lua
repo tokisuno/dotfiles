@@ -13,8 +13,6 @@ vim.keymap.set('n', 'k', [[(v:count > 1 ? 'm`' . v:count : 'g') . 'k']], { expr 
 -- super useful remap
 map("n", "<C-c>", "yygccp", { remap = true })
 
-map("n", "<M-n>", function() vim.diagnostic.jump({ count = 1, float = true }) end)
-map("n", "<M-p>", function() vim.diagnostic.jump({ count = -1, float = true }) end)
 map("n", "<C-e>", function() vim.diagnostic.open_float() end)
 
 map("n", "<leader>i", "gg=G<C-o>", { noremap = true, silent = true, desc = "Indents file" })
@@ -77,7 +75,7 @@ map("n", "<leader>t", "", { noremap = true, silent = true, desc = "Toggle..." })
 map("n", "<leader>tw", toggle_wrap, { noremap = true, silent = true, desc = "Toggle..." })
 map("n", "<leader>ts", toggle_spell, { noremap = true, silent = true, desc = "Toggle..." })
 
-map("x", "<leader>p", [["_dP]])
+map("n", "[c", function () require('treesitter-context').go_to_context(vim.v.count1) end, { silent = true})
 
 -- rest.nvim
 map("n", "<leader>rr", ":Rest run<CR>", { desc = "Run HTTP Request" })
