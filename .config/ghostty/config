@@ -1,5 +1,5 @@
 font-family = JetBrainsMono Nerd Font
-font-family-italic = FreeMono Regular Italic
+font-family-italic = FreeMono Italic
 font-size = 10
 
 theme = GruvboxDarkHard
@@ -7,6 +7,7 @@ shell-integration-features = no-cursor, sudo, no-title
 
 adjust-cell-width = -5%
 adjust-cell-height = 15%
+adjust-cursor-height = 15%
 adjust-underline-position = 6
 adjust-underline-thickness = 40%
 adjust-cursor-thickness = 125%
