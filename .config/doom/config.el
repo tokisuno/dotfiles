@@ -2,13 +2,10 @@
 (setq user-full-name "Lucas Cordero"
       user-mail-address "tokisunosan@gmail.com")
 
-(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 18 :height 1.0 :weight 'normal)
-      doom-big-font (font-spec :family "JetBrainsMono Nerd Font" :size 24 :style "medium" :weight 'bold))
+(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 14 :height 1.0 :weight 'normal)
+      doom-big-font (font-spec :family "JetBrainsMono Nerd Font" :size 20 :style "medium" :weight 'bold))
 
 (setq doom-theme 'doom-gruvbox)
-
-;; (add-to-list 'custom-theme-load-path "~/.config/doom/everforest-theme")
-;; (load-theme 'everforest-hard-dark t)
 
 (setq display-line-numbers-type t)
 
@@ -41,11 +38,6 @@
 ;; #+SEQ_TODO: NEXT(n) TODO(t) WAITING(w) PROJ(p) | DONE(d)
 (setq org-directory "~/org/")
 
-
-
-;; should i start using slugs..? i don't have thattt many notes and i organize them
-;; through both metadata and by adding them to their parent node.
-;; hmm...
 (use-package org-roam
   :ensure t
   :custom
@@ -65,7 +57,7 @@
   (org-roam-db-autosync-mode)
   (require 'org-roam-protocol))
 
-;; (after! citar (setq! citar-bibliography '("~/Sync/latex/bibs/finalproj.bib")))
+;; (after! citar (setq! citar-bibliography '("~/Sync/bibliographies/ambiguities.bib")))
 
 ;; making org-mode look good
 (setq org-hide-emphasis-markers t)
