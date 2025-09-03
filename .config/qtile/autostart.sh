@@ -1,4 +1,5 @@
 #!/bin/sh
+syncthing &
 flameshot &
 ibus-daemon -rxRd &
 pactl set-default-sink alsa_output.usb-GeneralPlus_USB_Audio_Device-00.analog-stereo &
