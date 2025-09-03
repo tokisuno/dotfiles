@@ -2,8 +2,14 @@
   "name": "personal-snippets",
   "contributes": {
     "snippets": [
-      { "language": "lua", "path": "./lua.json" },
-      { "language": "javascript", "path": "./js.json" }
+      {
+        "language": [ "markdown", "latex", "typst", "text" ],
+        "path": "./pulmonic.json"
+      },
+      {
+        "language": [ "markdown", "latex", "typst", "text" ],
+        "path": "./vowels.json"
+      }
     ]
   }
 }

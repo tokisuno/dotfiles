@@ -1,0 +1,110 @@
+{
+  "close front unrounded": {
+    "prefix": "cfu",
+    "body": [ "i" ],
+    "description": "close front unrounded"
+  },
+  "close front rounded": {
+    "prefix": "cfr",
+    "body": [ "y" ],
+    "description": "close front rounded"
+  },
+  "near-close front unrounded": {
+    "prefix": "ncfu",
+    "body": [ "ɪ" ],
+    "description": "near-close front unrounded"
+  },
+  "near-close front rounded": {
+    "prefix": "ncfr",
+    "body": [ "ʏ" ],
+    "description": "near-close front rounded"
+  },
+  "close-mid front unrounded": {
+    "prefix": "cmfu",
+    "body": [ "e" ],
+    "description": "close-mid front unrounded"
+  },
+  "close-mid front rounded": {
+    "prefix": "cmfr",
+    "body": [ "ø" ],
+    "description": "close-mid front rounded"
+  },
+  "mid front unrounded": {
+    "prefix": "mfu",
+    "body": [ "e̞" ],
+    "description": "mid front unrounded"
+  },
+  "mid front rounded": {
+    "prefix": "mfr",
+    "body": [ "ø̞" ],
+    "description": "mid front rounded"
+  },
+  "open-mid front unrounded": {
+    "prefix": "omfu",
+    "body": [ "ɛ" ],
+    "description": "open-mid front unrounded"
+  },
+  "open-mid front rounded": {
+    "prefix": "omfr",
+    "body": [ "œ" ],
+    "description": "open-mid front rounded"
+  },
+  "near-open front unrounded": {
+    "prefix": "nofu",
+    "body": [ "æ" ],
+    "description": "near-open front unrounded"
+  },
+  "near-open mid front rounded": {
+    "prefix": "nofr",
+    "body": [ "ɶ" ],
+    "description": "near-open mid front rounded"
+  },
+  "open front unrounded": {
+    "prefix": "ofu",
+    "body": [ "a" ],
+    "description": "open front unrounded"
+  },
+  "close central unrounded": {
+    "prefix": "ccu",
+    "body": [ "ɨ" ],
+    "description": "close central unrounded"
+  },
+  "close central rounded": {
+    "prefix": "ccr",
+    "body": [ "ʉ" ],
+    "description": "close central rounded"
+  },
+  "close-mid central unrounded": {
+    "prefix": "cmcu",
+    "body": [ "ɘ" ],
+    "description": "close-mid central unrounded"
+  },
+  "close-mid central rounded": {
+    "prefix": "cmcr",
+    "body": [ "ɵ" ]
+  },
+  "mid central vowel": {
+    "prefix": "mcv",
+    "body": [ "ə" ]
+  },
+  "schwa": {
+    "prefix": "schwa",
+    "body": [ "ə" ]
+  },
+  "open-mid central unrounded": {
+    "prefix": "omcu",
+    "body": [ "ɜ" ]
+  },
+  "open-mid central rounded": {
+    "prefix": "omcr",
+    "body": [ "ɞ" ]
+  },
+  "near-open central vowel": {
+    "prefix": "nocv",
+    "body": [ "ɐ" ]
+  },
+  "open central unrounded": {
+    "prefix": "ocu",
+    "body": [ "ä" ]
+  }
+}

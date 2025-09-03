@@ -17,6 +17,7 @@ return {
 			["<C-b>"] = { "snippet_backward" },
 			["<C-f>"] = { "snippet_forward" },
 		},
+    signature = { enabled = true },
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer" },
 		},

@@ -7,8 +7,11 @@ vim.keymap.del({ "i", "s" }, "<S-Tab>");
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
-vim.keymap.set('n', 'j', [[(v:count > 1 ? 'm`' . v:count : 'g') . 'j']], { expr = true })
-vim.keymap.set('n', 'k', [[(v:count > 1 ? 'm`' . v:count : 'g') . 'k']], { expr = true })
+map('n', '<leader>td', function() require('vling').deadkeys.toggle() end, { desc = "Toggle Deadkeys" })
+map('n', '<leader>ti', function() require('vling').ipa.toggle() end, { desc = "Toggle IPA" })
+
+map('n', 'j', [[(v:count > 1 ? 'm`' . v:count : 'g') . 'j']], { expr = true })
+map('n', 'k', [[(v:count > 1 ? 'm`' . v:count : 'g') . 'k']], { expr = true })
 
 -- super useful remap
 map("n", "<C-c>", "yygccp", { remap = true })

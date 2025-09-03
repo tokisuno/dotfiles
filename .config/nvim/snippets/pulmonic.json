@@ -1,0 +1,9 @@
+{
+  "voiced bilabial nasal": {
+    "prefix": "xbn",
+    "body": [
+      "m̥"
+    ],
+    "description": "[m̥] voiced bilabial nasal"
+  }
+}
