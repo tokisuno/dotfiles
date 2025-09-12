@@ -1,4 +1,4 @@
 return {
-  dir = "~/code/repos/vling",
+  -- dir = "~/code/repos/vling",
 }
 
