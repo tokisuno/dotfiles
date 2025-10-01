@@ -1,4 +1,12 @@
 #!/bin/bash
 
-xmodmap -e "keycode 51 = BackSpace"
-xmodmap -e "keycode 22 = backslash bar"
+
+setxkbmap -option lv3:lalt_switch -option lv3:ralt_alt
+setxkbmap -option ctrl:nocaps
+
+xmodmap -e "keycode 22 = BackSpace"
+xmodmap -e "keycode 51 = backslash bar"
+
+## use this only on laptop
+# xmodmap -e "keycode 51 = BackSpace"
+# xmodmap -e "keycode 22 = backslash bar"
