@@ -57,6 +57,12 @@
   (org-roam-db-autosync-mode)
   (require 'org-roam-protocol))
 
+(use-package! org-roam-bibtex
+  :after org-roam
+  :config)
+
+(setq bibtex-completion-bibliography '("~/org/roam/references/programming.bib"))
+
 ;; (after! citar (setq! citar-bibliography '("~/Sync/bibliographies/ambiguities.bib")))
 
 ;; making org-mode look good
