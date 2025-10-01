@@ -1,15 +1,21 @@
-# my dotfilez(tm)
+# my super-cool & awesome wayland dotfiles
 
 # base system
 - fedora 42
 
+# some dependencies
+- ibus-mozc-ut
+- flameshot
+- firefox
+- swaybg
+
 ## core programs
 - [doom emacs](https://github.com/tokisuno/dotfiles/tree/main/.config/doom)
-- [ghostty](https://github.com/tokisuno/dotfiles/tree/main/.config/ghostty)
+- [foot](https://github.com/tokisuno/dotfiles/tree/main/.config/foot)
 - [neovim](https://github.com/tokisuno/dotfiles/tree/main/.config/nvim)
 - [picom](https://github.com/tokisuno/dotfiles/tree/main/.config/picom)
-- [qtile](https://github.com/tokisuno/dotfiles/tree/main/.config/qtile)
-- [rofi](https://github.com/tokisuno/dotfiles/tree/main/.config/rofi)
+- [hyprland](https://github.com/tokisuno/dotfiles/tree/main/.config/hypr)
+- [waybar](https://github.com/tokisuno/dotfiles/tree/main/.config/waybar)
 - [tmux](https://github.com/tokisuno/dotfiles/tree/main/.config/tmux)
 - [zathura](https://github.com/tokisuno/dotfiles/tree/main/.config/zathura)
 - [zsh](https://github.com/tokisuno/dotfiles/tree/main/.config/zsh)
