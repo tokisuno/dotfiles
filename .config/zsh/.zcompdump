@@ -1,4 +1,4 @@
-#files: 1023	version: 5.9
+#files: 1033	version: 5.9
 
 _comps=(
 '-' '_precommand'
@@ -327,6 +327,8 @@ _comps=(
 'dnf-2' '_dnf'
 'dnf-3' '_dnf'
 'doas' '_doas'
+'docker' '_docker'
+'dockerd' '_docker'
 'domainname' '_yp'
 'dos2unix' '_dos2unix'
 'dosdel' '_floppy'
@@ -460,6 +462,8 @@ _comps=(
 'fold' '_fold'
 'folder' '_mh'
 'folders' '_mh'
+'foot' '_foot'
+'footclient' '_footclient'
 'fortune' '_fortune'
 'forw' '_mh'
 'fprev' '_mh'
@@ -692,6 +696,8 @@ _comps=(
 'hotjava' '_webbrowser'
 'htop' '_htop'
 'hwinfo' '_hwinfo'
+'hyprctl' '_hyprctl'
+'hyprpm' '_hyprpm'
 'iceweasel' '_mozilla'
 'icombine' '_ispell'
 'iconv' '_iconv'
@@ -995,6 +1001,7 @@ _comps=(
 'nmap' '_nmap'
 'nmblookup' '_samba'
 'nmcli' '_networkmanager'
+'nnn' '_nnn'
 'nocorrect' '_precommand'
 'noglob' '_precommand'
 'nohup' '_precommand'
@@ -1032,15 +1039,24 @@ _comps=(
 'osascript' '_osascript'
 'osc' '_osc'
 'otool' '_otool'
+'p11-kit' '_p11-kit'
 'p4' '_perforce'
 'p4d' '_perforce'
+'pacat' '_pulseaudio'
 'pack' '_pack'
 'packf' '_mh'
+'pacmd' '_pulseaudio'
+'pactl' '_pulseaudio'
+'padsp' '_pulseaudio'
 'pandoc' '_pandoc'
+'paplay' '_pulseaudio'
 '-parameter-' '_parameter'
+'parec' '_pulseaudio'
+'parecord' '_pulseaudio'
 'parsehdlist' '_urpmi'
 'passwd' '_users'
 'paste' '_paste'
+'pasuspender' '_pulseaudio'
 'patch' '_patch'
 'pax' '_pax'
 'pbcopy' '_pbcopy'
@@ -1103,6 +1119,7 @@ _comps=(
 'pkgrm' '_pkgrm'
 'pkgtool' '_pkgtool'
 'pkill' '_pgrep'
+'playerctl' '_playerctl'
 'pldd' '_pids'
 'plutil' '_plutil'
 'pmake' '_make'
@@ -1174,6 +1191,7 @@ _comps=(
 'pswrap' '_postscript'
 'ptree' '_ptree'
 'ptx' '_ptx'
+'pulseaudio' '_pulseaudio'
 'pump' '_pump'
 'pushd' '_cd'
 'putclip' '_putclip'
@@ -1499,6 +1517,7 @@ _comps=(
 'true' '_nothing'
 'truncate' '_truncate'
 'truss' '_truss'
+'trust' '_trust'
 'tryaffix' '_ispell'
 'tty' '_tty'
 'ttyctl' '_ttyctl'
@@ -1915,13 +1934,15 @@ bindkey '^[~' _bash_complete-word
 
 autoload -Uz _alacritty _bat _bluetoothctl _bootctl _btm \
             _busctl _bwrap _calibre _coredumpctl _curl \
-            _fastfetch _fd _firewalld _flameshot _flatpak \
-            _ghostty _hg _hostnamectl _journalctl _kernel-install \
+            _docker _fastfetch _fd _firewalld _flameshot \
+            _flatpak _foot _footclient _ghostty _hg \
+            _hostnamectl _hyprctl _hyprpm _journalctl _kernel-install \
             _libinput _localectl _loginctl _machinectl _mpv \
-            _networkctl _nvme _oomctl _resolvectl _rg \
-            _run0 _sd_hosts_or_user_at_host _sd_machines _sd_outputmodes _sd_unit_files \
-            _systemctl _systemd _systemd-analyze _systemd-delta _systemd-inhibit \
-            _systemd-nspawn _systemd-path _systemd-run _systemd-tmpfiles _timedatectl \
+            _networkctl _nnn _nvme _oomctl _p11-kit \
+            _playerctl _pulseaudio _resolvectl _rg _run0 \
+            _sd_hosts_or_user_at_host _sd_machines _sd_outputmodes _sd_unit_files _systemctl \
+            _systemd _systemd-analyze _systemd-delta _systemd-inhibit _systemd-nspawn \
+            _systemd-path _systemd-run _systemd-tmpfiles _timedatectl _trust \
             _udevadm _udisks2 _upower _uv _uvx \
             _varlinkctl _wl-copy _wl-paste _wpctl _yt-dlp \
             _zoxide _a2ps _a2utils _aap _abcde \
