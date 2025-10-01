@@ -83,3 +83,11 @@ map("n", "[c", function () require('treesitter-context').go_to_context(vim.v.cou
 -- rest.nvim
 map("n", "<leader>rr", ":Rest run<CR>", { desc = "Run HTTP Request" })
 map("n", "<leader>ro", ":Rest open<CR>", { desc = "Open REST.nvim" })
+
+local builtin = require('telescope.builtin')
+map('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+map('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+map('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+map('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+map('n', '<leader>fl', "<cmd>Telescope bibtex<cr>", { desc = 'Telescope Bibtex' })
+map('i', '<C-.>', "<cmd>Telescope bibtex<cr>", { desc = 'Telescope Bibtex' })

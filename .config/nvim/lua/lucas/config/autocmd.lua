@@ -9,16 +9,6 @@ autocmd("FileType", {
 	end,
 })
 
--- we're going for that linux kernel style frfr
-autocmd("Filetype", {
-  pattern = {
-    "c",
-  },
-  callback = function ()
-    vim.cmd("setlocal tabstob=8 shiftwidth=8 softtabstop=8")
-  end,
-})
-
 autocmd("BufWritePre", {
 	pattern = { "*" },
 	callback = function(ev)
