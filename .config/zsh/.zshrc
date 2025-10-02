@@ -1,8 +1,13 @@
 export COLORTERM="truecolor"
 
-# export GTK_IM_MODULE="ibus"
-# export QT_IM_MODULE="ibus"
-export GLFW_IM_MODULE="ibus"
+unset GTK_IM_MODULE
+unset QT_IM_MODULE
+unset GLFW_IM_MODULE
+unset XMODIFIERS
+
+export GLFW_IM_MODULE="wayland"
+export GTK_IM_MODULE="wayland"
+export QT_IM_MODULE="wayland"
 export XMODIFIERS="@im=ibus"
 
 export ALTERNATE_EDITOR=""
@@ -102,8 +107,6 @@ alias vc="cd ~/.config/nvim/lua/lucas/"
 alias vc="cd ~/.config/nvim/lua/lucas/"
 alias wm="cd ~/.config/awesome"
 alias rip="cd ~/.local/share/scripts"
-
-alias chr="google-chrome "
 
 alias kb="setxkbmap -option 'ctrl:nocaps'"
 
