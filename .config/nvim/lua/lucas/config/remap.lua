@@ -15,23 +15,28 @@ map('n', 'k', [[(v:count > 1 ? 'm`' . v:count : 'g') . 'k']], { expr = true })
 
 -- super useful remap
 map("n", "<C-c>", "yygccp", { remap = true })
-
 map("n", "<C-e>", function() vim.diagnostic.open_float() end)
-
 map("n", "<leader>i", "gg=G<C-o>", { noremap = true, silent = true, desc = "Indents file" })
-
 map("n", "<esc>", ":noh<cr>:lua vim.snippet.stop()<cr>", { noremap = true, silent = true, desc = "Does the useful stuff"})
 
 map({ "n", "x" }, "H", "^")
 map({ "n", "x" }, "L", "g_")
+map("n", "x", '"_x', opts)
 
 map("n", "<C-p>", ":bprev<cr>", opts)
 map("n", "<C-n>", ":bnext<cr>", opts)
+map("n", "<Tab>", ":bnext<CR>", { silent = false })
+map("n", "<S-Tab>", ":bprevious<CR>", { silent = false })
 
 map('v', '<', '<gv')
 map('v', '>', '>gv')
 
 map({'i', 'c'}, "<C-l>", "<C-o>A", { desc = "Go to the end of the line while in insert mode"})
+
+vim.keymap.set("n", "<A-j>", ":m .+1<CR>==") -- Alt+j: Move line down
+vim.keymap.set("n", "<A-k>", ":m .-2<CR>==") -- Alt+k: Move line up
+vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv") -- Alt+j: Move selection down
+vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv") -- Alt+k: Move selection up
 
 -- MILC
 -- Man I Love Centring
@@ -55,8 +60,8 @@ map("n", "<leader>Y", '"+yy', { desc = "Copy line to system clipboard" })
 map("i", "<C-h>", "<C-w>", opts)
 
 map("n", "<leader>d",
-":Trouble diagnostics filter.buf=0 win = { type = split, position = right, relative = win, size = 0.4 }<cr>",
-{ desc = "Split diagnostics window", silent = true })
+    ":Trouble diagnostics filter.buf=0 win = { type = split, position = right, relative = win, size = 0.4 }<cr>",
+    { desc = "Split diagnostics window", silent = true })
 
 -- opening menus
 map("n", "<localleader><localleader>", ":e .<cr>", { noremap = true, silent = true, desc = "Open oil.nvim" })
@@ -78,7 +83,7 @@ map("n", "<leader>t", "", { noremap = true, silent = true, desc = "Toggle..." })
 map("n", "<leader>tw", toggle_wrap, { noremap = true, silent = true, desc = "Toggle..." })
 map("n", "<leader>ts", toggle_spell, { noremap = true, silent = true, desc = "Toggle..." })
 
-map("n", "[c", function () require('treesitter-context').go_to_context(vim.v.count1) end, { silent = true})
+map("n", "[c", function () require('treesitter-context').go_to_context(vim.v.count1) end, { silent = true })
 
 -- rest.nvim
 map("n", "<leader>rr", ":Rest run<CR>", { desc = "Run HTTP Request" })
