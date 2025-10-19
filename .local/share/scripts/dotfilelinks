@@ -1,13 +1,12 @@
 #!/bin/bash
 ln -sf ~/code/repos/dotfiles/.config/doom/ ~/.config
+ln -sf ~/code/repos/dotfiles/.config/ghostty ~/.config
 ln -sf ~/code/repos/dotfiles/.config/mpv/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/nvim/ ~/.config
+ln -sf ~/code/repos/dotfiles/.config/qtile ~/.config
 ln -sf ~/code/repos/dotfiles/.config/tmux/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/zathura/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/zsh ~/.config
-ln -sf ~/code/repos/dotfiles/.config/foot ~/.config
-ln -sf ~/code/repos/dotfiles/.config/waybar ~/.config
-ln -sf ~/code/repos/dotfiles/.config/hypr ~/.config
 ln -sf ~/code/repos/dotfiles/.local/share/scripts/ ~/.local/share
 
 # Default programs

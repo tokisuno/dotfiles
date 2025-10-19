@@ -5,9 +5,9 @@ unset QT_IM_MODULE
 unset GLFW_IM_MODULE
 unset XMODIFIERS
 
-export GLFW_IM_MODULE="wayland"
-export GTK_IM_MODULE="wayland"
-export QT_IM_MODULE="wayland"
+export GLFW_IM_MODULE="ibus"
+export GTK_IM_MODULE="ibus"
+export QT_IM_MODULE="ibus"
 export XMODIFIERS="@im=ibus"
 
 export ALTERNATE_EDITOR=""
@@ -101,6 +101,8 @@ alias vim="nvim"                   #
 alias vi="/bin/vim"
 alias ka="killall"
 alias ff="fastfetch"
+
+alias mon="xrandr --output HDMI-A-0 --mode 1920x1080 --rate 144"
 
 alias dots="cd ~/code/repos/dotfiles"
 alias vc="cd ~/.config/nvim/lua/lucas/"

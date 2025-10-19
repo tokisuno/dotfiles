@@ -326,6 +326,8 @@ _comps=(
 'dnf' '_dnf'
 'dnf-2' '_dnf'
 'dnf-3' '_dnf'
+'dnf4' '_dnf'
+'dnf5' '_dnf5'
 'doas' '_doas'
 'docker' '_docker'
 'dockerd' '_docker'
@@ -1489,6 +1491,7 @@ _comps=(
 'tkconch' '_twisted'
 'tkinfo' '_texinfo'
 'tla' '_tla'
+'tldr' '_tldr'
 'tload' '_tload'
 'tmux' '_tmux'
 'todo' '_devtodo'
@@ -1688,9 +1691,7 @@ _comps=(
 'whom' '_mh'
 'wiggle' '_wiggle'
 'wipefs' '_wipefs'
-'wl-copy' '_wl-copy'
 'wlogout' '_wlogout'
-'wl-paste' '_wl-paste'
 'wodim' '_cdrecord'
 'wpa_cli' '_wpa_cli'
 'wpctl' '_wpctl'
@@ -1943,52 +1944,52 @@ autoload -Uz _alacritty _bat _bluetoothctl _bootctl _btm \
             _playerctl _pulseaudio _resolvectl _rg _run0 \
             _sd_hosts_or_user_at_host _sd_machines _sd_outputmodes _sd_unit_files _systemctl \
             _systemd _systemd-analyze _systemd-delta _systemd-inhibit _systemd-nspawn \
-            _systemd-path _systemd-run _systemd-tmpfiles _timedatectl _trust \
-            _udevadm _udisks2 _upower _uv _uvx \
-            _varlinkctl _wl-copy _wlogout _wl-paste _wpctl \
-            _yt-dlp _zoxide _a2ps _a2utils _aap \
-            _abcde _absolute_command_paths _ack _acpi _acpitool \
-            _acroread _adb _add-zle-hook-widget _add-zsh-hook _alias \
-            _aliases _all_labels _all_matches _alsa-utils _alternative \
-            _analyseplugin _ansible _ant _antiword _apachectl \
-            _apm _approximate _apt _apt-file _aptitude \
-            _apt-move _apt-show-versions _arch_archives _arch_namespace _arg_compile \
-            __arguments _arguments _arp _arping _arrays \
-            _asciidoctor _asciinema _assign _at _attr \
-            _augeas _auto-apt _autocd _avahi _awk \
-            _axi-cache _base64 _basename _basenc _bash \
-            _bash_completions _baudrates _baz _beadm _beep \
-            _be_name _bibtex _bind_addresses _bindkey _bison \
-            _bittorrent _bogofilter _bpf_filters _bpython _brace_parameter \
-            _brctl _bsdconfig _bsd_disks _bsdinstall _bsd_pkg \
-            _btrfs _bts _bug _builtin _bzip2 \
-            _bzr _cabal _cache_invalid _caffeinate _cal \
-            _calendar _call_function _canonical_paths _capabilities _cat \
-            _ccal _cd _cdbs-edit-patch _cdcd _cdr \
-            _cdrdao _cdrecord _chattr _chcon _chflags \
-            _chkconfig _chmod _choom _chown _chroot \
-            _chrt _chsh _cksum _clay _cmdambivalent \
-            _cmdstring _cmp _code _column _combination \
-            _comm _command _command_names _compadd _compdef \
-            _complete _complete_debug _complete_help _complete_help_generic _completers \
-            _complete_tag _comp_locale _composer _compress _condition \
-            _configure _coreadm _correct _correct_filename _correct_word \
-            _cowsay _cp _cpio _cplay _cpupower \
-            _crontab _cryptsetup _cscope _csplit _cssh \
-            _csup _ctags _ctags_tags _cu _curl \
-            _cut _cvs _cvsup _cygcheck _cygpath \
-            _cygrunsrv _cygserver _cygstart _dak _darcs \
-            _date _date_formats _dates _dbus _dchroot \
-            _dchroot-dsa _dconf _dcop _dcut _dd \
-            _deb_architectures _debbugs_bugnumber _debchange _debcheckout _deb_codenames \
-            _debdiff _deb_files _debfoster _deborphan _deb_packages \
-            _debsign _debsnap _debuild _default _defaults \
-            _delimiters _describe _description _devtodo _df \
-            _dhclient _dhcpinfo _dict _dict_words _diff \
-            _diff3 _diff_options _diffstat _dig _directories \
-            _directory_stack _dir_list _dirs _disable _dispatch \
-            _django _dkms _dladm _dlocate _dmesg \
-            _dmidecode _dnf _dns_types _doas _domains \
+            _systemd-path _systemd-run _systemd-tmpfiles _timedatectl _tldr \
+            _trust _udevadm _udisks2 _upower _uv \
+            _uvx _varlinkctl _wlogout _wpctl _yt-dlp \
+            _zoxide _a2ps _a2utils _aap _abcde \
+            _absolute_command_paths _ack _acpi _acpitool _acroread \
+            _adb _add-zle-hook-widget _add-zsh-hook _alias _aliases \
+            _all_labels _all_matches _alsa-utils _alternative _analyseplugin \
+            _ansible _ant _antiword _apachectl _apm \
+            _approximate _apt _apt-file _aptitude _apt-move \
+            _apt-show-versions _arch_archives _arch_namespace _arg_compile __arguments \
+            _arguments _arp _arping _arrays _asciidoctor \
+            _asciinema _assign _at _attr _augeas \
+            _auto-apt _autocd _avahi _awk _axi-cache \
+            _base64 _basename _basenc _bash _bash_completions \
+            _baudrates _baz _beadm _beep _be_name \
+            _bibtex _bind_addresses _bindkey _bison _bittorrent \
+            _bogofilter _bpf_filters _bpython _brace_parameter _brctl \
+            _bsdconfig _bsd_disks _bsdinstall _bsd_pkg _btrfs \
+            _bts _bug _builtin _bzip2 _bzr \
+            _cabal _cache_invalid _caffeinate _cal _calendar \
+            _call_function _canonical_paths _capabilities _cat _ccal \
+            _cd _cdbs-edit-patch _cdcd _cdr _cdrdao \
+            _cdrecord _chattr _chcon _chflags _chkconfig \
+            _chmod _choom _chown _chroot _chrt \
+            _chsh _cksum _clay _cmdambivalent _cmdstring \
+            _cmp _code _column _combination _comm \
+            _command _command_names _compadd _compdef _complete \
+            _complete_debug _complete_help _complete_help_generic _completers _complete_tag \
+            _comp_locale _composer _compress _condition _configure \
+            _coreadm _correct _correct_filename _correct_word _cowsay \
+            _cp _cpio _cplay _cpupower _crontab \
+            _cryptsetup _cscope _csplit _cssh _csup \
+            _ctags _ctags_tags _cu _curl _cut \
+            _cvs _cvsup _cygcheck _cygpath _cygrunsrv \
+            _cygserver _cygstart _dak _darcs _date \
+            _date_formats _dates _dbus _dchroot _dchroot-dsa \
+            _dconf _dcop _dcut _dd _deb_architectures \
+            _debbugs_bugnumber _debchange _debcheckout _deb_codenames _debdiff \
+            _deb_files _debfoster _deborphan _deb_packages _debsign \
+            _debsnap _debuild _default _defaults _delimiters \
+            _describe _description _devtodo _df _dhclient \
+            _dhcpinfo _dict _dict_words _diff _diff3 \
+            _diff_options _diffstat _dig _directories _directory_stack \
+            _dir_list _dirs _disable _dispatch _django \
+            _dkms _dladm _dlocate _dmesg _dmidecode \
+            _dnf _dnf5 _dns_types _doas _domains \
             _dos2unix _dpatch-edit-patch _dpkg _dpkg-buildpackage _dpkg-cross \
             _dpkg-repack _dpkg_source _dput _drill _dropbox \
             _dscverify _dsh _dtrace _dtruss _du \
