@@ -3,7 +3,7 @@ font-family-italic = FreeMono Italic
 font-size = 10
 font-size = 12
 
-theme = Gruvbox Dark
+theme = GruvboxDark
 shell-integration-features = no-cursor, sudo, no-title
 
 adjust-cell-width = -5%
