@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# set browser
+browser="google-chrome"
+
+cd $(tmux run "echo #{pane_start_path}")
+url=$(git remote get-url origin)
+
+if [[ $url == *github.com* ]]; then
+  if [[ $url == git@* ]]; then
+    url="${url#git@}"
+    url="${url/:/\/}"
+    url="http://$url"
+  fi
+  $browser $url
+else
+  echo "this repo is not hosted on github"
+fi
+

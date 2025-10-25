@@ -8,6 +8,7 @@ ln -sf ~/code/repos/dotfiles/.config/tmux/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/zathura/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/zsh ~/.config
 ln -sf ~/code/repos/dotfiles/.local/share/scripts/ ~/.local/share
+ln -s ~/code/repos/dotfiles/.local/share/applications/emacs-emacsclient.desktop ~/.local/share/applications
 
 # Default programs
 ln -s ~/code/repos/dotfiles/.config/mimeapps.list ~/.config/
