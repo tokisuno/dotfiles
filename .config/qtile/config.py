@@ -125,7 +125,11 @@ screens = [
                     ),
                 widget.Prompt(),
                 widget.WindowName(),
-                # widget.TextBox("default config", name="default"),
+                widget.GenPollCommand(
+                    cmd=f"{Path("~/.local/share/scripts/battery_widget").expanduser()}",
+                    fmt="{}",
+                    update_interval=120
+                    ),
                 widget.StatusNotifier(),
                 widget.Systray(),
                 widget.Clock(format="%Y-%m-%d %a"),
