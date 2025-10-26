@@ -3,6 +3,9 @@ import os
 import subprocess
 from pathlib import Path
 
-cmd = ['sh', '-c', f"{Path.home()}/.local/share/scripts/dual_batteries"]
-output = subprocess.check_output(cmd).decode().strip().split()
-print(f"{output[1]}:{output[7]} - {output[3]}:{output[9]} ({output[-1]})")
+if os.path.isdir('/sys/class/power_supply/BAT0') & os.path.isdir('/sys/class/power_supply/BAT1'):
+    cmd = ['sh', '-c', f"{Path.home()}/.local/share/scripts/dual_batteries"]
+    output = subprocess.check_output(cmd).decode().strip().split()
+    print(f"{output[1]}:{output[7]} - {output[3]}:{output[9]} ({output[-1]})")
+else:
+    print("Desktop")
