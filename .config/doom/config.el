@@ -63,6 +63,8 @@
 
 (setq bibtex-completion-bibliography '("~/org/roam/references/programming.bib"))
 
+(setq org-latex-compiler "xelatex")
+
 ;; (after! citar (setq! citar-bibliography '("~/Sync/bibliographies/ambiguities.bib")))
 
 ;; making org-mode look good
