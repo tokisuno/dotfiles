@@ -1,0 +1,15 @@
+# TODO: Figure out how to get this to run consistently without having it being called as a script
+
+import os
+import subprocess
+
+if os.path.isdir('/sys/class/power_supply/BAT0') & os.path.isdir('/sys/class/power_supply/BAT1'):
+    cmd = ['sh', '-c', "upower -d | grep \"native-path\" && upower -d | grep \"percentage\""]
+    output = subprocess.check_output(cmd).decode().strip().split()
+    battery_1 = output[-5]
+    battery_2 = output[-3]
+    battery_total = round(float(output[-1][:-1]), 2)
+    print(f"1:{battery_1} 2:{battery_2} ({battery_total}%)")
+else:
+    print("Desktop")
+

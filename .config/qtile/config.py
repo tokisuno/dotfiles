@@ -4,6 +4,7 @@ from libqtile.lazy import lazy
 
 from pathlib import Path
 import subprocess
+from keyboard import Keyboard
 
 mod = "mod4"
 terminal = "kitty"
@@ -48,6 +49,10 @@ keys = [
     Key([mod], "w", lazy.spawn(browser), desc="browser"),
     Key([mod], "e", lazy.spawn(files), desc="thunar"),
     Key([mod], "p", lazy.spawn(launcher), desc="rofi"),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -D pulse sset Master 5%-"), desc="vol down"),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -D pulse sset Master 5%+"), desc="vol up"),
+    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl +5%"), desc="brightness up"),     # why in the everloving hell
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl 5%-"), desc="brightness down"), # is the syntax reversed ???
     Key([], "Print", lazy.spawn("flameshot gui"), desc="screenshot")
 ]
 
@@ -124,12 +129,17 @@ screens = [
                     this_current_screen_border="#cc241d"
                     # highlight_color=["#cc241d", "#cc241d"]
                     ),
+                widget.CurrentLayout(
+                    mode="text",
+                    fmt="[{}]"
+                    ),
                 widget.Prompt(),
                 widget.WindowName(),
                 widget.GenPollCommand(
-                    cmd=f"{Path("~/.local/share/scripts/battery_widget").expanduser()}",
+                    update_interval=120,
+                    shell=True,
                     fmt="{}",
-                    update_interval=120
+                    cmd=f"python3 {Path("~/code/repos/dotfiles/.config/qtile/battery.py").expanduser()}",
                     ),
                 widget.StatusNotifier(),
                 widget.Systray(),
@@ -183,8 +193,20 @@ wl_xcursor_size = 24
 
 @hook.subscribe.startup_once
 def autostart_once():
-    home = Path("~/.config/qtile/autostart.sh").expanduser()
-    subprocess.run(home)
+    cmds = [
+            "nitrogen --restore"
+            "ibus-daemon -rxRd"
+            "nm-applet"
+            "flameshot"
+            "syncthing"
+            "pactl set-default-sink alsa_output.usb-GeneralPlus_USB_Audio_Device-00.analog-stereo"
+            "pactl set-sink-volume @DEFAULT_SINK@ 25%"
+            "xinput set-prop 'Logitech ERGO M575' 'Coordinate Transformation Matrix' 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6"
+            "xinput set-prop 'Logitech ERGO M575' 'libinput Accel Speed' 2"
+            ]
+    Keyboard()
+    for cmd in cmds:
+        subprocess.run(cmd)
 
 
 wmname = "LG3D"
