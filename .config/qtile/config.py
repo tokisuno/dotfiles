@@ -6,7 +6,7 @@ from pathlib import Path
 import subprocess
 
 mod = "mod4"
-terminal = "ghostty"
+terminal = "kitty"
 browser = "google-chrome"
 launcher = "rofi -show drun"
 files = "thunar"
@@ -48,6 +48,7 @@ keys = [
     Key([mod], "w", lazy.spawn(browser), desc="browser"),
     Key([mod], "e", lazy.spawn(files), desc="thunar"),
     Key([mod], "p", lazy.spawn(launcher), desc="rofi"),
+    Key([], "Print", lazy.spawn("flameshot gui"), desc="screenshot")
 ]
 
 # Add key bindings to switch VTs in Wayland.
@@ -108,7 +109,7 @@ layouts = [
 
 widget_defaults = dict(
     font="JetBrainsMono Nerd Font",
-    fontsize=13,
+    fontsize=15,
     padding=3,
 )
 extension_defaults = widget_defaults.copy()
@@ -134,7 +135,7 @@ screens = [
                 widget.Systray(),
                 widget.Clock(format="%Y-%m-%d %a"),
             ],
-            20,
+            24,
         ),
     ),
 ]
