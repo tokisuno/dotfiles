@@ -1,6 +1,7 @@
 #!/bin/bash
 ln -sf ~/code/repos/dotfiles/.config/doom/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/ghostty ~/.config
+ln -sf ~/code/repos/dotfiles/.config/kitty ~/.config
 ln -sf ~/code/repos/dotfiles/.config/mpv/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/nvim/ ~/.config
 ln -sf ~/code/repos/dotfiles/.config/qtile ~/.config

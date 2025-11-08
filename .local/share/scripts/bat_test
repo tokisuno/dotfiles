@@ -1,0 +1,6 @@
+#!/bin/python3
+import subprocess
+
+cmd = ['sh', '-c', "upower -d | grep \"native-path\" && upower -d | grep \"percentage\""]
+output = subprocess.check_output(cmd).decode().strip().split()
+print(f"{output}")
