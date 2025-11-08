@@ -6,6 +6,7 @@
 ## core programs
 - [doom emacs](https://github.com/tokisuno/dotfiles/tree/main/.config/doom)
 - [ghostty](https://github.com/tokisuno/dotfiles/tree/main/.config/ghostty)
+- [kitty](https://github.com/tokisuno/dotfiles/tree/main/.config/kitty)
 - [neovim](https://github.com/tokisuno/dotfiles/tree/main/.config/nvim)
 - [qtile](https://github.com/tokisuno/dotfiles/tree/main/.config/qtile)
 - [tmux](https://github.com/tokisuno/dotfiles/tree/main/.config/tmux)
