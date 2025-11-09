@@ -1,2 +1,0 @@
-#!/bin/bash
-upower -d | grep "native-path" && upower -d | grep "percentage"
