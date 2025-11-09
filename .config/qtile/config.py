@@ -142,7 +142,9 @@ screens = [
                     cmd=f"python3 {Path("~/code/repos/dotfiles/.config/qtile/battery.py").expanduser()}",
                     ),
                 widget.StatusNotifier(),
-                widget.Systray(),
+                widget.Systray(
+                    icon_size=16
+                    ),
                 widget.Clock(format="%Y-%m-%d %a"),
             ],
             24,
@@ -167,6 +169,7 @@ floating_layout = layout.Floating(
     float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.
         *layout.Floating.default_float_rules,
+        Match(wm_class="script-prompt"), # custom popup window class
         Match(wm_class="confirmreset"),  # gitk
         Match(wm_class="makebranch"),  # gitk
         Match(wm_class="maketag"),  # gitk
@@ -190,6 +193,11 @@ wl_input_rules = None
 wl_xcursor_theme = None
 wl_xcursor_size = 24
 
+
+# @hook.subscribe.client_new
+# def new_client(client):
+#     if "script-prompt" in client.get_wm_class():
+#         client.set_position_floating(200,200)
 
 @hook.subscribe.startup_once
 def autostart_once():
