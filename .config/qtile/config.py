@@ -212,9 +212,8 @@ def autostart_once():
             "xinput set-prop 'Logitech ERGO M575' 'Coordinate Transformation Matrix' 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6"
             "xinput set-prop 'Logitech ERGO M575' 'libinput Accel Speed' 2"
             ]
-    Keyboard()
     for cmd in cmds:
         subprocess.run(cmd)
-
+    Keyboard()
 
 wmname = "LG3D"

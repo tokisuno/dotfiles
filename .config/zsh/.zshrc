@@ -56,6 +56,11 @@ export PATH=${PATH}:"$HOME/.rbenv/versions/3.3.5/bin/gem"
 export PATH=${PATH}:"$HOME/.rbenv/versions/3.3.5/bin/bundle"
 export PATH=${PATH}:"$HOME/.rbenv/versions/3.3.5/bin/bundler"
 
+# ZVM
+export ZVM_INSTALL="$HOME/.zvm/self"
+export PATH="$PATH:$HOME/.zvm/bin"
+export PATH="$PATH:$ZVM_INSTALL/"
+
 export CC="clang"
 export NVM_DIR="~/.nvm"
 export GOPATH="$HOME/go"
