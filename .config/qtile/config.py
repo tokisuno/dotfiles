@@ -176,6 +176,7 @@ floating_layout = layout.Floating(
         Match(wm_class="ssh-askpass"),  # ssh-askpass
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
+        Match(title="Bitwarden")
     ]
 )
 auto_fullscreen = True
@@ -203,5 +204,11 @@ wl_xcursor_size = 24
 def autostart_once():
     subprocess.Popen(f"{Path("~/code/repos/dotfiles/.config/qtile").expanduser()}/autostart.sh")
     Keyboard()
+
+@hook.subscribe.client_new
+def floating_dialogs(window):
+    popup = window.window.get_wm_type() == 'pop-up'
+    if popup:
+        window.floating = True
 
 wmname = "LG3D"
