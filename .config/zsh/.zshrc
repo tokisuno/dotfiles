@@ -1,8 +1,10 @@
+. "$HOME/.cargo/env"
+
 export COLORTERM="truecolor"
 
+unset GLFW_IM_MODULE
 unset GTK_IM_MODULE
 unset QT_IM_MODULE
-unset GLFW_IM_MODULE
 unset XMODIFIERS
 
 export GLFW_IM_MODULE="ibus"
