@@ -65,6 +65,17 @@
 
 (setq org-latex-compiler "xelatex")
 
+(use-package! lsp-ltex
+  :ensure t
+  :hook (text-mode . (lambda ()
+                       (require 'lsp-ltex)
+                       (lsp-deferred)))
+  :init
+  (setq lsp-ltex-version "16.0.0"))
+
+(after! lsp-mode
+  (add-to-list 'lsp-language-id-configuration '(org-mode. "org")))
+
 ;; (after! citar (setq! citar-bibliography '("~/Sync/bibliographies/ambiguities.bib")))
 
 ;; making org-mode look good
