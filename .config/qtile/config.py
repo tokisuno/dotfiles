@@ -12,6 +12,11 @@ browser = "google-chrome"
 launcher = "rofi -show drun"
 files = "thunar"
 
+def float_to_front(qtile):
+    for window in qtile.currentGroup.windows:
+        if window.floating:
+            window.cmd_bring_to_front()
+
 keys = [
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
@@ -45,6 +50,7 @@ keys = [
     Key([mod], "t", lazy.window.toggle_floating(), desc="Toggle floating on the focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+    Key([mod], "m", float_to_front, desc="Move all floating windows to front"),
     # Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod], "w", lazy.spawn(browser), desc="browser"),
     Key([mod], "e", lazy.spawn(files), desc="thunar"),
@@ -194,6 +200,13 @@ wl_input_rules = None
 wl_xcursor_theme = None
 wl_xcursor_size = 24
 
+def float_to_front(qtile):
+    """
+    Bring all floating windows of the group to front
+    """
+    for window in qtile.currentGroup.windows:
+        if window.floating:
+            window.cmd_bring_to_front()
 
 # @hook.subscribe.client_new
 # def new_client(client):
@@ -207,7 +220,7 @@ def autostart_once():
 
 @hook.subscribe.client_new
 def floating_dialogs(window):
-    popup = window.window.get_wm_type() == 'pop-up'
+    popup = window.window.get_wm_role() == 'pop-up'
     if popup:
         window.floating = True
 
