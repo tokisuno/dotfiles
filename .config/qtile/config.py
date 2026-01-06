@@ -57,8 +57,8 @@ keys = [
     Key([mod], "p", lazy.spawn(launcher), desc="rofi"),
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -D pulse sset Master 5%-"), desc="vol down"),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -D pulse sset Master 5%+"), desc="vol up"),
-    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl +5%"), desc="brightness up"),     # why in the everloving hell
-    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl 5%-"), desc="brightness down"), # is the syntax reversed ???
+    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl s +5%"), desc="brightness up"),     # why in the everloving hell
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl s 5%-"), desc="brightness down"), # is the syntax reversed ???
     Key([], "Print", lazy.spawn("flameshot gui"), desc="screenshot")
 ]
 
