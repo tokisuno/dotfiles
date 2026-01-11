@@ -33,9 +33,13 @@ setopt AUTO_PUSHD           # Push the current directory visited on the stack.
 setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
 setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
 
-source ${ZDOTDIR}/.antidote/antidote.zsh
+source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
+# source ${ZDOTDIR}/.antidote/antidote.zsh
+
+export GOPATH="$HOME/go"
 
 export PATH="/bin"
+export PATH=${PATH}:"/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH=${PATH}:"$HOME/bin"
 export PATH=${PATH}:"/var/lib/flatpak/exports/share/applications"
 export PATH=${PATH}:"$HOME/.cargo/bin"
@@ -52,7 +56,8 @@ export PATH=${PATH}:"/usr/bin/"
 export PATH=${PATH}:"/usr/local/bin"
 export PATH=${PATH}:"$HOME/.config/emacs/bin/doom"
 export PATH=${PATH}:"$HOME/code/builds/zig-master/build/stage3/bin/"
-export PATH=${PATH}:"`go env GOPATH`/bin"
+export PATH=${PATH}:"$GOPATH/bin"
+export PATH=${PATH}:"/opt/homebrew/bin"
 
 export PATH=${PATH}:"$HOME/.rbenv/versions/3.3.5/bin/gem"
 export PATH=${PATH}:"$HOME/.rbenv/versions/3.3.5/bin/bundle"
@@ -65,7 +70,6 @@ export PATH="$PATH:$ZVM_INSTALL/"
 
 export CC="clang"
 export NVM_DIR="~/.nvm"
-export GOPATH="$HOME/go"
 
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
 
