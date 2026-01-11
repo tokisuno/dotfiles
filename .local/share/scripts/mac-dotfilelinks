@@ -9,7 +9,9 @@ ln -sf ~/Documents/Code/dotfiles/.config/nvim/ ~/.config
 ln -sf ~/Documents/Code/dotfiles/.config/tmux/ ~/.config
 ln -sf ~/Documents/Code/dotfiles/.config/zathura/ ~/.config
 ln -sf ~/Documents/Code/dotfiles/.config/zsh ~/.config
+
+ln -sf ~/Documents/Code/dotfiles/.config/aerospace ~/.config
+
 ln -sf ~/Documents/Code/dotfiles/.local/share/scripts/ ~/.local/share
 
-# Default programs
 ln -s ~/Documents/Code/dotfiles/.zshenv ~/
