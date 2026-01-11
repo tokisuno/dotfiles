@@ -36,14 +36,14 @@
         ("WAITING" . "yellow")))
 
 ;; #+SEQ_TODO: NEXT(n) TODO(t) WAITING(w) PROJ(p) | DONE(d)
-(setq org-directory "~/org/")
+(setq org-directory "~/Sync/org/")
 
 (use-package org-roam
   :ensure t
   :custom
   (setq org-roam-file-extensions '("org"))
-  (org-roam-directory (file-truename "~/org/roam/"))
-  (org-roam-dailies-directory (file-truename "~/org/roam/daily/"))
+  (org-roam-directory (file-truename "~/Sync/org/roam/"))
+  (org-roam-dailies-directory (file-truename "~/Sync/org/roam/daily/"))
   :bind (("C-c n l" . org-roam-buffer-toggle)
          ("C-c n f" . org-roam-node-find)
          ("C-c n g" . org-roam-graph)
@@ -61,7 +61,7 @@
   :after org-roam
   :config)
 
-(setq bibtex-completion-bibliography '("~/org/roam/references/programming.bib"))
+(setq bibtex-completion-bibliography '("~/Sync/org/roam/references/programming.bib"))
 
 (setq org-latex-compiler "xelatex")
 
