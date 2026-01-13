@@ -13,7 +13,7 @@ set scroll-full-overlap 0.01
 set zoom-min 10
 set guioptions "s"
 
-set font "Hack Nerd Font 13"
+set font "JetBrainsMono Nerd Font 13"
 
 set adjust-open width
 set recolor true
