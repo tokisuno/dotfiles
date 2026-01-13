@@ -5,7 +5,7 @@
 (setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 14 :height 1.0 :weight 'normal)
       doom-big-font (font-spec :family "JetBrainsMono Nerd Font" :size 20 :style "medium" :weight 'bold))
 
-(setq doom-theme 'doom-gruvbox)
+(setq doom-theme 'doom-gruvbox-light)
 
 (setq display-line-numbers-type t)
 
