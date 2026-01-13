@@ -1,4 +1,4 @@
-vim.o.background = "dark"
+vim.o.background = "light"
 
 vim.o.conceallevel = 0
 vim.o.guicursor = ""
