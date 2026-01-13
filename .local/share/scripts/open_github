@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# set browser
-browser="google-chrome"
-
 cd $(tmux run "echo #{pane_start_path}")
 url=$(git remote get-url origin)
 
@@ -12,7 +9,13 @@ if [[ $url == *github.com* ]]; then
     url="${url/:/\/}"
     url="http://$url"
   fi
-  $browser $url
+  # Determine whether it's on Mac or Linux
+  if [[ $OSTYPE == 'darwin'* ]]; then
+    # You can't run "/Applications/Google\ Chrome.app" like on Linux
+    open -a "Google Chrome" $url
+  else
+    "google-chrome" $url
+  fi
 else
   echo "this repo is not hosted on github"
 fi
