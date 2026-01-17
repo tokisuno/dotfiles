@@ -1,16 +1,17 @@
 . "$HOME/.cargo/env"
 
 export COLORTERM="truecolor"
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  unset GLFW_IM_MODULE
+  unset GTK_IM_MODULE
+  unset QT_IM_MODULE
+  unset XMODIFIERS
 
-unset GLFW_IM_MODULE
-unset GTK_IM_MODULE
-unset QT_IM_MODULE
-unset XMODIFIERS
-
-export GLFW_IM_MODULE="ibus"
-export GTK_IM_MODULE="ibus"
-export QT_IM_MODULE="ibus"
-export XMODIFIERS="@im=ibus"
+  export GLFW_IM_MODULE="ibus"
+  export GTK_IM_MODULE="ibus"
+  export QT_IM_MODULE="ibus"
+  export XMODIFIERS="@im=ibus"
+fi
 
 export ALTERNATE_EDITOR=""
 export VISUAL="/usr/bin/emacs"
@@ -33,8 +34,17 @@ setopt AUTO_PUSHD           # Push the current directory visited on the stack.
 setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
 setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
 
-source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
-# source ${ZDOTDIR}/.antidote/antidote.zsh
+fpath+=($ZDOTDIR/plugins/pure)
+
+# Manually doing this because fuck you
+source $ZDOTDIR/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source $ZDOTDIR/plugins/pure/pure.zsh
+source $ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source $ZDOTDIR/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+source $ZDOTDIR/plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
+
+autoload -U promptinit; promptinit
+prompt pure
 
 export GOPATH="$HOME/go"
 
@@ -150,22 +160,5 @@ alias shsh="'$(ssh-agent -s)' && ssh-add"
 
 mkd() { mkdir "$@" 2> >(sed s/mkdir/mkd/ 1>&2) && cd "$_"; }
 
-zsh_plugins=${ZDOTDIR:-~}/.zsh_plugins
-
-# Ensure the .zsh_plugins.txt file exists so you can add plugins.
-[[ -f ${zsh_plugins}.txt ]] || touch ${zsh_plugins}.txt
-
-# Lazy-load antidote from its functions directory.
-fpath=(/path/to/antidote/functions $fpath)
-autoload -Uz antidote
-
-# Generate a new static file whenever .zsh_plugins.txt is updated.
-if [[ ! ${zsh_plugins}.zsh -nt ${zsh_plugins}.txt ]]; then
-  antidote bundle <${zsh_plugins}.txt >|${zsh_plugins}.zsh
-fi
-
-# Source your static plugins file.
-
-source ${zsh_plugins}.zsh
 eval "$(zoxide init zsh --cmd cd)"
 source <(fzf --zsh)
