@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+
+from subprocess import run
+
+print("Which app?: ")
+name = input()
+cmd = f"osascript -e 'id of app \"{name}\"'"
+data = run(cmd, shell=True, capture_output=True, text=True)
+run("pbcopy", text=True, input=data.stdout)
+print(data.stdout)
